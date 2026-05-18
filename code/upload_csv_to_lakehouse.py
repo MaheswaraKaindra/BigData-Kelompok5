@@ -1,0 +1,145 @@
+import sys
+from pathlib import Path
+from minio import Minio
+from minio.error import S3Error
+
+
+def get_minio_client():
+    """Create and return MinIO client."""
+    return Minio(
+        endpoint="localhost:9000",
+        access_key="admin",
+        secret_key="admin123",
+        secure=False,
+    )
+
+
+def ensure_bucket_exists(client: Minio, bucket_name: str) -> None:
+    """Ensure MinIO bucket exists, create if not."""
+    try:
+        if not client.bucket_exists(bucket_name):
+            client.make_bucket(bucket_name)
+            print(f"Created bucket: {bucket_name}")
+        else:
+            print(f"Bucket exists: {bucket_name}")
+    except S3Error as e:
+        print(f"Error ensuring bucket {bucket_name}: {e}")
+        raise
+
+
+def upload_csv_files(csv_dir: Path, client: Minio, bucket_name: str, prefix: str = "csv") -> None:
+    """Upload all CSV files from directory to MinIO."""
+    if not csv_dir.exists():
+        print(f"CSV directory not found: {csv_dir}")
+        sys.exit(1)
+
+    csv_files = sorted(csv_dir.glob("*.csv"))
+    
+    if not csv_files:
+        print(f"No CSV files found in: {csv_dir}")
+        sys.exit(1)
+
+    print(f"\nFound {len(csv_files)} CSV file(s)")
+    print(f"Uploading to s3://{bucket_name}/{prefix}/\n")
+
+    failed_files = []
+    
+    for csv_file in csv_files:
+        try:
+            object_name = f"{prefix}/{csv_file.name}"
+            file_size = csv_file.stat().st_size
+            
+            client.fput_object(
+                bucket_name,
+                object_name,
+                str(csv_file),
+                content_type="text/csv",
+            )
+            
+            size_mb = file_size / (1024 * 1024)
+            print(f"Uploaded: {csv_file.name:20} ({size_mb:8.2f} MB) → {object_name}")
+            
+        except S3Error as e:
+            print(f"Failed: {csv_file.name} - {e}")
+            failed_files.append(csv_file.name)
+
+    print(f"\n{'='*70}")
+    print(f"Upload Summary:")
+    print(f"  Total files:    {len(csv_files)}")
+    print(f"  Successful:     {len(csv_files) - len(failed_files)}")
+    print(f"  Failed:         {len(failed_files)}")
+    
+    if failed_files:
+        print(f"\nFailed files:")
+        for f in failed_files:
+            print(f"  - {f}")
+        sys.exit(1)
+    else:
+        print(f"\nAll CSV files uploaded successfully!")
+
+
+def verify_uploads(client: Minio, bucket_name: str, prefix: str = "csv") -> None:
+    """Verify that files were uploaded correctly."""
+    print(f"\nVerifying uploads in s3://{bucket_name}/{prefix}/...\n")
+    
+    try:
+        objects = client.list_objects(bucket_name, prefix=prefix)
+        count = 0
+        
+        for obj in objects:
+            if obj.object_name.endswith(".csv"):
+                size_mb = obj.size / (1024 * 1024)
+                print(f"{obj.object_name} ({size_mb:.2f} MB)")
+                count += 1
+        
+        if count == 0:
+            print(f"No CSV files found in {bucket_name}/{prefix}")
+            return False
+        
+        print(f"\nVerified {count} CSV file(s) in MinIO")
+        return True
+        
+    except S3Error as e:
+        print(f"Verification failed: {e}")
+        return False
+
+
+def main():
+    
+    # Resolve paths
+    code_dir = Path(__file__).resolve().parent
+    project_dir = code_dir.parent
+    csv_dir = project_dir / "data" / "csv"
+    
+    print(f"\nProject directory: {project_dir}")
+    print(f"CSV directory:     {csv_dir}")
+    
+    # MinIO config
+    bucket_name = "lakehouse"
+    csv_prefix = "csv"
+    
+    try:
+        # Connect to MinIO
+        print(f"\nConnecting to MinIO localhost:9000...")
+        client = get_minio_client()
+        client.bucket_exists("lakehouse")  # Test connection
+        print("Connected to MinIO")
+        
+        # Ensure bucket exists
+        ensure_bucket_exists(client, bucket_name)
+        
+        # Upload CSV files
+        upload_csv_files(csv_dir, client, bucket_name, csv_prefix)
+        
+        # Verify uploads
+        verify_uploads(client, bucket_name, csv_prefix)
+        
+        print("Complete.")
+        
+    except Exception as e:
+        print(f"\nError: {e}")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
