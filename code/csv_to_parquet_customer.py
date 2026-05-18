@@ -34,7 +34,7 @@ response.release_conn()
 # File masih pakai delimiter | dan trailing |
 df = pd.read_csv(
     io.BytesIO(csv_bytes),
-    sep="|",
+    sep=",",
     header=None,
     engine="python"
 )
