@@ -166,7 +166,7 @@ CREATE TABLE IF NOT EXISTS iceberg.tpch.lineitem (
 )
 WITH (
     location = 's3://iceberg/tpch/lineitem/',
-    partitioning = ARRAY['l_shipdate']
+    partitioning = ARRAY['month(l_shipdate)']
 );
 
 CREATE TABLE IF NOT EXISTS iceberg.tpch.nation (
@@ -192,7 +192,7 @@ CREATE TABLE IF NOT EXISTS iceberg.tpch.orders (
 )
 WITH (
     location = 's3://iceberg/tpch/orders/',
-    partitioning = ARRAY['o_orderdate']
+    partitioning = ARRAY['month(o_orderdate)']
 );
 
 CREATE TABLE IF NOT EXISTS iceberg.tpch.part (
@@ -274,7 +274,8 @@ SELECT
     l_shipinstruct,
     l_shipmode,
     l_comment
-FROM hive.tpch_external.lineitem;
+FROM hive.tpch_external.lineitem
+ORDER BY CAST(l_shipdate AS date);
 
 INSERT INTO iceberg.tpch.nation
 SELECT
@@ -295,7 +296,8 @@ SELECT
     o_clerk,
     CAST(o_shippriority AS integer),
     o_comment
-FROM hive.tpch_external.orders;
+FROM hive.tpch_external.orders
+ORDER BY CAST(o_orderdate AS date);
 
 INSERT INTO iceberg.tpch.part
 SELECT
