@@ -42,7 +42,8 @@ CREATE TABLE IF NOT EXISTS hive.tpch_external.lineitem (
 WITH (
     format = 'CSV',
     external_location = 's3://lakehouse/csv/lineitem/',
-    skip_header_line_count = 0
+    skip_header_line_count = 0,
+    partitioning = ARRAY['year(l_shipdate)']
 );
 
 CREATE TABLE IF NOT EXISTS hive.tpch_external.nation (
@@ -71,7 +72,8 @@ CREATE TABLE IF NOT EXISTS hive.tpch_external.orders (
 WITH (
     format = 'CSV',
     external_location = 's3://lakehouse/csv/orders/',
-    skip_header_line_count = 0
+    skip_header_line_count = 0,
+    partitioning = ARRAY['year(o_orderdate)']
 );
 
 CREATE TABLE IF NOT EXISTS hive.tpch_external.part (
@@ -129,6 +131,16 @@ WITH (
     external_location = 's3://lakehouse/csv/supplier/',
     skip_header_line_count = 0
 );
+
+-- Drop existing Iceberg tables to reset metadata catalog
+DROP TABLE IF EXISTS iceberg.tpch.customer;
+DROP TABLE IF EXISTS iceberg.tpch.lineitem;
+DROP TABLE IF EXISTS iceberg.tpch.nation;
+DROP TABLE IF EXISTS iceberg.tpch.orders;
+DROP TABLE IF EXISTS iceberg.tpch.part;
+DROP TABLE IF EXISTS iceberg.tpch.partsupp;
+DROP TABLE IF EXISTS iceberg.tpch.region;
+DROP TABLE IF EXISTS iceberg.tpch.supplier;
 
 -- Create Iceberg tables
 CREATE TABLE IF NOT EXISTS iceberg.tpch.customer (

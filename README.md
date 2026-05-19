@@ -10,7 +10,24 @@ Ringkasan singkat
 Prerequisite
 - Docker Desktop / Docker Engine `docker compose`
 - Python 3.9+, `pip`
+- Build tools: `make`, `gcc` (untuk compile dbgen)
 - Port yang dipakai (localhost): MinIO 9000/9001, Trino 8080, Hive Metastore 9083
+
+Dataset Generation (TPC-H 1GB)
+
+Jika belum ada file `.tbl` di folder `tpch-data/`, generate terlebih dahulu:
+
+```bash
+# Build dan jalankan dbgen (menghasilkan 1GB data)
+./scripts/gendb.sh
+```
+
+Script akan:
+- Build `dbgen` (kompile dari source di `tpch-dbgen/`)
+- Generate file `.tbl` dengan scale factor 1 (1GB)
+- Output ke folder `tpch-data/`
+
+Jika ingin custom size, edit `scripts/gendb.sh` dan ubah parameter `-s 1` menjadi scale factor yang diinginkan (contoh: `-s 10` untuk 10GB).
 
 Langkah-langkah (jalankan dari root project)
 1) Instal dependensi Python (virtualenv)
@@ -118,6 +135,23 @@ File utama & peran singkat
 - [code/tpch_iceberg_schema.sql](code/tpch_iceberg_schema.sql) — SQL untuk membuat external + iceberg tables
 - [code/csv_to_parquet_customer.py](code/csv_to_parquet_customer.py) — contoh konversi CSV → Parquet dan upload
 
+Cleanup & Reset
 
+Untuk menghapus semua generated data dan reset project:
 
+```bash
+./cleanup.sh
+```
+
+Script akan:
+- Stop dan remove Docker containers
+- Hapus `data/csv/*` (generated CSV files)
+- Hapus `tpch-data/*.tbl` (extracted TPC-H files)
+- Hapus Python cache
+
+**Catatan:** File `.tbl.gz` (compressed source) akan dipertahankan.
+
+Setelah cleanup, Anda bisa:
+- Generate ulang data: `./scripts/gendb.sh`
+- Atau extract dari `.tbl.gz` yang ada jika file sudah diekstrak sebelumnya
 
