@@ -19,34 +19,36 @@ def ensure_bucket_exists(client: Minio, bucket_name: str) -> None:
     try:
         if not client.bucket_exists(bucket_name):
             client.make_bucket(bucket_name)
-            print(f"Created bucket: {bucket_name}")
+            print(f"  Created bucket: {bucket_name}")
         else:
-            print(f"Bucket exists: {bucket_name}")
+            print(f"  Bucket exists: {bucket_name}")
     except S3Error as e:
-        print(f"Error ensuring bucket {bucket_name}: {e}")
+        print(f"Error: Could not access bucket {bucket_name}: {e}")
         raise
 
 
 def upload_csv_files(csv_dir: Path, client: Minio, bucket_name: str, prefix: str = "csv") -> None:
     """Upload all CSV files from directory to MinIO."""
     if not csv_dir.exists():
-        print(f"CSV directory not found: {csv_dir}")
+        print(f"Error: CSV directory not found: {csv_dir}")
         sys.exit(1)
 
     csv_files = sorted(csv_dir.glob("*.csv"))
     
     if not csv_files:
-        print(f"No CSV files found in: {csv_dir}")
+        print(f"Error: No CSV files found in: {csv_dir}")
         sys.exit(1)
 
     print(f"\nFound {len(csv_files)} CSV file(s)")
-    print(f"Uploading to s3://{bucket_name}/{prefix}/\n")
+    print(f"Uploading to s3://{bucket_name}/{prefix}/")
+    print()
 
     failed_files = []
     
     for csv_file in csv_files:
         try:
-            object_name = f"{prefix}/{csv_file.name}"
+            table_name = csv_file.stem
+            object_name = f"{prefix}/{table_name}/{csv_file.name}"
             file_size = csv_file.stat().st_size
             
             client.fput_object(
@@ -57,14 +59,14 @@ def upload_csv_files(csv_dir: Path, client: Minio, bucket_name: str, prefix: str
             )
             
             size_mb = file_size / (1024 * 1024)
-            print(f"Uploaded: {csv_file.name:20} ({size_mb:8.2f} MB) → {object_name}")
+            print(f"  Uploaded {csv_file.name:20} ({size_mb:7.2f} MB) → {object_name}")
             
         except S3Error as e:
-            print(f"Failed: {csv_file.name} - {e}")
+            print(f"  Error {csv_file.name:20} {str(e)[:40]}")
             failed_files.append(csv_file.name)
 
-    print(f"\n{'='*70}")
-    print(f"Upload Summary:")
+    print(f"\n{'-'*70}")
+    print(f"Upload Summary")
     print(f"  Total files:    {len(csv_files)}")
     print(f"  Successful:     {len(csv_files) - len(failed_files)}")
     print(f"  Failed:         {len(failed_files)}")
@@ -75,12 +77,13 @@ def upload_csv_files(csv_dir: Path, client: Minio, bucket_name: str, prefix: str
             print(f"  - {f}")
         sys.exit(1)
     else:
-        print(f"\nAll CSV files uploaded successfully!")
+        print(f"\nAll CSV files uploaded successfully")
 
 
 def verify_uploads(client: Minio, bucket_name: str, prefix: str = "csv") -> None:
     """Verify that files were uploaded correctly."""
-    print(f"\nVerifying uploads in s3://{bucket_name}/{prefix}/...\n")
+    print(f"\nVerifying uploads in s3://{bucket_name}/{prefix}/")
+    print()
     
     try:
         objects = client.list_objects(bucket_name, prefix=prefix)
@@ -89,18 +92,18 @@ def verify_uploads(client: Minio, bucket_name: str, prefix: str = "csv") -> None
         for obj in objects:
             if obj.object_name.endswith(".csv"):
                 size_mb = obj.size / (1024 * 1024)
-                print(f"{obj.object_name} ({size_mb:.2f} MB)")
+                print(f"  {obj.object_name:40} ({size_mb:7.2f} MB)")
                 count += 1
         
         if count == 0:
-            print(f"No CSV files found in {bucket_name}/{prefix}")
+            print(f"  No CSV files found in {bucket_name}/{prefix}")
             return False
         
-        print(f"\nVerified {count} CSV file(s) in MinIO")
+        print(f"\nVerified: {count} CSV file(s) in MinIO")
         return True
         
     except S3Error as e:
-        print(f"Verification failed: {e}")
+        print(f"Error: Verification failed: {e}")
         return False
 
 
@@ -111,7 +114,7 @@ def main():
     project_dir = code_dir.parent
     csv_dir = project_dir / "data" / "csv"
     
-    print(f"\nProject directory: {project_dir}")
+    print(f"Project directory: {project_dir}")
     print(f"CSV directory:     {csv_dir}")
     
     # MinIO config
@@ -122,8 +125,8 @@ def main():
         # Connect to MinIO
         print(f"\nConnecting to MinIO localhost:9000...")
         client = get_minio_client()
-        client.bucket_exists("lakehouse")  # Test connection
-        print("Connected to MinIO")
+        client.bucket_exists("lakehouse")
+        print("Connected")
         
         # Ensure bucket exists
         ensure_bucket_exists(client, bucket_name)
@@ -134,10 +137,10 @@ def main():
         # Verify uploads
         verify_uploads(client, bucket_name, csv_prefix)
         
-        print("Complete.")
+        print("Complete")
         
     except Exception as e:
-        print(f"\nError: {e}")
+        print(f"Error: {e}")
         sys.exit(1)
 
 
