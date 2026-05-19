@@ -43,6 +43,26 @@ def upload_csv_files(csv_dir: Path, client: Minio, bucket_name: str, prefix: str
     print(f"Uploading to s3://{bucket_name}/{prefix}/")
     print()
 
+    # Clean up old files before uploading new ones
+    print(f"Cleaning up old files in s3://{bucket_name}/{prefix}/...")
+    try:
+        old_objects = client.list_objects(bucket_name, prefix=prefix, recursive=True)
+        cleanup_count = 0
+        for obj in old_objects:
+            try:
+                client.remove_object(bucket_name, obj.object_name)
+                cleanup_count += 1
+            except S3Error as e:
+                print(f"  Warning: Could not remove {obj.object_name}: {str(e)[:40]}")
+        if cleanup_count > 0:
+            print(f"Removed {cleanup_count} old object(s).")
+        else:
+            print(f"No old objects found.")
+    except S3Error as e:
+        print(f"  Warning: Cleanup failed: {str(e)[:60]}")
+    
+    print()
+
     failed_files = []
     
     for csv_file in csv_files:
@@ -86,7 +106,7 @@ def verify_uploads(client: Minio, bucket_name: str, prefix: str = "csv") -> None
     print()
     
     try:
-        objects = client.list_objects(bucket_name, prefix=prefix)
+        objects = client.list_objects(bucket_name, prefix=prefix, recursive=True)
         count = 0
         
         for obj in objects:
