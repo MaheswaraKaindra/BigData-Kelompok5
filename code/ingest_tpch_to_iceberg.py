@@ -241,16 +241,44 @@ def execute_iceberg_schema_sql() -> bool:
         
         cursor = conn.cursor()
         
-        # Split SQL by semicolon and execute statements
-        statements = [s.strip() for s in sql_content.split(';') if s.strip()]
-        
         statement_groups = {
-            "Schema Creation": statements[0:1],
-            "External Table Creation": statements[1:9],
-            "Iceberg Table Creation": statements[9:17],
-            "Data Ingestion": statements[17:25],
-            "Validation": statements[25:26] if len(statements) > 25 else [],
+            "Schema Creation": [],
+            "External Table Creation": [],
+            "Iceberg Table Creation": [],
+            "Data Ingestion": [],
+            "Validation": []
         }
+        
+        raw_statements = sql_content.split(';')
+        
+        for raw_stmt in raw_statements:
+            stmt_stripped = raw_stmt.strip()
+            if not stmt_stripped:
+                continue
+                
+            # 1. DROP TABLE
+            if "DROP TABLE" in stmt_stripped:
+                statement_groups["Iceberg Table Creation"].append(stmt_stripped)
+            
+            # 2. Schema Creation
+            elif "CREATE SCHEMA" in stmt_stripped:
+                statement_groups["Schema Creation"].append(stmt_stripped)
+            
+            # 3. External Table Hive
+            elif "hive.tpch_external" in stmt_stripped and "CREATE TABLE" in stmt_stripped:
+                statement_groups["External Table Creation"].append(stmt_stripped)
+            
+            # 4. Create Table Iceberg
+            elif "iceberg.tpch" in stmt_stripped and "CREATE TABLE" in stmt_stripped:
+                statement_groups["Iceberg Table Creation"].append(stmt_stripped)
+            
+            # 5. Ingestion
+            elif "INSERT INTO" in stmt_stripped:
+                statement_groups["Data Ingestion"].append(stmt_stripped)
+            
+            # 6. Validation
+            elif "UNION ALL" in stmt_stripped or "table_name, COUNT(*)" in stmt_stripped:
+                statement_groups["Validation"].append(stmt_stripped)
         
         for group_name, group_statements in statement_groups.items():
             if not group_statements:
