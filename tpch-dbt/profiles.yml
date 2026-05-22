@@ -1,0 +1,12 @@
+tpch_project_profile:
+  target: dev
+  outputs:
+    dev:
+      type: trino
+      host: localhost
+      port: 8080
+      user: trino
+      catalog: iceberg
+      schema: tpch_mart
+      threads: 4
+      http_scheme: http

@@ -1,0 +1,20 @@
+name: 'tpch_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'tpch_project_profile'
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+
+models:
+  tpch_dbt:
+    staging:
+      +materialized: view
+      +schema: staging
+
+    mart:
+      +materialized: table
+      +schema: mart

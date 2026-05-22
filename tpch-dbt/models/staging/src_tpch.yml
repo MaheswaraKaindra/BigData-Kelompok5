@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: iceberg_tpch
+    database: iceberg
+    schema: tpch
+    description: "Dataset hasil ingestion dari TPC-H ke Apache Iceberg"
+    tables:
+
+      - name: orders
+        description: "Data transaksi pemesanan."
+        columns:
+          - name: o_orderkey
+            description: "Primary key untuk tabel orders."
+            tests:
+              - not_null
+              - unique
+          - name: o_custkey
+            description: "Foreign key yang merujuk ke tabel customers."
+
+      - name: lineitem
+        description: "Data detail item dalam setiap pesanan."
+        columns:
+          - name: l_orderkey
+            description: "Foreign key yang merujuk ke tabel orders."
+            tests:
+              - not_null
