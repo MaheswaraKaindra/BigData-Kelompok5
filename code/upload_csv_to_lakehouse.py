@@ -7,7 +7,7 @@ from minio.error import S3Error
 def get_minio_client():
     """Create and return MinIO client."""
     return Minio(
-        endpoint="localhost:9000",
+        endpoint="localhost:9005",
         access_key="admin",
         secret_key="admin123",
         secure=False,
@@ -142,7 +142,7 @@ def main():
     
     try:
         # Connect to MinIO
-        print(f"\nConnecting to MinIO localhost:9000...")
+        print(f"\nConnecting to MinIO localhost:9005...")
         client = get_minio_client()
         client.bucket_exists("lakehouse")
         print("Connected")
