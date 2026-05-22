@@ -42,8 +42,7 @@ CREATE TABLE IF NOT EXISTS hive.tpch_external.lineitem (
 WITH (
     format = 'CSV',
     external_location = 's3://lakehouse/csv/lineitem/',
-    skip_header_line_count = 0,
-    partitioning = ARRAY['year(l_shipdate)']
+    skip_header_line_count = 0
 );
 
 CREATE TABLE IF NOT EXISTS hive.tpch_external.nation (
@@ -72,8 +71,7 @@ CREATE TABLE IF NOT EXISTS hive.tpch_external.orders (
 WITH (
     format = 'CSV',
     external_location = 's3://lakehouse/csv/orders/',
-    skip_header_line_count = 0,
-    partitioning = ARRAY['year(o_orderdate)']
+    skip_header_line_count = 0
 );
 
 CREATE TABLE IF NOT EXISTS hive.tpch_external.part (
