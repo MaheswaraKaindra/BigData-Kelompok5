@@ -54,9 +54,13 @@ curl -fsS http://localhost:9000/minio/health/live && echo 'MinIO OK'
 curl -fsS http://localhost:8080/v1/info && echo 'Trino OK'
 ```
 
-4) Konversi file TPC-H `.tbl` → CSV
+4) Generate dan Konversi file TPC-H `.tbl` → CSV
+- Jalankan command berikut di root dan tunggu hingga ada 8 file tbl yang terbentuk di folder data
+```bash
+cd tpch-dbgen && make && DSS_PATH=../data ./dbgen -s 1 -f
+```
 
-- Script: [code/convert_tbl_to_csv.py](code/convert_tbl_to_csv.py)
+- Jalankan Script: [code/convert_tbl_to_csv.py](code/convert_tbl_to_csv.py)
 - Input: folder `tpch-data/` (file `*.tbl`) — script akan mencari `tpch-data/*.tbl`
 - Output: `data/csv/*.csv`
 
