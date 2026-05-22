@@ -78,9 +78,8 @@ def upload_csv_files(csv_dir: Path, client: Minio, bucket_name: str, prefix: str
                 content_type="text/csv",
             )
             
-            size_mb = file_size / (1024 * 1024)
-            print(f"  Uploaded {csv_file.name:20} ({size_mb:7.2f} MB) → {object_name}")
-            
+            formatted_size = format_file_size(file_size)
+            print(f"  Uploaded {csv_file.name:20} ({formatted_size:>10}) → {object_name}")   
         except S3Error as e:
             print(f"  Error {csv_file.name:20} {str(e)[:40]}")
             failed_files.append(csv_file.name)
@@ -164,5 +163,18 @@ def main():
         sys.exit(1)
 
 
+def format_file_size(size_in_bytes: float) -> str:
+    """Mengubah ukuran bytes menjadi KB, MB, atau GB secara dinamis."""
+    kb = 1024
+    mb = kb * 1024
+    gb = mb * 1024
+
+    if size_in_bytes < mb:
+        return f"{size_in_bytes / kb:6.2f} KB"
+    elif size_in_bytes >= gb:
+        return f"{size_in_bytes / gb:6.2f} GB"
+    else:
+        return f"{size_in_bytes / mb:6.2f} MB"
+    
 if __name__ == "__main__":
     main()
