@@ -1,0 +1,1430 @@
+[0m11:22:08.399824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e1f9be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110cbbe90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110cbbaa0>]}
+
+
+============================== 11:22:08.407861 | 0c92f7be-7ab7-4b44-a11a-ffa00142ee44 ==============================
+[0m11:22:08.407861 [info ] [MainThread]: Running with dbt=1.10.1
+[0m11:22:08.408873 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'tpch-dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'tpch-dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run --project-dir tpch-dbt --profiles-dir tpch-dbt', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:22:08.806059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0c92f7be-7ab7-4b44-a11a-ffa00142ee44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e36f200>]}
+[0m11:22:08.949261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0c92f7be-7ab7-4b44-a11a-ffa00142ee44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110b1d9a0>]}
+[0m11:22:08.950289 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m11:22:09.137187 [debug] [MainThread]: checksum: 2c026f85d539c10c69b093157526ce33d0bf5533489eafb07fe5172434ec7740, vars: {}, profile: , target: , version: 1.10.1
+[0m11:22:09.138575 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:22:09.139230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0c92f7be-7ab7-4b44-a11a-ffa00142ee44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1110ab5c0>]}
+[0m11:22:11.572480 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.tpch_dbt.mart_revenue_summary' (models/mart/mart_revenue_summary.sql) depends on a node named 'staging_orders' which was not found
+[0m11:22:11.587441 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.3352013, "process_in_blocks": "0", "process_kernel_time": 0.468708, "process_mem_max_rss": "135745536", "process_out_blocks": "0", "process_user_time": 7.071672}
+[0m11:22:11.588296 [debug] [MainThread]: Command `dbt run` failed at 11:22:11.588124 after 3.34 seconds
+[0m11:22:11.588948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110cbbcb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110c4a510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11108a030>]}
+[0m11:22:11.589570 [debug] [MainThread]: Flushing usage events
+[0m11:22:13.130709 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:24:53.324205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c95220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ef4140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ef66c0>]}
+
+
+============================== 13:24:53.334540 | 5fd3841a-2e6c-4ba1-86b7-cd2ccdd8b97b ==============================
+[0m13:24:53.334540 [info ] [MainThread]: Running with dbt=1.10.1
+[0m13:24:53.336001 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/logs', 'fail_fast': 'False', 'profiles_dir': '.', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug --profiles-dir .', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:24:53.370294 [info ] [MainThread]: dbt version: 1.10.1
+[0m13:24:53.371162 [info ] [MainThread]: python version: 3.12.7
+[0m13:24:53.371916 [info ] [MainThread]: python path: /Users/mac/Desktop/BigData-Kelompok5/.venv/bin/python3.12
+[0m13:24:53.372675 [info ] [MainThread]: os info: macOS-10.16-x86_64-i386-64bit
+[0m13:24:53.573722 [info ] [MainThread]: Using profiles dir at .
+[0m13:24:53.574623 [info ] [MainThread]: Using profiles.yml file at ./profiles.yml
+[0m13:24:53.575379 [info ] [MainThread]: Using dbt_project.yml file at /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/dbt_project.yml
+[0m13:24:53.576125 [info ] [MainThread]: adapter type: trino
+[0m13:24:53.576854 [info ] [MainThread]: adapter version: 1.10.1
+[0m13:24:53.879935 [info ] [MainThread]: Configuration:
+[0m13:24:53.880814 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:24:53.881561 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:24:53.882428 [info ] [MainThread]: Required dependencies:
+[0m13:24:53.883380 [debug] [MainThread]: Executing "git --help"
+[0m13:24:53.921430 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:24:53.923431 [debug] [MainThread]: STDERR: "b''"
+[0m13:24:53.924841 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:24:53.925845 [info ] [MainThread]: Connection:
+[0m13:24:53.926706 [info ] [MainThread]:   host: localhost
+[0m13:24:53.927469 [info ] [MainThread]:   port: 8080
+[0m13:24:53.928235 [info ] [MainThread]:   user: trino
+[0m13:24:53.929362 [info ] [MainThread]:   database: iceberg
+[0m13:24:53.930918 [info ] [MainThread]:   schema: tpch_mart
+[0m13:24:53.932548 [info ] [MainThread]:   cert: None
+[0m13:24:53.933801 [info ] [MainThread]:   prepared_statements_enabled: True
+[0m13:24:53.938078 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m13:24:54.203172 [debug] [MainThread]: Acquiring new trino connection 'debug'
+[0m13:24:54.329273 [debug] [MainThread]: Using trino connection "debug"
+[0m13:24:54.330119 [debug] [MainThread]: On debug: select 1 as id
+[0m13:24:54.330865 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:24:54.331537 [warn ] [MainThread]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:24:54.332836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '5fd3841a-2e6c-4ba1-86b7-cd2ccdd8b97b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b1ece00>]}
+[0m13:24:54.428645 [debug] [MainThread]: SQL status: SUCCESS in 0.098 seconds
+[0m13:24:54.430749 [debug] [MainThread]: On debug: Close
+[0m13:24:54.431707 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:24:54.432572 [info ] [MainThread]: [32mAll checks passed![0m
+[0m13:24:54.446405 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.3352236, "process_in_blocks": "0", "process_kernel_time": 0.854833, "process_mem_max_rss": "129208320", "process_out_blocks": "0", "process_user_time": 6.524753}
+[0m13:24:54.447858 [debug] [MainThread]: Command `dbt debug` succeeded at 13:24:54.447566 after 1.34 seconds
+[0m13:24:54.448727 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:24:54.450007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ec5f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5bbad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad80710>]}
+[0m13:24:54.451190 [debug] [MainThread]: Flushing usage events
+[0m13:24:55.699559 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:25:36.913600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052b3fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c2a750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c2baa0>]}
+
+
+============================== 13:25:36.923612 | 2f0c4d51-6d65-4e9a-a0e3-9a2a887b9244 ==============================
+[0m13:25:36.923612 [info ] [MainThread]: Running with dbt=1.10.1
+[0m13:25:36.925028 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '.', 'log_path': '/Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --profiles-dir .', 'send_anonymous_usage_stats': 'True'}
+[0m13:25:37.509870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2f0c4d51-6d65-4e9a-a0e3-9a2a887b9244', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059ce960>]}
+[0m13:25:37.739948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2f0c4d51-6d65-4e9a-a0e3-9a2a887b9244', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105845730>]}
+[0m13:25:37.741362 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m13:25:38.047021 [debug] [MainThread]: checksum: 2c026f85d539c10c69b093157526ce33d0bf5533489eafb07fe5172434ec7740, vars: {}, profile: , target: , version: 1.10.1
+[0m13:25:38.049203 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:25:38.050139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2f0c4d51-6d65-4e9a-a0e3-9a2a887b9244', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ae6ff0>]}
+[0m13:25:41.493365 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.tpch_dbt.mart_revenue_summary' (models/mart/mart_revenue_summary.sql) depends on a node named 'staging_orders' which was not found
+[0m13:25:41.500860 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 4.791614, "process_in_blocks": "0", "process_kernel_time": 0.732647, "process_mem_max_rss": "138702848", "process_out_blocks": "0", "process_user_time": 9.78629}
+[0m13:25:41.502022 [debug] [MainThread]: Command `dbt run` failed at 13:25:41.501773 after 4.79 seconds
+[0m13:25:41.502937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10538f9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f36240>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057454f0>]}
+[0m13:25:41.503781 [debug] [MainThread]: Flushing usage events
+[0m13:25:42.625365 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:27:24.246382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109135ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10988b590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10988b1d0>]}
+
+
+============================== 13:27:24.256916 | a3db433d-c6c1-4220-a2f2-b1ca0e104c9f ==============================
+[0m13:27:24.256916 [info ] [MainThread]: Running with dbt=1.10.1
+[0m13:27:24.258358 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/logs', 'fail_fast': 'False', 'profiles_dir': '.', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --profiles-dir .', 'send_anonymous_usage_stats': 'True'}
+[0m13:27:24.914745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098c1580>]}
+[0m13:27:25.132136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109826060>]}
+[0m13:27:25.133689 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m13:27:25.537474 [debug] [MainThread]: checksum: 2c026f85d539c10c69b093157526ce33d0bf5533489eafb07fe5172434ec7740, vars: {}, profile: , target: , version: 1.10.1
+[0m13:27:25.539392 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:27:25.540355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a60e30>]}
+[0m13:27:29.316279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a05a600>]}
+[0m13:27:29.508134 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m13:27:29.537294 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m13:27:29.562028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a1982c0>]}
+[0m13:27:29.563123 [info ] [MainThread]: Found 3 models, 5 data tests, 2 sources, 456 macros
+[0m13:27:29.564005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a23a8a0>]}
+[0m13:27:29.568320 [info ] [MainThread]: 
+[0m13:27:29.569187 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:27:29.570180 [info ] [MainThread]: 
+[0m13:27:29.571348 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m13:27:29.582169 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m13:27:29.588951 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m13:27:29.733050 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m13:27:29.734426 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m13:27:29.735235 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m13:27:29.736098 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m13:27:29.737117 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:27:29.737993 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:27:29.738862 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:27:29.739760 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:27:29.740821 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a05b350>]}
+[0m13:27:29.741690 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a64ddf0>]}
+[0m13:27:30.000867 [debug] [ThreadPool]: SQL status: SUCCESS in 0.264 seconds
+[0m13:27:30.004467 [debug] [ThreadPool]: On list_iceberg: Close
+[0m13:27:30.013213 [debug] [ThreadPool]: SQL status: SUCCESS in 0.275 seconds
+[0m13:27:30.016004 [debug] [ThreadPool]: On list_iceberg: Close
+[0m13:27:30.017745 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now create_iceberg_tpch_mart_staging)
+[0m13:27:30.018882 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now create_iceberg_tpch_mart_mart)
+[0m13:27:30.020345 [debug] [ThreadPool]: Creating schema "database: "iceberg"
+schema: "tpch_mart_staging"
+"
+[0m13:27:30.021509 [debug] [ThreadPool]: Creating schema "database: "iceberg"
+schema: "tpch_mart_mart"
+"
+[0m13:27:30.031796 [debug] [ThreadPool]: Using trino connection "create_iceberg_tpch_mart_staging"
+[0m13:27:30.036125 [debug] [ThreadPool]: Using trino connection "create_iceberg_tpch_mart_mart"
+[0m13:27:30.036990 [debug] [ThreadPool]: On create_iceberg_tpch_mart_staging: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "create_iceberg_tpch_mart_staging"} */
+create schema if not exists "iceberg"."tpch_mart_staging"
+[0m13:27:30.037865 [debug] [ThreadPool]: On create_iceberg_tpch_mart_mart: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "create_iceberg_tpch_mart_mart"} */
+create schema if not exists "iceberg"."tpch_mart_mart"
+[0m13:27:30.038845 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:27:30.039606 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:27:30.237891 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.199 seconds
+[0m13:27:30.240485 [debug] [ThreadPool]: On create_iceberg_tpch_mart_staging: COMMIT
+[0m13:27:30.241709 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.202 seconds
+[0m13:27:30.242490 [debug] [ThreadPool]: On create_iceberg_tpch_mart_staging: Close
+[0m13:27:30.244630 [debug] [ThreadPool]: On create_iceberg_tpch_mart_mart: COMMIT
+[0m13:27:30.246842 [debug] [ThreadPool]: On create_iceberg_tpch_mart_mart: Close
+[0m13:27:30.249937 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_iceberg_tpch_mart_mart, now list_iceberg_tpch_mart_staging)
+[0m13:27:30.251164 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_iceberg_tpch_mart_staging, now list_iceberg_tpch_mart_mart)
+[0m13:27:30.302907 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_staging"
+[0m13:27:30.306425 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_mart"
+[0m13:27:30.307279 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_staging"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_staging') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_staging'
+[0m13:27:30.308184 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_mart"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_mart') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_mart'
+[0m13:27:30.308997 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:27:30.309740 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:27:31.190853 [debug] [ThreadPool]: SQL status: SUCCESS in 0.881 seconds
+[0m13:27:31.197124 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: ROLLBACK
+[0m13:27:31.198060 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: Close
+[0m13:27:31.209485 [debug] [ThreadPool]: SQL status: SUCCESS in 0.900 seconds
+[0m13:27:31.213287 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: ROLLBACK
+[0m13:27:31.214698 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: Close
+[0m13:27:31.216289 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a1d81a0>]}
+[0m13:27:31.217729 [debug] [MainThread]: On master: COMMIT
+[0m13:27:31.224795 [debug] [Thread-1 (]: Began running node model.tpch_dbt.stg_lineitem
+[0m13:27:31.225849 [debug] [Thread-2 (]: Began running node model.tpch_dbt.stg_orders
+[0m13:27:31.226961 [info ] [Thread-1 (]: 1 of 3 START sql view model tpch_mart_staging.stg_lineitem ..................... [RUN]
+[0m13:27:31.228814 [info ] [Thread-2 (]: 2 of 3 START sql view model tpch_mart_staging.stg_orders ....................... [RUN]
+[0m13:27:31.230311 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_staging, now model.tpch_dbt.stg_lineitem)
+[0m13:27:31.231429 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_mart, now model.tpch_dbt.stg_orders)
+[0m13:27:31.232366 [debug] [Thread-1 (]: Began compiling node model.tpch_dbt.stg_lineitem
+[0m13:27:31.233417 [debug] [Thread-2 (]: Began compiling node model.tpch_dbt.stg_orders
+[0m13:27:31.239743 [debug] [Thread-1 (]: Writing injected SQL for node "model.tpch_dbt.stg_lineitem"
+[0m13:27:31.249010 [debug] [Thread-2 (]: Writing injected SQL for node "model.tpch_dbt.stg_orders"
+[0m13:27:31.251536 [debug] [Thread-1 (]: Began executing node model.tpch_dbt.stg_lineitem
+[0m13:27:31.252519 [debug] [Thread-2 (]: Began executing node model.tpch_dbt.stg_orders
+[0m13:27:31.342088 [debug] [Thread-1 (]: Writing runtime sql for node "model.tpch_dbt.stg_lineitem"
+[0m13:27:31.343247 [debug] [Thread-2 (]: Writing runtime sql for node "model.tpch_dbt.stg_orders"
+[0m13:27:31.350504 [debug] [Thread-2 (]: Using trino connection "model.tpch_dbt.stg_orders"
+[0m13:27:31.356687 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.stg_lineitem"
+[0m13:27:31.358579 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_orders"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_orders"
+  security definer
+  as
+    with source_orders as (
+    select * from "iceberg"."tpch"."orders"
+),
+
+renamed_cleaned as (
+    select
+        o_orderkey as order_id,
+        o_custkey as customer_id,
+        o_orderstatus as order_status,
+        o_totalprice as total_price,
+        o_orderdate as order_date,
+        o_orderpriority as order_priority,
+        o_clerk as clerk_name,
+        o_shippriority as ship_priority,
+        o_comment as comment
+    from source_orders
+)
+
+select * from renamed_cleaned
+  
+[0m13:27:31.359935 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_lineitem"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_lineitem"
+  security definer
+  as
+    with source_lineitem as (
+    select * from "iceberg"."tpch"."lineitem"
+),
+
+renamed_cleaned as (
+    select
+        l_orderkey as order_id,
+        l_partkey as part_id,
+        l_suppkey as supplier_id,
+        l_linenumber as line_number,
+        l_quantity as quantity,
+        l_extendedprice as extended_price,
+        l_discount as discount,
+        l_tax as tax_rate,
+        l_returnflag as return_flag,
+        l_linestatus as line_status,
+        l_shipdate as ship_date,
+        l_commitdate as commit_date,
+        l_receiptdate as receipt_date,
+        l_shipinstruct as ship_instruction,
+        l_shipmode as ship_mode,
+        l_comment as comment
+    from source_lineitem
+)
+
+select * from renamed_cleaned
+  
+[0m13:27:31.361702 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:27:31.363198 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:27:31.954082 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.591 seconds
+[0m13:27:31.993720 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: ROLLBACK
+[0m13:27:31.995056 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: Close
+[0m13:27:31.999675 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099f7e30>]}
+[0m13:27:32.001185 [info ] [Thread-1 (]: 1 of 3 OK created sql view model tpch_mart_staging.stg_lineitem ................ [[32mCREATE VIEW[0m in 0.77s]
+[0m13:27:32.003601 [debug] [Thread-1 (]: Finished running node model.tpch_dbt.stg_lineitem
+[0m13:27:32.004867 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.643 seconds
+[0m13:27:32.009162 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: ROLLBACK
+[0m13:27:32.010422 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: Close
+[0m13:27:32.012610 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a656660>]}
+[0m13:27:32.014178 [info ] [Thread-2 (]: 2 of 3 OK created sql view model tpch_mart_staging.stg_orders .................. [[32mCREATE VIEW[0m in 0.78s]
+[0m13:27:32.015644 [debug] [Thread-2 (]: Finished running node model.tpch_dbt.stg_orders
+[0m13:27:32.017258 [debug] [Thread-4 (]: Began running node model.tpch_dbt.mart_revenue_summary
+[0m13:27:32.018426 [info ] [Thread-4 (]: 3 of 3 START sql table model tpch_mart_mart.mart_revenue_summary ............... [RUN]
+[0m13:27:32.019786 [debug] [Thread-4 (]: Acquiring new trino connection 'model.tpch_dbt.mart_revenue_summary'
+[0m13:27:32.020833 [debug] [Thread-4 (]: Began compiling node model.tpch_dbt.mart_revenue_summary
+[0m13:27:32.028935 [debug] [Thread-4 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary"
+[0m13:27:32.030797 [debug] [Thread-4 (]: Began executing node model.tpch_dbt.mart_revenue_summary
+[0m13:27:32.166419 [debug] [Thread-4 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary"
+[0m13:27:32.173346 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary"
+[0m13:27:32.174380 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary"
+      
+      
+    as (
+      with orders as {
+    select * from "iceberg"."tpch_mart_staging"."stg_orders"
+},
+
+lineitem as {
+    select * from "iceberg"."tpch_mart_staging"."stg_lineitem"
+},
+
+select 
+    o.order_priority,
+    lineitem.line_status,
+    count(distinct o.order_id) as total_orders,
+
+    -- jinja macro to calculate discounted price
+    sum(
+    lineitem.extended_price * (1 - lineitem.discount)
+) as total_net_revenue
+
+from lineitem
+join orders o on lineitem.order_id = o.order_id
+group by 1, 2
+order by total_net_revenue desc
+    )
+[0m13:27:32.175332 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:27:32.222548 [debug] [Thread-4 (]: Trino adapter: Trino query id: 20260523_052038_00099_d4mw9
+[0m13:27:32.224312 [debug] [Thread-4 (]: Trino adapter: Trino error: TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 10:22: mismatched input '{'. Expecting: '('", query_id=20260523_052038_00099_d4mw9)
+[0m13:27:32.225721 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: ROLLBACK
+[0m13:27:32.226760 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: Close
+[0m13:27:32.248548 [debug] [Thread-4 (]: Database Error in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)
+  TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 10:22: mismatched input '{'. Expecting: '('", query_id=20260523_052038_00099_d4mw9)
+  compiled code at target/run/tpch_dbt/models/mart/mart_revenue_summary.sql
+[0m13:27:32.249776 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a3db433d-c6c1-4220-a2f2-b1ca0e104c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11083bc20>]}
+[0m13:27:32.251175 [error] [Thread-4 (]: 3 of 3 ERROR creating sql table model tpch_mart_mart.mart_revenue_summary ...... [[31mERROR[0m in 0.23s]
+[0m13:27:32.252578 [debug] [Thread-4 (]: Finished running node model.tpch_dbt.mart_revenue_summary
+[0m13:27:32.253838 [debug] [Thread-7 (]: Marking all children of 'model.tpch_dbt.mart_revenue_summary' to be skipped because of status 'error'.  Reason: Database Error in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)
+  TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 10:22: mismatched input '{'. Expecting: '('", query_id=20260523_052038_00099_d4mw9)
+  compiled code at target/run/tpch_dbt/models/mart/mart_revenue_summary.sql.
+[0m13:27:32.258221 [debug] [MainThread]: On master: COMMIT
+[0m13:27:32.259286 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:27:32.260111 [debug] [MainThread]: Connection 'model.tpch_dbt.stg_lineitem' was properly closed.
+[0m13:27:32.261564 [debug] [MainThread]: Connection 'model.tpch_dbt.stg_orders' was properly closed.
+[0m13:27:32.262577 [debug] [MainThread]: Connection 'model.tpch_dbt.mart_revenue_summary' was properly closed.
+[0m13:27:32.263642 [info ] [MainThread]: 
+[0m13:27:32.264768 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 2.69 seconds (2.69s).
+[0m13:27:32.267153 [debug] [MainThread]: Command end result
+[0m13:27:32.323750 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m13:27:32.327987 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m13:27:32.343798 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/run_results.json
+[0m13:27:32.345522 [info ] [MainThread]: 
+[0m13:27:32.346923 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:27:32.347814 [info ] [MainThread]: 
+[0m13:27:32.348801 [error] [MainThread]: [31mFailure in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)[0m
+[0m13:27:32.349770 [error] [MainThread]:   Database Error in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)
+  TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 10:22: mismatched input '{'. Expecting: '('", query_id=20260523_052038_00099_d4mw9)
+  compiled code at target/run/tpch_dbt/models/mart/mart_revenue_summary.sql
+[0m13:27:32.350571 [info ] [MainThread]: 
+[0m13:27:32.351483 [info ] [MainThread]:   compiled code at target/compiled/tpch_dbt/models/mart/mart_revenue_summary.sql
+[0m13:27:32.352311 [info ] [MainThread]: 
+[0m13:27:32.353464 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=3
+[0m13:27:32.363864 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 8.334387, "process_in_blocks": "0", "process_kernel_time": 1.182457, "process_mem_max_rss": "146042880", "process_out_blocks": "0", "process_user_time": 11.924951}
+[0m13:27:32.366332 [debug] [MainThread]: Command `dbt run` failed at 13:27:32.365851 after 8.34 seconds
+[0m13:27:32.367912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10988b740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a1f94c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109826000>]}
+[0m13:27:32.368921 [debug] [MainThread]: Flushing usage events
+[0m13:27:33.876681 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:27:44.038882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b01fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c9f0b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c9ecf0>]}
+
+
+============================== 13:27:44.049468 | ce8f3c64-6dbd-44f4-8411-c1dc545bf919 ==============================
+[0m13:27:44.049468 [info ] [MainThread]: Running with dbt=1.10.1
+[0m13:27:44.050914 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --profiles-dir .', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:27:44.612639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ce8f3c64-6dbd-44f4-8411-c1dc545bf919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105edbec0>]}
+[0m13:27:44.858092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ce8f3c64-6dbd-44f4-8411-c1dc545bf919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105dcf380>]}
+[0m13:27:44.859492 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m13:27:45.133505 [debug] [MainThread]: checksum: 2c026f85d539c10c69b093157526ce33d0bf5533489eafb07fe5172434ec7740, vars: {}, profile: , target: , version: 1.10.1
+[0m13:27:45.469531 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:27:45.470384 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:27:45.581240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ce8f3c64-6dbd-44f4-8411-c1dc545bf919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10606f8f0>]}
+[0m13:27:45.773588 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m13:27:45.797253 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m13:27:45.820219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ce8f3c64-6dbd-44f4-8411-c1dc545bf919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063f00b0>]}
+[0m13:27:45.821276 [info ] [MainThread]: Found 3 models, 5 data tests, 2 sources, 456 macros
+[0m13:27:45.822290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ce8f3c64-6dbd-44f4-8411-c1dc545bf919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063e75f0>]}
+[0m13:27:45.826909 [info ] [MainThread]: 
+[0m13:27:45.828285 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:27:45.829429 [info ] [MainThread]: 
+[0m13:27:45.830830 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m13:27:45.841928 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m13:27:45.848090 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m13:27:45.993746 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m13:27:45.994643 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m13:27:45.995945 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m13:27:45.996700 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:27:45.997485 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m13:27:45.998223 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:27:45.999219 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:27:46.000189 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'ce8f3c64-6dbd-44f4-8411-c1dc545bf919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064a6420>]}
+[0m13:27:46.000917 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:27:46.002762 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'ce8f3c64-6dbd-44f4-8411-c1dc545bf919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064a61b0>]}
+[0m13:27:46.165442 [debug] [ThreadPool]: SQL status: SUCCESS in 0.166 seconds
+[0m13:27:46.171704 [debug] [ThreadPool]: On list_iceberg: Close
+[0m13:27:46.182596 [debug] [ThreadPool]: SQL status: SUCCESS in 0.186 seconds
+[0m13:27:46.185261 [debug] [ThreadPool]: On list_iceberg: Close
+[0m13:27:46.188148 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now list_iceberg_tpch_mart_staging)
+[0m13:27:46.195964 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now list_iceberg_tpch_mart_mart)
+[0m13:27:46.233696 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_mart"
+[0m13:27:46.237211 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_staging"
+[0m13:27:46.238057 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_mart"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_mart') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_mart'
+[0m13:27:46.239034 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_staging"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_staging') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_staging'
+[0m13:27:46.239839 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:27:46.240686 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:27:46.519574 [debug] [ThreadPool]: SQL status: SUCCESS in 0.280 seconds
+[0m13:27:46.522738 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: ROLLBACK
+[0m13:27:46.523724 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: Close
+[0m13:27:46.567812 [debug] [ThreadPool]: SQL status: SUCCESS in 0.327 seconds
+[0m13:27:46.570488 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: ROLLBACK
+[0m13:27:46.571308 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: Close
+[0m13:27:46.573868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ce8f3c64-6dbd-44f4-8411-c1dc545bf919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062e4440>]}
+[0m13:27:46.574919 [debug] [MainThread]: On master: COMMIT
+[0m13:27:46.579793 [debug] [Thread-1 (]: Began running node model.tpch_dbt.stg_lineitem
+[0m13:27:46.580981 [debug] [Thread-2 (]: Began running node model.tpch_dbt.stg_orders
+[0m13:27:46.582126 [info ] [Thread-1 (]: 1 of 3 START sql view model tpch_mart_staging.stg_lineitem ..................... [RUN]
+[0m13:27:46.583436 [info ] [Thread-2 (]: 2 of 3 START sql view model tpch_mart_staging.stg_orders ....................... [RUN]
+[0m13:27:46.584523 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_staging, now model.tpch_dbt.stg_lineitem)
+[0m13:27:46.585462 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_mart, now model.tpch_dbt.stg_orders)
+[0m13:27:46.586358 [debug] [Thread-1 (]: Began compiling node model.tpch_dbt.stg_lineitem
+[0m13:27:46.587212 [debug] [Thread-2 (]: Began compiling node model.tpch_dbt.stg_orders
+[0m13:27:46.593644 [debug] [Thread-1 (]: Writing injected SQL for node "model.tpch_dbt.stg_lineitem"
+[0m13:27:46.599627 [debug] [Thread-2 (]: Writing injected SQL for node "model.tpch_dbt.stg_orders"
+[0m13:27:46.601629 [debug] [Thread-1 (]: Began executing node model.tpch_dbt.stg_lineitem
+[0m13:27:46.608038 [debug] [Thread-2 (]: Began executing node model.tpch_dbt.stg_orders
+[0m13:27:46.682110 [debug] [Thread-1 (]: Writing runtime sql for node "model.tpch_dbt.stg_lineitem"
+[0m13:27:46.687867 [debug] [Thread-2 (]: Writing runtime sql for node "model.tpch_dbt.stg_orders"
+[0m13:27:46.700315 [debug] [Thread-2 (]: Using trino connection "model.tpch_dbt.stg_orders"
+[0m13:27:46.695707 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.stg_lineitem"
+[0m13:27:46.701805 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_orders"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_orders"
+  security definer
+  as
+    with source_orders as (
+    select * from "iceberg"."tpch"."orders"
+),
+
+renamed_cleaned as (
+    select
+        o_orderkey as order_id,
+        o_custkey as customer_id,
+        o_orderstatus as order_status,
+        o_totalprice as total_price,
+        o_orderdate as order_date,
+        o_orderpriority as order_priority,
+        o_clerk as clerk_name,
+        o_shippriority as ship_priority,
+        o_comment as comment
+    from source_orders
+)
+
+select * from renamed_cleaned
+  
+[0m13:27:46.702859 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_lineitem"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_lineitem"
+  security definer
+  as
+    with source_lineitem as (
+    select * from "iceberg"."tpch"."lineitem"
+),
+
+renamed_cleaned as (
+    select
+        l_orderkey as order_id,
+        l_partkey as part_id,
+        l_suppkey as supplier_id,
+        l_linenumber as line_number,
+        l_quantity as quantity,
+        l_extendedprice as extended_price,
+        l_discount as discount,
+        l_tax as tax_rate,
+        l_returnflag as return_flag,
+        l_linestatus as line_status,
+        l_shipdate as ship_date,
+        l_commitdate as commit_date,
+        l_receiptdate as receipt_date,
+        l_shipinstruct as ship_instruction,
+        l_shipmode as ship_mode,
+        l_comment as comment
+    from source_lineitem
+)
+
+select * from renamed_cleaned
+  
+[0m13:27:46.703861 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:27:46.704784 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:27:47.074699 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.370 seconds
+[0m13:27:47.125558 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.420 seconds
+[0m13:27:47.151511 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: ROLLBACK
+[0m13:27:47.153931 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: ROLLBACK
+[0m13:27:47.155310 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: Close
+[0m13:27:47.156864 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: Close
+[0m13:27:47.165174 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ce8f3c64-6dbd-44f4-8411-c1dc545bf919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10683faa0>]}
+[0m13:27:47.166377 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ce8f3c64-6dbd-44f4-8411-c1dc545bf919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ff6150>]}
+[0m13:27:47.168212 [info ] [Thread-2 (]: 2 of 3 OK created sql view model tpch_mart_staging.stg_orders .................. [[32mCREATE VIEW[0m in 0.57s]
+[0m13:27:47.172240 [debug] [Thread-2 (]: Finished running node model.tpch_dbt.stg_orders
+[0m13:27:47.170513 [info ] [Thread-1 (]: 1 of 3 OK created sql view model tpch_mart_staging.stg_lineitem ................ [[32mCREATE VIEW[0m in 0.58s]
+[0m13:27:47.174623 [debug] [Thread-1 (]: Finished running node model.tpch_dbt.stg_lineitem
+[0m13:27:47.177281 [debug] [Thread-4 (]: Began running node model.tpch_dbt.mart_revenue_summary
+[0m13:27:47.179394 [info ] [Thread-4 (]: 3 of 3 START sql table model tpch_mart_mart.mart_revenue_summary ............... [RUN]
+[0m13:27:47.182005 [debug] [Thread-4 (]: Acquiring new trino connection 'model.tpch_dbt.mart_revenue_summary'
+[0m13:27:47.183631 [debug] [Thread-4 (]: Began compiling node model.tpch_dbt.mart_revenue_summary
+[0m13:27:47.196811 [debug] [Thread-4 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary"
+[0m13:27:47.199331 [debug] [Thread-4 (]: Began executing node model.tpch_dbt.mart_revenue_summary
+[0m13:27:47.353931 [debug] [Thread-4 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary"
+[0m13:27:47.367366 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary"
+[0m13:27:47.368779 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary"
+      
+      
+    as (
+      with orders as {
+    select * from "iceberg"."tpch_mart_staging"."stg_orders"
+},
+
+lineitem as {
+    select * from "iceberg"."tpch_mart_staging"."stg_lineitem"
+},
+
+select 
+    o.order_priority,
+    lineitem.line_status,
+    count(distinct o.order_id) as total_orders,
+
+    -- jinja macro to calculate discounted price
+    sum(
+    lineitem.extended_price * (1 - lineitem.discount)
+) as total_net_revenue
+
+from lineitem
+join orders o on lineitem.order_id = o.order_id
+group by 1, 2
+order by total_net_revenue desc
+    )
+[0m13:27:47.370422 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:27:47.399004 [debug] [Thread-4 (]: Trino adapter: Trino query id: 20260523_052053_00106_d4mw9
+[0m13:27:47.400815 [debug] [Thread-4 (]: Trino adapter: Trino error: TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 10:22: mismatched input '{'. Expecting: '('", query_id=20260523_052053_00106_d4mw9)
+[0m13:27:47.402304 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: ROLLBACK
+[0m13:27:47.404114 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: Close
+[0m13:27:47.423641 [debug] [Thread-4 (]: Database Error in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)
+  TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 10:22: mismatched input '{'. Expecting: '('", query_id=20260523_052053_00106_d4mw9)
+  compiled code at target/run/tpch_dbt/models/mart/mart_revenue_summary.sql
+[0m13:27:47.425349 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ce8f3c64-6dbd-44f4-8411-c1dc545bf919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068ef8c0>]}
+[0m13:27:47.427449 [error] [Thread-4 (]: 3 of 3 ERROR creating sql table model tpch_mart_mart.mart_revenue_summary ...... [[31mERROR[0m in 0.24s]
+[0m13:27:47.430334 [debug] [Thread-4 (]: Finished running node model.tpch_dbt.mart_revenue_summary
+[0m13:27:47.432801 [debug] [Thread-7 (]: Marking all children of 'model.tpch_dbt.mart_revenue_summary' to be skipped because of status 'error'.  Reason: Database Error in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)
+  TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 10:22: mismatched input '{'. Expecting: '('", query_id=20260523_052053_00106_d4mw9)
+  compiled code at target/run/tpch_dbt/models/mart/mart_revenue_summary.sql.
+[0m13:27:47.439490 [debug] [MainThread]: On master: COMMIT
+[0m13:27:47.441233 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:27:47.442860 [debug] [MainThread]: Connection 'model.tpch_dbt.stg_lineitem' was properly closed.
+[0m13:27:47.444500 [debug] [MainThread]: Connection 'model.tpch_dbt.stg_orders' was properly closed.
+[0m13:27:47.445714 [debug] [MainThread]: Connection 'model.tpch_dbt.mart_revenue_summary' was properly closed.
+[0m13:27:47.447340 [info ] [MainThread]: 
+[0m13:27:47.449596 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 1.62 seconds (1.62s).
+[0m13:27:47.454314 [debug] [MainThread]: Command end result
+[0m13:27:47.658846 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m13:27:47.664872 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m13:27:47.681873 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/run_results.json
+[0m13:27:47.682859 [info ] [MainThread]: 
+[0m13:27:47.683852 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:27:47.684818 [info ] [MainThread]: 
+[0m13:27:47.685831 [error] [MainThread]: [31mFailure in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)[0m
+[0m13:27:47.686833 [error] [MainThread]:   Database Error in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)
+  TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 10:22: mismatched input '{'. Expecting: '('", query_id=20260523_052053_00106_d4mw9)
+  compiled code at target/run/tpch_dbt/models/mart/mart_revenue_summary.sql
+[0m13:27:47.687681 [info ] [MainThread]: 
+[0m13:27:47.688693 [info ] [MainThread]:   compiled code at target/compiled/tpch_dbt/models/mart/mart_revenue_summary.sql
+[0m13:27:47.689552 [info ] [MainThread]: 
+[0m13:27:47.691138 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=3
+[0m13:27:47.700307 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.869556, "process_in_blocks": "0", "process_kernel_time": 0.954261, "process_mem_max_rss": "140374016", "process_out_blocks": "0", "process_user_time": 8.488278}
+[0m13:27:47.701485 [debug] [MainThread]: Command `dbt run` failed at 13:27:47.701230 after 3.87 seconds
+[0m13:27:47.702594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058563c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fd0f80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fd1010>]}
+[0m13:27:47.703531 [debug] [MainThread]: Flushing usage events
+[0m13:27:49.319252 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:28:09.262722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b41010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10803afc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10803a9c0>]}
+
+
+============================== 13:28:09.272439 | 904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44 ==============================
+[0m13:28:09.272439 [info ] [MainThread]: Running with dbt=1.10.1
+[0m13:28:09.274023 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/logs', 'version_check': 'True', 'profiles_dir': '.', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:28:09.829426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076c8b00>]}
+[0m13:28:10.041740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e9a300>]}
+[0m13:28:10.043154 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m13:28:10.320258 [debug] [MainThread]: checksum: 2c026f85d539c10c69b093157526ce33d0bf5533489eafb07fe5172434ec7740, vars: {}, profile: , target: , version: 1.10.1
+[0m13:28:10.620063 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:28:10.621689 [debug] [MainThread]: Partial parsing: updated file: tpch_dbt://models/mart/mart_revenue_summary.sql
+[0m13:28:12.172706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105773380>]}
+[0m13:28:12.358559 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m13:28:12.377695 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m13:28:12.396448 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108913320>]}
+[0m13:28:12.397518 [info ] [MainThread]: Found 3 models, 5 data tests, 2 sources, 456 macros
+[0m13:28:12.398492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088e0470>]}
+[0m13:28:12.402739 [info ] [MainThread]: 
+[0m13:28:12.403628 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:28:12.404843 [info ] [MainThread]: 
+[0m13:28:12.406144 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m13:28:12.417017 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m13:28:12.418406 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m13:28:12.572446 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m13:28:12.573377 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m13:28:12.574655 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m13:28:12.575797 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:28:12.577015 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m13:28:12.578153 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:28:12.579474 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:28:12.580855 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108bb52b0>]}
+[0m13:28:12.581671 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:28:12.583485 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108cdcf20>]}
+[0m13:28:12.721324 [debug] [ThreadPool]: SQL status: SUCCESS in 0.146 seconds
+[0m13:28:12.725488 [debug] [ThreadPool]: On list_iceberg: Close
+[0m13:28:12.746289 [debug] [ThreadPool]: SQL status: SUCCESS in 0.167 seconds
+[0m13:28:12.749115 [debug] [ThreadPool]: On list_iceberg: Close
+[0m13:28:12.752785 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now list_iceberg_tpch_mart_staging)
+[0m13:28:12.761312 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now list_iceberg_tpch_mart_mart)
+[0m13:28:12.813549 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_staging"
+[0m13:28:12.816668 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_mart"
+[0m13:28:12.817475 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_staging"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_staging') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_staging'
+[0m13:28:12.818406 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_mart"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_mart') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_mart'
+[0m13:28:12.819243 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:28:12.819976 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:28:13.119536 [debug] [ThreadPool]: SQL status: SUCCESS in 0.299 seconds
+[0m13:28:13.124607 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: ROLLBACK
+[0m13:28:13.126299 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: Close
+[0m13:28:13.156704 [debug] [ThreadPool]: SQL status: SUCCESS in 0.337 seconds
+[0m13:28:13.159559 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: ROLLBACK
+[0m13:28:13.160632 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: Close
+[0m13:28:13.163937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088e2a20>]}
+[0m13:28:13.165116 [debug] [MainThread]: On master: COMMIT
+[0m13:28:13.169574 [debug] [Thread-1 (]: Began running node model.tpch_dbt.stg_lineitem
+[0m13:28:13.170579 [debug] [Thread-2 (]: Began running node model.tpch_dbt.stg_orders
+[0m13:28:13.171838 [info ] [Thread-1 (]: 1 of 3 START sql view model tpch_mart_staging.stg_lineitem ..................... [RUN]
+[0m13:28:13.173188 [info ] [Thread-2 (]: 2 of 3 START sql view model tpch_mart_staging.stg_orders ....................... [RUN]
+[0m13:28:13.174314 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_staging, now model.tpch_dbt.stg_lineitem)
+[0m13:28:13.175273 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_mart, now model.tpch_dbt.stg_orders)
+[0m13:28:13.176168 [debug] [Thread-1 (]: Began compiling node model.tpch_dbt.stg_lineitem
+[0m13:28:13.177306 [debug] [Thread-2 (]: Began compiling node model.tpch_dbt.stg_orders
+[0m13:28:13.183808 [debug] [Thread-1 (]: Writing injected SQL for node "model.tpch_dbt.stg_lineitem"
+[0m13:28:13.189844 [debug] [Thread-2 (]: Writing injected SQL for node "model.tpch_dbt.stg_orders"
+[0m13:28:13.191889 [debug] [Thread-2 (]: Began executing node model.tpch_dbt.stg_orders
+[0m13:28:13.193364 [debug] [Thread-1 (]: Began executing node model.tpch_dbt.stg_lineitem
+[0m13:28:13.278731 [debug] [Thread-1 (]: Writing runtime sql for node "model.tpch_dbt.stg_lineitem"
+[0m13:28:13.281768 [debug] [Thread-2 (]: Writing runtime sql for node "model.tpch_dbt.stg_orders"
+[0m13:28:13.287968 [debug] [Thread-2 (]: Using trino connection "model.tpch_dbt.stg_orders"
+[0m13:28:13.294465 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_orders"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_orders"
+  security definer
+  as
+    with source_orders as (
+    select * from "iceberg"."tpch"."orders"
+),
+
+renamed_cleaned as (
+    select
+        o_orderkey as order_id,
+        o_custkey as customer_id,
+        o_orderstatus as order_status,
+        o_totalprice as total_price,
+        o_orderdate as order_date,
+        o_orderpriority as order_priority,
+        o_clerk as clerk_name,
+        o_shippriority as ship_priority,
+        o_comment as comment
+    from source_orders
+)
+
+select * from renamed_cleaned
+  
+[0m13:28:13.295828 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.stg_lineitem"
+[0m13:28:13.296720 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:28:13.298172 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_lineitem"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_lineitem"
+  security definer
+  as
+    with source_lineitem as (
+    select * from "iceberg"."tpch"."lineitem"
+),
+
+renamed_cleaned as (
+    select
+        l_orderkey as order_id,
+        l_partkey as part_id,
+        l_suppkey as supplier_id,
+        l_linenumber as line_number,
+        l_quantity as quantity,
+        l_extendedprice as extended_price,
+        l_discount as discount,
+        l_tax as tax_rate,
+        l_returnflag as return_flag,
+        l_linestatus as line_status,
+        l_shipdate as ship_date,
+        l_commitdate as commit_date,
+        l_receiptdate as receipt_date,
+        l_shipinstruct as ship_instruction,
+        l_shipmode as ship_mode,
+        l_comment as comment
+    from source_lineitem
+)
+
+select * from renamed_cleaned
+  
+[0m13:28:13.300912 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:28:13.602083 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.305 seconds
+[0m13:28:13.627551 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.327 seconds
+[0m13:28:13.666355 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: ROLLBACK
+[0m13:28:13.673071 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: ROLLBACK
+[0m13:28:13.673895 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: Close
+[0m13:28:13.674733 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: Close
+[0m13:28:13.680275 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107433ef0>]}
+[0m13:28:13.681189 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d99d30>]}
+[0m13:28:13.682517 [info ] [Thread-2 (]: 2 of 3 OK created sql view model tpch_mart_staging.stg_orders .................. [[32mCREATE VIEW[0m in 0.50s]
+[0m13:28:13.683868 [info ] [Thread-1 (]: 1 of 3 OK created sql view model tpch_mart_staging.stg_lineitem ................ [[32mCREATE VIEW[0m in 0.51s]
+[0m13:28:13.685316 [debug] [Thread-2 (]: Finished running node model.tpch_dbt.stg_orders
+[0m13:28:13.686573 [debug] [Thread-1 (]: Finished running node model.tpch_dbt.stg_lineitem
+[0m13:28:13.688235 [debug] [Thread-4 (]: Began running node model.tpch_dbt.mart_revenue_summary
+[0m13:28:13.689746 [info ] [Thread-4 (]: 3 of 3 START sql table model tpch_mart_mart.mart_revenue_summary ............... [RUN]
+[0m13:28:13.691175 [debug] [Thread-4 (]: Acquiring new trino connection 'model.tpch_dbt.mart_revenue_summary'
+[0m13:28:13.692294 [debug] [Thread-4 (]: Began compiling node model.tpch_dbt.mart_revenue_summary
+[0m13:28:13.699328 [debug] [Thread-4 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary"
+[0m13:28:13.703013 [debug] [Thread-4 (]: Began executing node model.tpch_dbt.mart_revenue_summary
+[0m13:28:13.817757 [debug] [Thread-4 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary"
+[0m13:28:13.822901 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary"
+[0m13:28:13.823884 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary"
+      
+      
+    as (
+      with orders as (
+    select * from "iceberg"."tpch_mart_staging"."stg_orders"
+),
+
+lineitem as (
+    select * from "iceberg"."tpch_mart_staging"."stg_lineitem"
+),
+
+select 
+    o.order_priority,
+    lineitem.line_status,
+    count(distinct o.order_id) as total_orders,
+
+    -- jinja macro to calculate discounted price
+    sum(
+    lineitem.extended_price * (1 - lineitem.discount)
+) as total_net_revenue
+
+from lineitem
+join orders o on lineitem.order_id = o.order_id
+group by 1, 2
+order by total_net_revenue desc
+    )
+[0m13:28:13.824827 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:28:13.850898 [debug] [Thread-4 (]: Trino adapter: Trino query id: 20260523_052119_00113_d4mw9
+[0m13:28:13.852471 [debug] [Thread-4 (]: Trino adapter: Trino error: TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 18:1: mismatched input 'select'. Expecting: <identifier>", query_id=20260523_052119_00113_d4mw9)
+[0m13:28:13.853885 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: ROLLBACK
+[0m13:28:13.855004 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: Close
+[0m13:28:13.866887 [debug] [Thread-4 (]: Database Error in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)
+  TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 18:1: mismatched input 'select'. Expecting: <identifier>", query_id=20260523_052119_00113_d4mw9)
+  compiled code at target/run/tpch_dbt/models/mart/mart_revenue_summary.sql
+[0m13:28:13.868016 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '904fa2bd-6bf0-4f4c-adeb-2d8cccff0b44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106510920>]}
+[0m13:28:13.869427 [error] [Thread-4 (]: 3 of 3 ERROR creating sql table model tpch_mart_mart.mart_revenue_summary ...... [[31mERROR[0m in 0.18s]
+[0m13:28:13.870870 [debug] [Thread-4 (]: Finished running node model.tpch_dbt.mart_revenue_summary
+[0m13:28:13.872255 [debug] [Thread-7 (]: Marking all children of 'model.tpch_dbt.mart_revenue_summary' to be skipped because of status 'error'.  Reason: Database Error in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)
+  TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 18:1: mismatched input 'select'. Expecting: <identifier>", query_id=20260523_052119_00113_d4mw9)
+  compiled code at target/run/tpch_dbt/models/mart/mart_revenue_summary.sql.
+[0m13:28:13.875873 [debug] [MainThread]: On master: COMMIT
+[0m13:28:13.877192 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:28:13.878240 [debug] [MainThread]: Connection 'model.tpch_dbt.stg_lineitem' was properly closed.
+[0m13:28:13.879076 [debug] [MainThread]: Connection 'model.tpch_dbt.stg_orders' was properly closed.
+[0m13:28:13.879794 [debug] [MainThread]: Connection 'model.tpch_dbt.mart_revenue_summary' was properly closed.
+[0m13:28:13.880665 [info ] [MainThread]: 
+[0m13:28:13.881624 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 1.47 seconds (1.47s).
+[0m13:28:13.883972 [debug] [MainThread]: Command end result
+[0m13:28:13.927511 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m13:28:13.931353 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m13:28:13.946178 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/run_results.json
+[0m13:28:13.947057 [info ] [MainThread]: 
+[0m13:28:13.947986 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:28:13.948828 [info ] [MainThread]: 
+[0m13:28:13.949922 [error] [MainThread]: [31mFailure in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)[0m
+[0m13:28:13.950940 [error] [MainThread]:   Database Error in model mart_revenue_summary (models/mart/mart_revenue_summary.sql)
+  TrinoUserError(type=USER_ERROR, name=SYNTAX_ERROR, message="line 18:1: mismatched input 'select'. Expecting: <identifier>", query_id=20260523_052119_00113_d4mw9)
+  compiled code at target/run/tpch_dbt/models/mart/mart_revenue_summary.sql
+[0m13:28:13.951760 [info ] [MainThread]: 
+[0m13:28:13.952868 [info ] [MainThread]:   compiled code at target/compiled/tpch_dbt/models/mart/mart_revenue_summary.sql
+[0m13:28:13.953770 [info ] [MainThread]: 
+[0m13:28:13.954965 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=3
+[0m13:28:13.961365 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 4.912892, "process_in_blocks": "0", "process_kernel_time": 0.988389, "process_mem_max_rss": "144588800", "process_out_blocks": "0", "process_user_time": 9.810889}
+[0m13:28:13.962564 [debug] [MainThread]: Command `dbt run` failed at 13:28:13.962313 after 4.91 seconds
+[0m13:28:13.963516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103142e70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10895c620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107469b80>]}
+[0m13:28:13.964394 [debug] [MainThread]: Flushing usage events
+[0m13:28:15.497126 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:28:53.259812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc29e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e73f590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e73f1d0>]}
+
+
+============================== 13:28:53.269426 | 04943f67-a2d7-479c-93fe-a7458dc393b9 ==============================
+[0m13:28:53.269426 [info ] [MainThread]: Running with dbt=1.10.1
+[0m13:28:53.270848 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '.', 'log_path': '/Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:28:53.830182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '04943f67-a2d7-479c-93fe-a7458dc393b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e9ea780>]}
+[0m13:28:54.040065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '04943f67-a2d7-479c-93fe-a7458dc393b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e59eba0>]}
+[0m13:28:54.041408 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m13:28:54.298002 [debug] [MainThread]: checksum: 2c026f85d539c10c69b093157526ce33d0bf5533489eafb07fe5172434ec7740, vars: {}, profile: , target: , version: 1.10.1
+[0m13:28:54.599578 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:28:54.601102 [debug] [MainThread]: Partial parsing: updated file: tpch_dbt://models/mart/mart_revenue_summary.sql
+[0m13:28:56.032561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '04943f67-a2d7-479c-93fe-a7458dc393b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f0eac90>]}
+[0m13:28:56.217892 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m13:28:56.237123 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m13:28:56.254893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '04943f67-a2d7-479c-93fe-a7458dc393b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f000a40>]}
+[0m13:28:56.256029 [info ] [MainThread]: Found 3 models, 5 data tests, 2 sources, 456 macros
+[0m13:28:56.256894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '04943f67-a2d7-479c-93fe-a7458dc393b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eff5e80>]}
+[0m13:28:56.261544 [info ] [MainThread]: 
+[0m13:28:56.262483 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:28:56.263503 [info ] [MainThread]: 
+[0m13:28:56.264850 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m13:28:56.275325 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m13:28:56.276778 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m13:28:56.419488 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m13:28:56.420812 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m13:28:56.421671 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m13:28:56.422592 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m13:28:56.423512 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:28:56.424762 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:28:56.425514 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:28:56.426396 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:28:56.427460 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '04943f67-a2d7-479c-93fe-a7458dc393b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e231880>]}
+[0m13:28:56.428330 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '04943f67-a2d7-479c-93fe-a7458dc393b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ee485f0>]}
+[0m13:28:56.552982 [debug] [ThreadPool]: SQL status: SUCCESS in 0.129 seconds
+[0m13:28:56.557126 [debug] [ThreadPool]: On list_iceberg: Close
+[0m13:28:56.575046 [debug] [ThreadPool]: SQL status: SUCCESS in 0.150 seconds
+[0m13:28:56.577822 [debug] [ThreadPool]: On list_iceberg: Close
+[0m13:28:56.581054 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now list_iceberg_tpch_mart_staging)
+[0m13:28:56.582296 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now list_iceberg_tpch_mart_mart)
+[0m13:28:56.634191 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_mart"
+[0m13:28:56.637699 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_staging"
+[0m13:28:56.638552 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_mart"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_mart') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_mart'
+[0m13:28:56.639474 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_staging"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_staging') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_staging'
+[0m13:28:56.640301 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:28:56.641035 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:28:56.898875 [debug] [ThreadPool]: SQL status: SUCCESS in 0.258 seconds
+[0m13:28:56.903026 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: ROLLBACK
+[0m13:28:56.904063 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: Close
+[0m13:28:56.934777 [debug] [ThreadPool]: SQL status: SUCCESS in 0.294 seconds
+[0m13:28:56.937506 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: ROLLBACK
+[0m13:28:56.938307 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: Close
+[0m13:28:56.940773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '04943f67-a2d7-479c-93fe-a7458dc393b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc2a6c0>]}
+[0m13:28:56.942081 [debug] [MainThread]: On master: COMMIT
+[0m13:28:56.947460 [debug] [Thread-1 (]: Began running node model.tpch_dbt.stg_lineitem
+[0m13:28:56.948481 [debug] [Thread-2 (]: Began running node model.tpch_dbt.stg_orders
+[0m13:28:56.949655 [info ] [Thread-1 (]: 1 of 3 START sql view model tpch_mart_staging.stg_lineitem ..................... [RUN]
+[0m13:28:56.950862 [info ] [Thread-2 (]: 2 of 3 START sql view model tpch_mart_staging.stg_orders ....................... [RUN]
+[0m13:28:56.951944 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_staging, now model.tpch_dbt.stg_lineitem)
+[0m13:28:56.952970 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_mart, now model.tpch_dbt.stg_orders)
+[0m13:28:56.953902 [debug] [Thread-1 (]: Began compiling node model.tpch_dbt.stg_lineitem
+[0m13:28:56.954831 [debug] [Thread-2 (]: Began compiling node model.tpch_dbt.stg_orders
+[0m13:28:56.961509 [debug] [Thread-1 (]: Writing injected SQL for node "model.tpch_dbt.stg_lineitem"
+[0m13:28:56.967293 [debug] [Thread-2 (]: Writing injected SQL for node "model.tpch_dbt.stg_orders"
+[0m13:28:56.968921 [debug] [Thread-1 (]: Began executing node model.tpch_dbt.stg_lineitem
+[0m13:28:56.969806 [debug] [Thread-2 (]: Began executing node model.tpch_dbt.stg_orders
+[0m13:28:57.055922 [debug] [Thread-1 (]: Writing runtime sql for node "model.tpch_dbt.stg_lineitem"
+[0m13:28:57.057223 [debug] [Thread-2 (]: Writing runtime sql for node "model.tpch_dbt.stg_orders"
+[0m13:28:57.068421 [debug] [Thread-2 (]: Using trino connection "model.tpch_dbt.stg_orders"
+[0m13:28:57.071070 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.stg_lineitem"
+[0m13:28:57.072009 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_orders"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_orders"
+  security definer
+  as
+    with source_orders as (
+    select * from "iceberg"."tpch"."orders"
+),
+
+renamed_cleaned as (
+    select
+        o_orderkey as order_id,
+        o_custkey as customer_id,
+        o_orderstatus as order_status,
+        o_totalprice as total_price,
+        o_orderdate as order_date,
+        o_orderpriority as order_priority,
+        o_clerk as clerk_name,
+        o_shippriority as ship_priority,
+        o_comment as comment
+    from source_orders
+)
+
+select * from renamed_cleaned
+  
+[0m13:28:57.073033 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_lineitem"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_lineitem"
+  security definer
+  as
+    with source_lineitem as (
+    select * from "iceberg"."tpch"."lineitem"
+),
+
+renamed_cleaned as (
+    select
+        l_orderkey as order_id,
+        l_partkey as part_id,
+        l_suppkey as supplier_id,
+        l_linenumber as line_number,
+        l_quantity as quantity,
+        l_extendedprice as extended_price,
+        l_discount as discount,
+        l_tax as tax_rate,
+        l_returnflag as return_flag,
+        l_linestatus as line_status,
+        l_shipdate as ship_date,
+        l_commitdate as commit_date,
+        l_receiptdate as receipt_date,
+        l_shipinstruct as ship_instruction,
+        l_shipmode as ship_mode,
+        l_comment as comment
+    from source_lineitem
+)
+
+select * from renamed_cleaned
+  
+[0m13:28:57.074021 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:28:57.074972 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:28:57.377763 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.303 seconds
+[0m13:28:57.425974 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.351 seconds
+[0m13:28:57.442978 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: ROLLBACK
+[0m13:28:57.449842 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: ROLLBACK
+[0m13:28:57.450784 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: Close
+[0m13:28:57.451925 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: Close
+[0m13:28:57.458179 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '04943f67-a2d7-479c-93fe-a7458dc393b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db9cec0>]}
+[0m13:28:57.459550 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '04943f67-a2d7-479c-93fe-a7458dc393b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f471520>]}
+[0m13:28:57.461693 [info ] [Thread-1 (]: 1 of 3 OK created sql view model tpch_mart_staging.stg_lineitem ................ [[32mCREATE VIEW[0m in 0.51s]
+[0m13:28:57.463157 [info ] [Thread-2 (]: 2 of 3 OK created sql view model tpch_mart_staging.stg_orders .................. [[32mCREATE VIEW[0m in 0.50s]
+[0m13:28:57.465078 [debug] [Thread-1 (]: Finished running node model.tpch_dbt.stg_lineitem
+[0m13:28:57.466486 [debug] [Thread-2 (]: Finished running node model.tpch_dbt.stg_orders
+[0m13:28:57.468167 [debug] [Thread-4 (]: Began running node model.tpch_dbt.mart_revenue_summary
+[0m13:28:57.469728 [info ] [Thread-4 (]: 3 of 3 START sql table model tpch_mart_mart.mart_revenue_summary ............... [RUN]
+[0m13:28:57.471370 [debug] [Thread-4 (]: Acquiring new trino connection 'model.tpch_dbt.mart_revenue_summary'
+[0m13:28:57.472310 [debug] [Thread-4 (]: Began compiling node model.tpch_dbt.mart_revenue_summary
+[0m13:28:57.480409 [debug] [Thread-4 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary"
+[0m13:28:57.482333 [debug] [Thread-4 (]: Began executing node model.tpch_dbt.mart_revenue_summary
+[0m13:28:57.605132 [debug] [Thread-4 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary"
+[0m13:28:57.610370 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary"
+[0m13:28:57.611540 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary"
+      
+      
+    as (
+      with orders as (
+    select * from "iceberg"."tpch_mart_staging"."stg_orders"
+),
+
+lineitem as (
+    select * from "iceberg"."tpch_mart_staging"."stg_lineitem"
+)
+
+select 
+    o.order_priority,
+    lineitem.line_status,
+    count(distinct o.order_id) as total_orders,
+
+    -- jinja macro to calculate discounted price
+    sum(
+    lineitem.extended_price * (1 - lineitem.discount)
+) as total_net_revenue
+
+from lineitem
+join orders o on lineitem.order_id = o.order_id
+group by 1, 2
+order by total_net_revenue desc
+    )
+[0m13:28:57.612855 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:29:37.515049 [debug] [Thread-4 (]: SQL status: CREATE TABLE (10 rows) in 39.903 seconds
+[0m13:29:37.519800 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: ROLLBACK
+[0m13:29:37.521067 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: Close
+[0m13:29:37.523010 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '04943f67-a2d7-479c-93fe-a7458dc393b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f43ca70>]}
+[0m13:29:37.525785 [info ] [Thread-4 (]: 3 of 3 OK created sql table model tpch_mart_mart.mart_revenue_summary .......... [[32mCREATE TABLE (10 rows)[0m in 40.05s]
+[0m13:29:37.527593 [debug] [Thread-4 (]: Finished running node model.tpch_dbt.mart_revenue_summary
+[0m13:29:37.530403 [debug] [MainThread]: On master: COMMIT
+[0m13:29:37.531435 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:29:37.532603 [debug] [MainThread]: Connection 'model.tpch_dbt.stg_lineitem' was properly closed.
+[0m13:29:37.533850 [debug] [MainThread]: Connection 'model.tpch_dbt.stg_orders' was properly closed.
+[0m13:29:37.535231 [debug] [MainThread]: Connection 'model.tpch_dbt.mart_revenue_summary' was properly closed.
+[0m13:29:37.536418 [info ] [MainThread]: 
+[0m13:29:37.537505 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 41.27 seconds (41.27s).
+[0m13:29:37.540204 [debug] [MainThread]: Command end result
+[0m13:29:37.595045 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m13:29:37.600118 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m13:29:37.619357 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/run_results.json
+[0m13:29:37.620432 [info ] [MainThread]: 
+[0m13:29:37.621948 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:29:37.623230 [info ] [MainThread]: 
+[0m13:29:37.625048 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m13:29:37.635153 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 44.58575, "process_in_blocks": "0", "process_kernel_time": 0.891196, "process_mem_max_rss": "144752640", "process_out_blocks": "0", "process_user_time": 9.751276}
+[0m13:29:37.636948 [debug] [MainThread]: Command `dbt run` succeeded at 13:29:37.636519 after 44.59 seconds
+[0m13:29:37.638049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e360c80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e6d6570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cbd2a50>]}
+[0m13:29:37.639076 [debug] [MainThread]: Flushing usage events
+[0m13:29:39.114581 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:29:43.199690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f1b1dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ebd07a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ebd06e0>]}
+
+
+============================== 13:29:43.210176 | e87259c0-5183-43e3-81f6-b7a8d33a0e8f ==============================
+[0m13:29:43.210176 [info ] [MainThread]: Running with dbt=1.10.1
+[0m13:29:43.211572 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '.', 'log_path': '/Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:29:43.824564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e87259c0-5183-43e3-81f6-b7a8d33a0e8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f34d7f0>]}
+[0m13:29:44.039805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e87259c0-5183-43e3-81f6-b7a8d33a0e8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f402c60>]}
+[0m13:29:44.041738 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m13:29:44.357665 [debug] [MainThread]: checksum: 2c026f85d539c10c69b093157526ce33d0bf5533489eafb07fe5172434ec7740, vars: {}, profile: , target: , version: 1.10.1
+[0m13:29:44.689170 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:29:44.690063 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:29:44.799411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e87259c0-5183-43e3-81f6-b7a8d33a0e8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ee5a960>]}
+[0m13:29:44.988645 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m13:29:45.015009 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m13:29:45.039053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e87259c0-5183-43e3-81f6-b7a8d33a0e8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fea9460>]}
+[0m13:29:45.040304 [info ] [MainThread]: Found 3 models, 5 data tests, 2 sources, 456 macros
+[0m13:29:45.041276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e87259c0-5183-43e3-81f6-b7a8d33a0e8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fb5ff20>]}
+[0m13:29:45.045848 [info ] [MainThread]: 
+[0m13:29:45.046793 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:29:45.047710 [info ] [MainThread]: 
+[0m13:29:45.048911 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m13:29:45.060025 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m13:29:45.061324 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m13:29:45.227478 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m13:29:45.228821 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m13:29:45.229593 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m13:29:45.230379 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m13:29:45.231151 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:29:45.231879 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:29:45.232586 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:29:45.233483 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:29:45.234577 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'e87259c0-5183-43e3-81f6-b7a8d33a0e8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110280650>]}
+[0m13:29:45.235627 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'e87259c0-5183-43e3-81f6-b7a8d33a0e8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1102818e0>]}
+[0m13:29:45.441148 [debug] [ThreadPool]: SQL status: SUCCESS in 0.210 seconds
+[0m13:29:45.448249 [debug] [ThreadPool]: On list_iceberg: Close
+[0m13:29:45.472665 [debug] [ThreadPool]: SQL status: SUCCESS in 0.241 seconds
+[0m13:29:45.477269 [debug] [ThreadPool]: On list_iceberg: Close
+[0m13:29:45.480764 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now list_iceberg_tpch_mart_mart)
+[0m13:29:45.488684 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now list_iceberg_tpch_mart_staging)
+[0m13:29:45.570450 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_staging"
+[0m13:29:45.569557 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_mart"
+[0m13:29:45.571738 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_staging"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_staging') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_staging'
+[0m13:29:45.572620 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_mart"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_mart') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_mart'
+[0m13:29:45.573502 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:29:45.574618 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:29:45.916056 [debug] [ThreadPool]: SQL status: SUCCESS in 0.341 seconds
+[0m13:29:45.919885 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: ROLLBACK
+[0m13:29:45.920996 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: Close
+[0m13:29:45.923159 [debug] [ThreadPool]: SQL status: SUCCESS in 0.349 seconds
+[0m13:29:45.926751 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: ROLLBACK
+[0m13:29:45.928223 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: Close
+[0m13:29:45.930800 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e87259c0-5183-43e3-81f6-b7a8d33a0e8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fb40860>]}
+[0m13:29:45.931980 [debug] [MainThread]: On master: COMMIT
+[0m13:29:45.938389 [debug] [Thread-1 (]: Began running node model.tpch_dbt.stg_lineitem
+[0m13:29:45.939505 [debug] [Thread-2 (]: Began running node model.tpch_dbt.stg_orders
+[0m13:29:45.941512 [info ] [Thread-1 (]: 1 of 3 START sql view model tpch_mart_staging.stg_lineitem ..................... [RUN]
+[0m13:29:45.944551 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_mart, now model.tpch_dbt.stg_lineitem)
+[0m13:29:45.943155 [info ] [Thread-2 (]: 2 of 3 START sql view model tpch_mart_staging.stg_orders ....................... [RUN]
+[0m13:29:45.945884 [debug] [Thread-1 (]: Began compiling node model.tpch_dbt.stg_lineitem
+[0m13:29:45.946950 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_staging, now model.tpch_dbt.stg_orders)
+[0m13:29:45.954814 [debug] [Thread-1 (]: Writing injected SQL for node "model.tpch_dbt.stg_lineitem"
+[0m13:29:45.955829 [debug] [Thread-2 (]: Began compiling node model.tpch_dbt.stg_orders
+[0m13:29:45.962847 [debug] [Thread-2 (]: Writing injected SQL for node "model.tpch_dbt.stg_orders"
+[0m13:29:45.964925 [debug] [Thread-1 (]: Began executing node model.tpch_dbt.stg_lineitem
+[0m13:29:45.977928 [debug] [Thread-2 (]: Began executing node model.tpch_dbt.stg_orders
+[0m13:29:46.075435 [debug] [Thread-2 (]: Writing runtime sql for node "model.tpch_dbt.stg_orders"
+[0m13:29:46.076624 [debug] [Thread-1 (]: Writing runtime sql for node "model.tpch_dbt.stg_lineitem"
+[0m13:29:46.082262 [debug] [Thread-2 (]: Using trino connection "model.tpch_dbt.stg_orders"
+[0m13:29:46.088708 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_orders"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_orders"
+  security definer
+  as
+    with source_orders as (
+    select * from "iceberg"."tpch"."orders"
+),
+
+renamed_cleaned as (
+    select
+        o_orderkey as order_id,
+        o_custkey as customer_id,
+        o_orderstatus as order_status,
+        o_totalprice as total_price,
+        o_orderdate as order_date,
+        o_orderpriority as order_priority,
+        o_clerk as clerk_name,
+        o_shippriority as ship_priority,
+        o_comment as comment
+    from source_orders
+)
+
+select * from renamed_cleaned
+  
+[0m13:29:46.091122 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.stg_lineitem"
+[0m13:29:46.092567 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:29:46.093852 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_lineitem"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_lineitem"
+  security definer
+  as
+    with source_lineitem as (
+    select * from "iceberg"."tpch"."lineitem"
+),
+
+renamed_cleaned as (
+    select
+        l_orderkey as order_id,
+        l_partkey as part_id,
+        l_suppkey as supplier_id,
+        l_linenumber as line_number,
+        l_quantity as quantity,
+        l_extendedprice as extended_price,
+        l_discount as discount,
+        l_tax as tax_rate,
+        l_returnflag as return_flag,
+        l_linestatus as line_status,
+        l_shipdate as ship_date,
+        l_commitdate as commit_date,
+        l_receiptdate as receipt_date,
+        l_shipinstruct as ship_instruction,
+        l_shipmode as ship_mode,
+        l_comment as comment
+    from source_lineitem
+)
+
+select * from renamed_cleaned
+  
+[0m13:29:46.096507 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:29:46.495885 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.403 seconds
+[0m13:29:46.536210 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.440 seconds
+[0m13:29:46.548927 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: ROLLBACK
+[0m13:29:46.548104 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: ROLLBACK
+[0m13:29:46.550605 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: Close
+[0m13:29:46.551615 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: Close
+[0m13:29:46.556997 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e87259c0-5183-43e3-81f6-b7a8d33a0e8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fa9e7b0>]}
+[0m13:29:46.558048 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e87259c0-5183-43e3-81f6-b7a8d33a0e8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fa9fd40>]}
+[0m13:29:46.559662 [info ] [Thread-2 (]: 2 of 3 OK created sql view model tpch_mart_staging.stg_orders .................. [[32mCREATE VIEW[0m in 0.61s]
+[0m13:29:46.561214 [info ] [Thread-1 (]: 1 of 3 OK created sql view model tpch_mart_staging.stg_lineitem ................ [[32mCREATE VIEW[0m in 0.61s]
+[0m13:29:46.562712 [debug] [Thread-2 (]: Finished running node model.tpch_dbt.stg_orders
+[0m13:29:46.563974 [debug] [Thread-1 (]: Finished running node model.tpch_dbt.stg_lineitem
+[0m13:29:46.565921 [debug] [Thread-4 (]: Began running node model.tpch_dbt.mart_revenue_summary
+[0m13:29:46.567248 [info ] [Thread-4 (]: 3 of 3 START sql table model tpch_mart_mart.mart_revenue_summary ............... [RUN]
+[0m13:29:46.568618 [debug] [Thread-4 (]: Acquiring new trino connection 'model.tpch_dbt.mart_revenue_summary'
+[0m13:29:46.569539 [debug] [Thread-4 (]: Began compiling node model.tpch_dbt.mart_revenue_summary
+[0m13:29:46.579050 [debug] [Thread-4 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary"
+[0m13:29:46.580693 [debug] [Thread-4 (]: Began executing node model.tpch_dbt.mart_revenue_summary
+[0m13:29:46.707752 [debug] [Thread-4 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary"
+[0m13:29:46.713961 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary"
+[0m13:29:46.715308 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary__dbt_tmp"
+      
+      
+    as (
+      with orders as (
+    select * from "iceberg"."tpch_mart_staging"."stg_orders"
+),
+
+lineitem as (
+    select * from "iceberg"."tpch_mart_staging"."stg_lineitem"
+)
+
+select 
+    o.order_priority,
+    lineitem.line_status,
+    count(distinct o.order_id) as total_orders,
+
+    -- jinja macro to calculate discounted price
+    sum(
+    lineitem.extended_price * (1 - lineitem.discount)
+) as total_net_revenue
+
+from lineitem
+join orders o on lineitem.order_id = o.order_id
+group by 1, 2
+order by total_net_revenue desc
+    )
+[0m13:29:46.716346 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:29:54.508493 [debug] [Thread-4 (]: SQL status: CREATE TABLE (10 rows) in 7.792 seconds
+[0m13:29:54.672597 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary"
+[0m13:29:54.673600 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary__dbt_backup"
+[0m13:29:54.928259 [debug] [Thread-4 (]: SQL status: RENAME TABLE in 0.254 seconds
+[0m13:29:54.934681 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary"
+[0m13:29:54.935572 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary__dbt_tmp" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary"
+[0m13:29:55.177098 [debug] [Thread-4 (]: SQL status: RENAME TABLE in 0.241 seconds
+[0m13:29:55.191821 [debug] [Thread-4 (]: Applying DROP to: "iceberg"."tpch_mart_mart"."mart_revenue_summary__dbt_backup"
+[0m13:29:55.196585 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary"
+[0m13:29:55.197487 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary"} */
+
+    drop table if exists "iceberg"."tpch_mart_mart"."mart_revenue_summary__dbt_backup"
+[0m13:29:55.464255 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.266 seconds
+[0m13:29:55.467926 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: ROLLBACK
+[0m13:29:55.468787 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary: Close
+[0m13:29:55.470040 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e87259c0-5183-43e3-81f6-b7a8d33a0e8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1103b8830>]}
+[0m13:29:55.471395 [info ] [Thread-4 (]: 3 of 3 OK created sql table model tpch_mart_mart.mart_revenue_summary .......... [[32mCREATE TABLE (10 rows)[0m in 8.90s]
+[0m13:29:55.472778 [debug] [Thread-4 (]: Finished running node model.tpch_dbt.mart_revenue_summary
+[0m13:29:55.475295 [debug] [MainThread]: On master: COMMIT
+[0m13:29:55.476232 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:29:55.476930 [debug] [MainThread]: Connection 'model.tpch_dbt.stg_lineitem' was properly closed.
+[0m13:29:55.477598 [debug] [MainThread]: Connection 'model.tpch_dbt.stg_orders' was properly closed.
+[0m13:29:55.478261 [debug] [MainThread]: Connection 'model.tpch_dbt.mart_revenue_summary' was properly closed.
+[0m13:29:55.479086 [info ] [MainThread]: 
+[0m13:29:55.480199 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 10.43 seconds (10.43s).
+[0m13:29:55.482672 [debug] [MainThread]: Command end result
+[0m13:29:55.527227 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m13:29:55.532122 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m13:29:55.628408 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mac/Desktop/BigData-Kelompok5/tpch-dbt/target/run_results.json
+[0m13:29:55.629216 [info ] [MainThread]: 
+[0m13:29:55.630099 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:29:55.630875 [info ] [MainThread]: 
+[0m13:29:55.631895 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m13:29:55.648403 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 12.660642, "process_in_blocks": "0", "process_kernel_time": 1.198036, "process_mem_max_rss": "139374592", "process_out_blocks": "0", "process_user_time": 10.271859}
+[0m13:29:55.651019 [debug] [MainThread]: Command `dbt run` succeeded at 13:29:55.650761 after 12.66 seconds
+[0m13:29:55.653119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f1b1dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f34deb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe68500>]}
+[0m13:29:55.654099 [debug] [MainThread]: Flushing usage events
+[0m13:29:57.029025 [debug] [MainThread]: An error was encountered while trying to flush usage events

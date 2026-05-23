@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: mart_revenue_summary
+    description: "Tabel Data Mart untuk meringkas total order dan pendapatan bersih berdasarkan tingkat prioritas pesanan."
+    columns:
+      - name: order_priority
+        description: "Tingkat prioritas pesanan."
+        tests:
+          - not_null
+
+      - name: line_status
+        description: "Status dari setiap baris pesanan."
+        tests:
+          - not_null
+
+      - name: total_net_revenue
+        description: "Total pendapatan bersih yang dihitung dengan mengalikan harga dengan kuantitas dan kemudian mengurangi diskon."

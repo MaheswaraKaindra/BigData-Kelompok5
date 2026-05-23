@@ -5,6 +5,9 @@ from typing import Tuple
 import time
 
 
+MINIO_ENDPOINT = "localhost:9005"
+
+
 def run_command(cmd: list, description: str = "") -> Tuple[int, str, str]:
     """Execute shell command and capture output."""
     if description:
@@ -22,6 +25,11 @@ def run_command(cmd: list, description: str = "") -> Tuple[int, str, str]:
         return -1, "", "Command timed out (5 minutes)"
     except Exception as e:
         return -1, "", str(e)
+
+
+def python_cmd() -> str:
+    """Return current Python executable to keep subprocess env consistent."""
+    return sys.executable or "python"
 
 
 def check_docker_service(service_name: str) -> bool:
@@ -91,7 +99,7 @@ def upload_csv_files() -> bool:
     print("STEP 1: UPLOAD CSV FILES TO MINIO")
     print("="*70)
     
-    returncode, stdout, stderr = run_command(["python", str(upload_script)])
+    returncode, stdout, stderr = run_command([python_cmd(), str(upload_script)])
     
     print(stdout)
     
@@ -117,7 +125,7 @@ def cleanup_iceberg_locations() -> bool:
     print("="*70)
 
     client = Minio(
-        endpoint="localhost:9000",
+        endpoint=MINIO_ENDPOINT,
         access_key="admin",
         secret_key="admin123",
         secure=False,

@@ -10,8 +10,12 @@ echo "TPC-H Data Generation (1GB - Scale Factor 1)"
 echo "=========================================="
 echo ""
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DBGEN_DIR="$PROJECT_ROOT/tpch-dbgen"
+# prefer nested tpch-dbgen-master if present
+if [ -d "$PROJECT_ROOT/tpch-dbgen/tpch-dbgen-master" ]; then
+    DBGEN_DIR="$PROJECT_ROOT/tpch-dbgen/tpch-dbgen-master"
+fi
 OUTPUT_DIR="$PROJECT_ROOT/tpch-data"
 
 # Check if dbgen exists and is executable
@@ -40,18 +44,21 @@ if [ ! -f "$DBGEN_DIR/dbgen" ]; then
     cd - > /dev/null
 fi
 
+# ensure output directory exists
+mkdir -p "$OUTPUT_DIR"
 echo ""
 echo "Generating 1GB TPC-H data (Scale Factor = 1)..."
 echo "  Output directory: $OUTPUT_DIR"
 echo ""
 
-# Generate data with scale factor 1 (1GB)
-cd "$OUTPUT_DIR"
 
-# Run dbgen with -s 1 (1 GB)
-# -s: scale factor (size in GB)
-# Pipe through gzip for disk space efficiency
-"$DBGEN_DIR/dbgen" -s 1 -f
+# Run dbgen from its source directory so it can find distribution files
+cd "$DBGEN_DIR"
+DSS_PATH="$DBGEN_DIR" ./dbgen -s 1 -f
+
+# Move generated files to output directory
+mkdir -p "$OUTPUT_DIR"
+mv -v *.tbl "$OUTPUT_DIR"/ 2>/dev/null || true
 
 if [ $? -eq 0 ]; then
     echo ""

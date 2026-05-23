@@ -11,151 +11,205 @@ Prerequisite
 - Docker Desktop / Docker Engine `docker compose`
 - Python 3.9+, `pip`
 - Build tools: `make`, `gcc` (untuk compile dbgen)
-- Port yang dipakai (localhost): MinIO 9000/9001, Trino 8080, Hive Metastore 9083
+- dbt Core + dbt Trino (diinstall lewat `requirements.txt`)
+- Port yang dipakai (localhost): MinIO 9005/9001, Trino 8080, Hive Metastore 9083
 
 Dataset Generation (TPC-H 1GB)
 
-Jika belum ada file `.tbl` di folder `tpch-data/`, generate terlebih dahulu:
+BigData-Kelompok5 — Panduan Langkah-demi-Langkah
+
+Ringkasan singkat
+- Tujuan: Ambil data TPC-H (dari `tpch-dbgen`), konversi ke CSV, unggah ke MinIO,
+  buat tabel Iceberg via Trino, lalu jalankan transformasi/validasi dengan `dbt`.
+
+Prasyarat (sebelum mulai)
+- macOS / Linux / Windows WSL dengan Docker dan build tools
+- Python 3.11 atau 3.12 (direkomendasikan)
+- `make`, `gcc` (untuk meng-compile `dbgen`)
+- Docker Desktop / Docker Engine (mendukung `docker compose`)
+- Port yang dipakai pada localhost: MinIO 9005/9001, Trino 8080, Hive Metastore 9083
+
+Dependensi Python
+- Semua dependency Python termasuk `dbt-core` dan `dbt-trino` tercantum di
+  `requirements.txt` pada root project. Kami merekomendasikan membuat virtualenv
+  per-project.
+
+Langkah Terurut (ikuti persis)
+
+1) Siapkan virtualenv dan instal dependency
+
+	Dari root project:
+
+	```bash
+	python3.12 -m venv .venv    # ganti python3.12 jika perlu
+	source .venv/bin/activate
+	python -m pip install --upgrade pip
+	pip install -r requirements.txt
+	```
+
+	Validasi interpreter aktif (harus menunjuk ke `.venv`):
+
+	```bash
+	which python
+	python -m pip -V
+	```
+
+	Jika masih mengarah ke Anaconda (`/opt/anaconda3/...`), jalankan `conda deactivate`
+	sampai prompt `(base)` hilang, atau gunakan interpreter venv secara eksplisit
+	(`./.venv/bin/python`).
+
+	Cek `dbt` tersedia:
+
+	```bash
+	dbt --version
+	# atau jika belum aktif: ./.venv/bin/dbt --version
+	```
+
+	Catatan: jika terminal Anda menggunakan Anaconda base, lebih aman gunakan
+	`python3.12 -m venv .venv` seperti di atas agar package versi proyek tidak
+	bercampur dengan base env.
+
+2) Build dan generate data TPC-H (`dbgen`)
+
+	Jika belum pernah build `dbgen`, jalankan:
+
+	```bash
+	./scripts/gendb.sh
+	# skrip ini memanggil make di tpch-dbgen, lalu menjalankan dbgen -s 1 -f
+	```
+
+	Alternatif (manual):
+
+	```bash
+	cd tpch-dbgen/tpch-dbgen-master
+	make
+	DSS_PATH=../../data ./dbgen -s 1 -f
+	```
+
+	Hasil: file `.tbl` akan tertulis ke folder `tpch-data/`.
+
+3) Konversi `.tbl` → CSV
+
+	Dari root project jalankan:
+
+	```bash
+	python code/convert_tbl_to_csv.py
+	ls -lh data/csv
+	```
+
+	Script akan membaca `tpch-data/*.tbl` dan menulis CSV ke `data/csv/`.
+
+4) Jalankan layanan Docker (MinIO, Hive metastore, Trino)
+
+	```bash
+	docker compose up -d
+	docker compose ps
+	```
+
+	Verifikasi cepat:
+
+	```bash
+	curl -fsS http://localhost:9005/minio/health/live && echo 'MinIO OK'
+	curl -fsS http://localhost:8080/v1/info && echo 'Trino OK'
+	```
+
+5) Unggah CSV ke MinIO (bucket `lakehouse`)
+
+	```bash
+	python code/upload_csv_to_lakehouse.py
+	# fallback jika python masih bukan milik .venv:
+	./.venv/bin/python code/upload_csv_to_lakehouse.py
+	```
+
+	Default credential web console: `admin` / `admin123` (http://localhost:9001)
+
+6) Buat schema / external table + Iceberg (via Trino)
+
+	Opsi A (otomatis): jalankan orkestrator
+
+	```bash
+	python code/ingest_tpch_to_iceberg.py
+	# fallback jika python masih bukan milik .venv:
+	./.venv/bin/python code/ingest_tpch_to_iceberg.py
+	```
+
+	Opsi B (manual): masuk ke Trino dan eksekusi SQL
+
+	```bash
+	# masuk ke CLI Trino dalam container
+	docker exec -it trino trino
+
+	# lalu di CLI Trino
+	SOURCE /path/to/code/tpch_iceberg_schema.sql;  # atau copy-paste SQL
+	```
+
+7) Siapkan dan jalankan `dbt` (transformasi & validasi)
+
+	`tpch-dbt/` berisi `dbt_project.yml` dan `profiles.yml`. Jalankan dari folder
+	tersebut agar `--profiles-dir .` menunjuk ke `profiles.yml` yang benar.
+
+	```bash
+	cd tpch-dbt
+	dbt debug --profiles-dir .
+	dbt run --profiles-dir .
+	```
+
+	Jika menjalankan dari root project, gunakan:
+
+	```bash
+	dbt run --project-dir tpch-dbt --profiles-dir tpch-dbt
+	```
+
+	Troubleshoot singkat:
+- Jika `dbt` tidak ditemukan, aktifkan virtualenv: `source .venv/bin/activate` atau
+  jalankan langsung `./.venv/bin/dbt`.
+- Jika `dbt debug` gagal koneksi, periksa `tpch-dbt/profiles.yml` (host/port/user).
+
+8) Verifikasi hasil
+
+	Contoh query di Trino untuk verifikasi:
+
+	```sql
+	SHOW TABLES FROM iceberg.tpch;
+	SELECT COUNT(*) FROM iceberg.tpch.customer;
+	SELECT * FROM iceberg.tpch.customer LIMIT 10;
+	```
+
+9) Cleanup / Reset
+
+	Untuk menghentikan layanan dan menghapus data yang di-generate:
+
+	```bash
+	./cleanup.sh
+	```
+
+	Perintah ini akan menghentikan container, menghapus `data/csv/*`, `tpch-data/*.tbl`
+	dan cache Python.
+
+Ringkasan (Quick Commands)
 
 ```bash
-# Build dan jalankan dbgen (menghasilkan 1GB data)
-./scripts/gendb.sh
-```
-
-Script akan:
-- Build `dbgen` (kompile dari source di `tpch-dbgen/`)
-- Generate file `.tbl` dengan scale factor 1 (1GB)
-- Output ke folder `tpch-data/`
-
-Jika ingin custom size, edit `scripts/gendb.sh` dan ubah parameter `-s 1` menjadi scale factor yang diinginkan (contoh: `-s 10` untuk 10GB).
-
-Langkah-langkah (jalankan dari root project)
-1) Instal dependensi Python (virtualenv)
-
-```bash
-python3 -m venv .venv
+# 1) Setup environment
+python3.12 -m venv .venv
 source .venv/bin/activate
-
-pip install --upgrade pip
 pip install -r requirements.txt
-```
 
-2) Jalankan Docker (MinIO, Hive metastore, Trino)
+# 2) Build & generate data
+./scripts/gendb.sh
 
-```bash
-docker compose up -d
-```
-
-3) Pastikan MinIO & Trino jalan (tunggu beberapa detik saat pertama kali)
-
-```bash
-docker compose ps
-curl -fsS http://localhost:9000/minio/health/live && echo 'MinIO OK'
-curl -fsS http://localhost:8080/v1/info && echo 'Trino OK'
-```
-
-4) Generate dan Konversi file TPC-H `.tbl` → CSV
-- Jalankan command berikut di root dan tunggu hingga ada 8 file tbl yang terbentuk di folder data
-```bash
-cd tpch-dbgen && make && DSS_PATH=../data ./dbgen -s 1 -f
-```
-
-- Jalankan Script: [code/convert_tbl_to_csv.py](code/convert_tbl_to_csv.py)
-- Input: folder `tpch-data/` (file `*.tbl`) — script akan mencari `tpch-data/*.tbl`
-- Output: `data/csv/*.csv`
-
-```bash
+# 3) Convert & upload
 python code/convert_tbl_to_csv.py
-# Periksa hasil:
-ls -lh data/csv
-```
-
-Note: script juga akan mengekstrak file `*.gz` di `tpch-data/` jika ada.
-
-5) Upload CSV ke MinIO (lakehouse)
-
-- Script: [code/upload_csv_to_lakehouse.py](code/upload_csv_to_lakehouse.py)
-- Default MinIO credentials: `admin` / `admin123`
-- MinIO Console: http://localhost:9001 (login: admin / admin123)
-
-```bash
-python code/upload_csv_to_lakehouse.py
-# Verifikasi bucket dan file di MinIO web console
-```
-
-6) (Opsional) Jalankan seluruh pipeline otomatis: buat schema + ingest + verifikasi
-
-- Script orchestrator Data Generation & Ingestion: [code/ingest_tpch_to_iceberg.py](code/ingest_tpch_to_iceberg.py)
-
-```bash
-python code/ingest_tpch_to_iceberg.py
-```
-
-Script ini otomatis menjalankan:
-- Upload CSV (memanggil `upload_csv_to_lakehouse.py`)
-- Koneksi ke Trino dan mengeksekusi SQL di [code/tpch_iceberg_schema.sql](code/tpch_iceberg_schema.sql)
-- Validasi row counts pada Iceberg tables
-
-7) Verifikasi hasil dan contoh query (via Trino)
-
-```bash
-# Masuk ke CLI Trino dalam container
-docker exec -it trino trino
-
-# Contoh SQL
-SHOW TABLES FROM iceberg.tpch;
-SELECT COUNT(*) FROM iceberg.tpch.customer;
-SELECT * FROM iceberg.tpch.customer LIMIT 10;
-```
-
-8) Utility tambahan
-- `code/csv_to_parquet_customer.py` dapat membaca `s3://lakehouse/csv/customer.csv` dari MinIO
-	dan upload Parquet ke bucket `iceberg` (sebagai contoh konversi ke Parquet), tapi di sini nggak dimasukkan ke pipeline.
-
-
-Perintah penting (Rangkuman)
-
-```bash
-# Start services
-docker compose up -d
-
-# Convert .tbl -> .csv
-python code/convert_tbl_to_csv.py
-
-# Upload CSV -> MinIO
 python code/upload_csv_to_lakehouse.py
 
-# Full ingestion (upload + create schemas + ingest + validate)
+# 4) Start services
+docker compose up -d
+
+# 5) Ingest (schema + data)
 python code/ingest_tpch_to_iceberg.py
 
-# Trino CLI
-docker exec -it trino trino
+# 6) Run dbt
+cd tpch-dbt && dbt run --profiles-dir .
 ```
 
-File utama & peran singkat
-- [code/convert_tbl_to_csv.py](code/convert_tbl_to_csv.py) — konversi `.tbl` → `data/csv/`
-- [code/upload_csv_to_lakehouse.py](code/upload_csv_to_lakehouse.py) — unggah CSV ke MinIO `lakehouse`
-- [code/ingest_tpch_to_iceberg.py](code/ingest_tpch_to_iceberg.py) — orkestrator end-to-end
-- [code/tpch_iceberg_schema.sql](code/tpch_iceberg_schema.sql) — SQL untuk membuat external + iceberg tables
-- [code/csv_to_parquet_customer.py](code/csv_to_parquet_customer.py) — contoh konversi CSV → Parquet dan upload
-
-Cleanup & Reset
-
-Untuk menghapus semua generated data dan reset project:
-
-```bash
-./cleanup.sh
-```
-
-Script akan:
-- Stop dan remove Docker containers
-- Hapus `data/csv/*` (generated CSV files)
-- Hapus `tpch-data/*.tbl` (extracted TPC-H files)
-- Hapus Python cache
-
-**Catatan:** File `.tbl.gz` (compressed source) akan dipertahankan.
-
-Setelah cleanup, Anda bisa:
-- Generate ulang data: `./scripts/gendb.sh`
-- Atau extract dari `.tbl.gz` yang ada jika file sudah diekstrak sebelumnya
+Jika kamu mau, saya bisa: (a) menjalankan langkah verifikasi `dbt debug` sekarang di mesin kamu, atau (b) menambahkan contoh konfigurasi `profiles.yml` yang lebih lengkap untuk Trino. Pilih salah satu.
 

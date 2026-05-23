@@ -1,9 +1,9 @@
 with orders as (
-    select * from {{ ref('stg_orders') }}
+    select * from "iceberg"."tpch_mart_staging"."stg_orders"
 ),
 
 lineitem as (
-    select * from {{ ref('stg_lineitem') }}
+    select * from "iceberg"."tpch_mart_staging"."stg_lineitem"
 )
 
 select 
@@ -12,7 +12,9 @@ select
     count(distinct o.order_id) as total_orders,
 
     -- jinja macro to calculate discounted price
-    sum({{ calculate_discounted_price('lineitem.extended_price', 'lineitem.discount') }}) as total_net_revenue
+    sum(
+    lineitem.extended_price * (1 - lineitem.discount)
+) as total_net_revenue
 
 from lineitem
 join orders o on lineitem.order_id = o.order_id
