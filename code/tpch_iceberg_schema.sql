@@ -268,24 +268,157 @@ FROM hive.tpch_external.customer;
 
 INSERT INTO iceberg.tpch.lineitem
 SELECT
-    CAST(l_orderkey AS integer),
-    CAST(l_partkey AS integer),
-    CAST(l_suppkey AS integer),
-    CAST(l_linenumber AS integer),
-    CAST(l_quantity AS decimal(10,2)),
-    CAST(l_extendedprice AS decimal(15,2)),
-    CAST(l_discount AS decimal(10,2)),
-    CAST(l_tax AS decimal(10,2)),
-    l_returnflag,
-    l_linestatus,
-    CAST(l_shipdate AS date),
-    CAST(l_commitdate AS date),
-    CAST(l_receiptdate AS date),
-    l_shipinstruct,
-    l_shipmode,
-    l_comment
+        CAST(l_orderkey AS integer),
+        CAST(l_partkey AS integer),
+        CAST(l_suppkey AS integer),
+        CAST(l_linenumber AS integer),
+        CAST(l_quantity AS decimal(10,2)),
+        CAST(l_extendedprice AS decimal(15,2)),
+        CAST(l_discount AS decimal(10,2)),
+        CAST(l_tax AS decimal(10,2)),
+        l_returnflag,
+        l_linestatus,
+        CAST(l_shipdate AS date),
+        CAST(l_commitdate AS date),
+        CAST(l_receiptdate AS date),
+        l_shipinstruct,
+        l_shipmode,
+        l_comment
 FROM hive.tpch_external.lineitem
-ORDER BY CAST(l_shipdate AS date);
+WHERE CAST(l_shipdate AS date) >= DATE '1992-01-01'
+    AND CAST(l_shipdate AS date) <  DATE '1993-01-01';
+
+INSERT INTO iceberg.tpch.lineitem
+SELECT
+        CAST(l_orderkey AS integer),
+        CAST(l_partkey AS integer),
+        CAST(l_suppkey AS integer),
+        CAST(l_linenumber AS integer),
+        CAST(l_quantity AS decimal(10,2)),
+        CAST(l_extendedprice AS decimal(15,2)),
+        CAST(l_discount AS decimal(10,2)),
+        CAST(l_tax AS decimal(10,2)),
+        l_returnflag,
+        l_linestatus,
+        CAST(l_shipdate AS date),
+        CAST(l_commitdate AS date),
+        CAST(l_receiptdate AS date),
+        l_shipinstruct,
+        l_shipmode,
+        l_comment
+FROM hive.tpch_external.lineitem
+WHERE CAST(l_shipdate AS date) >= DATE '1993-01-01'
+    AND CAST(l_shipdate AS date) <  DATE '1994-01-01';
+
+INSERT INTO iceberg.tpch.lineitem
+SELECT
+        CAST(l_orderkey AS integer),
+        CAST(l_partkey AS integer),
+        CAST(l_suppkey AS integer),
+        CAST(l_linenumber AS integer),
+        CAST(l_quantity AS decimal(10,2)),
+        CAST(l_extendedprice AS decimal(15,2)),
+        CAST(l_discount AS decimal(10,2)),
+        CAST(l_tax AS decimal(10,2)),
+        l_returnflag,
+        l_linestatus,
+        CAST(l_shipdate AS date),
+        CAST(l_commitdate AS date),
+        CAST(l_receiptdate AS date),
+        l_shipinstruct,
+        l_shipmode,
+        l_comment
+FROM hive.tpch_external.lineitem
+WHERE CAST(l_shipdate AS date) >= DATE '1994-01-01'
+    AND CAST(l_shipdate AS date) <  DATE '1995-01-01';
+
+INSERT INTO iceberg.tpch.lineitem
+SELECT
+        CAST(l_orderkey AS integer),
+        CAST(l_partkey AS integer),
+        CAST(l_suppkey AS integer),
+        CAST(l_linenumber AS integer),
+        CAST(l_quantity AS decimal(10,2)),
+        CAST(l_extendedprice AS decimal(15,2)),
+        CAST(l_discount AS decimal(10,2)),
+        CAST(l_tax AS decimal(10,2)),
+        l_returnflag,
+        l_linestatus,
+        CAST(l_shipdate AS date),
+        CAST(l_commitdate AS date),
+        CAST(l_receiptdate AS date),
+        l_shipinstruct,
+        l_shipmode,
+        l_comment
+FROM hive.tpch_external.lineitem
+WHERE CAST(l_shipdate AS date) >= DATE '1995-01-01'
+    AND CAST(l_shipdate AS date) <  DATE '1996-01-01';
+
+INSERT INTO iceberg.tpch.lineitem
+SELECT
+        CAST(l_orderkey AS integer),
+        CAST(l_partkey AS integer),
+        CAST(l_suppkey AS integer),
+        CAST(l_linenumber AS integer),
+        CAST(l_quantity AS decimal(10,2)),
+        CAST(l_extendedprice AS decimal(15,2)),
+        CAST(l_discount AS decimal(10,2)),
+        CAST(l_tax AS decimal(10,2)),
+        l_returnflag,
+        l_linestatus,
+        CAST(l_shipdate AS date),
+        CAST(l_commitdate AS date),
+        CAST(l_receiptdate AS date),
+        l_shipinstruct,
+        l_shipmode,
+        l_comment
+FROM hive.tpch_external.lineitem
+WHERE CAST(l_shipdate AS date) >= DATE '1996-01-01'
+    AND CAST(l_shipdate AS date) <  DATE '1997-01-01';
+
+INSERT INTO iceberg.tpch.lineitem
+SELECT
+        CAST(l_orderkey AS integer),
+        CAST(l_partkey AS integer),
+        CAST(l_suppkey AS integer),
+        CAST(l_linenumber AS integer),
+        CAST(l_quantity AS decimal(10,2)),
+        CAST(l_extendedprice AS decimal(15,2)),
+        CAST(l_discount AS decimal(10,2)),
+        CAST(l_tax AS decimal(10,2)),
+        l_returnflag,
+        l_linestatus,
+        CAST(l_shipdate AS date),
+        CAST(l_commitdate AS date),
+        CAST(l_receiptdate AS date),
+        l_shipinstruct,
+        l_shipmode,
+        l_comment
+FROM hive.tpch_external.lineitem
+WHERE CAST(l_shipdate AS date) >= DATE '1997-01-01'
+    AND CAST(l_shipdate AS date) <  DATE '1998-01-01';
+
+INSERT INTO iceberg.tpch.lineitem
+SELECT
+        CAST(l_orderkey AS integer),
+        CAST(l_partkey AS integer),
+        CAST(l_suppkey AS integer),
+        CAST(l_linenumber AS integer),
+        CAST(l_quantity AS decimal(10,2)),
+        CAST(l_extendedprice AS decimal(15,2)),
+        CAST(l_discount AS decimal(10,2)),
+        CAST(l_tax AS decimal(10,2)),
+        l_returnflag,
+        l_linestatus,
+        CAST(l_shipdate AS date),
+        CAST(l_commitdate AS date),
+        CAST(l_receiptdate AS date),
+        l_shipinstruct,
+        l_shipmode,
+        l_comment
+FROM hive.tpch_external.lineitem
+WHERE CAST(l_shipdate AS date) >= DATE '1998-01-01'
+    AND CAST(l_shipdate AS date) <  DATE '1999-01-01';
 
 INSERT INTO iceberg.tpch.nation
 SELECT
@@ -297,17 +430,108 @@ FROM hive.tpch_external.nation;
 
 INSERT INTO iceberg.tpch.orders
 SELECT
-    CAST(o_orderkey AS integer),
-    CAST(o_custkey AS integer),
-    o_orderstatus,
-    CAST(o_totalprice AS decimal(15,2)),
-    CAST(o_orderdate AS date),
-    o_orderpriority,
-    o_clerk,
-    CAST(o_shippriority AS integer),
-    o_comment
+        CAST(o_orderkey AS integer),
+        CAST(o_custkey AS integer),
+        o_orderstatus,
+        CAST(o_totalprice AS decimal(15,2)),
+        CAST(o_orderdate AS date),
+        o_orderpriority,
+        o_clerk,
+        CAST(o_shippriority AS integer),
+        o_comment
 FROM hive.tpch_external.orders
-ORDER BY CAST(o_orderdate AS date);
+WHERE CAST(o_orderdate AS date) >= DATE '1992-01-01'
+    AND CAST(o_orderdate AS date) <  DATE '1993-01-01';
+
+INSERT INTO iceberg.tpch.orders
+SELECT
+        CAST(o_orderkey AS integer),
+        CAST(o_custkey AS integer),
+        o_orderstatus,
+        CAST(o_totalprice AS decimal(15,2)),
+        CAST(o_orderdate AS date),
+        o_orderpriority,
+        o_clerk,
+        CAST(o_shippriority AS integer),
+        o_comment
+FROM hive.tpch_external.orders
+WHERE CAST(o_orderdate AS date) >= DATE '1993-01-01'
+    AND CAST(o_orderdate AS date) <  DATE '1994-01-01';
+
+INSERT INTO iceberg.tpch.orders
+SELECT
+        CAST(o_orderkey AS integer),
+        CAST(o_custkey AS integer),
+        o_orderstatus,
+        CAST(o_totalprice AS decimal(15,2)),
+        CAST(o_orderdate AS date),
+        o_orderpriority,
+        o_clerk,
+        CAST(o_shippriority AS integer),
+        o_comment
+FROM hive.tpch_external.orders
+WHERE CAST(o_orderdate AS date) >= DATE '1994-01-01'
+    AND CAST(o_orderdate AS date) <  DATE '1995-01-01';
+
+INSERT INTO iceberg.tpch.orders
+SELECT
+        CAST(o_orderkey AS integer),
+        CAST(o_custkey AS integer),
+        o_orderstatus,
+        CAST(o_totalprice AS decimal(15,2)),
+        CAST(o_orderdate AS date),
+        o_orderpriority,
+        o_clerk,
+        CAST(o_shippriority AS integer),
+        o_comment
+FROM hive.tpch_external.orders
+WHERE CAST(o_orderdate AS date) >= DATE '1995-01-01'
+    AND CAST(o_orderdate AS date) <  DATE '1996-01-01';
+
+INSERT INTO iceberg.tpch.orders
+SELECT
+        CAST(o_orderkey AS integer),
+        CAST(o_custkey AS integer),
+        o_orderstatus,
+        CAST(o_totalprice AS decimal(15,2)),
+        CAST(o_orderdate AS date),
+        o_orderpriority,
+        o_clerk,
+        CAST(o_shippriority AS integer),
+        o_comment
+FROM hive.tpch_external.orders
+WHERE CAST(o_orderdate AS date) >= DATE '1996-01-01'
+    AND CAST(o_orderdate AS date) <  DATE '1997-01-01';
+
+INSERT INTO iceberg.tpch.orders
+SELECT
+        CAST(o_orderkey AS integer),
+        CAST(o_custkey AS integer),
+        o_orderstatus,
+        CAST(o_totalprice AS decimal(15,2)),
+        CAST(o_orderdate AS date),
+        o_orderpriority,
+        o_clerk,
+        CAST(o_shippriority AS integer),
+        o_comment
+FROM hive.tpch_external.orders
+WHERE CAST(o_orderdate AS date) >= DATE '1997-01-01'
+    AND CAST(o_orderdate AS date) <  DATE '1998-01-01';
+
+INSERT INTO iceberg.tpch.orders
+SELECT
+        CAST(o_orderkey AS integer),
+        CAST(o_custkey AS integer),
+        o_orderstatus,
+        CAST(o_totalprice AS decimal(15,2)),
+        CAST(o_orderdate AS date),
+        o_orderpriority,
+        o_clerk,
+        CAST(o_shippriority AS integer),
+        o_comment
+FROM hive.tpch_external.orders
+WHERE CAST(o_orderdate AS date) >= DATE '1998-01-01'
+    AND CAST(o_orderdate AS date) <  DATE '1999-01-01';
 
 INSERT INTO iceberg.tpch.part
 SELECT

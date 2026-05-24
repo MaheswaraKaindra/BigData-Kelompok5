@@ -1,22 +1,27 @@
-with orders as (
-    select * from "iceberg"."tpch_mart_staging"."stg_orders"
-),
 
-lineitem as (
-    select * from "iceberg"."tpch_mart_staging"."stg_lineitem"
+
+-- Union yearly aggregates to keep each batch small and memory friendly
+with yearly as (
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1992"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1993"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1994"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1995"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1996"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1997"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1998"
 )
 
-select 
-    o.order_priority,
-    lineitem.line_status,
-    count(distinct o.order_id) as total_orders,
-
-    -- jinja macro to calculate discounted price
-    sum(
-    lineitem.extended_price * (1 - lineitem.discount)
-) as total_net_revenue
-
-from lineitem
-join orders o on lineitem.order_id = o.order_id
+select
+    order_priority,
+    line_status,
+    sum(total_orders) as total_orders,
+    sum(total_net_revenue) as total_net_revenue
+from yearly
 group by 1, 2
 order by total_net_revenue desc

@@ -110,8 +110,9 @@ def verify_uploads(client: Minio, bucket_name: str, prefix: str = "csv") -> None
         
         for obj in objects:
             if obj.object_name.endswith(".csv"):
-                size_mb = obj.size / (1024 * 1024)
-                print(f"  {obj.object_name:40} ({size_mb:7.2f} MB)")
+                # size_mb = obj.size / (1024 * 1024)
+                formatted_size = format_file_size(obj.size)
+                print(f"  {obj.object_name:40} ({formatted_size})")
                 count += 1
         
         if count == 0:

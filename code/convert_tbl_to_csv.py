@@ -4,7 +4,7 @@ import shutil
 import csv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-INPUT_DIR = BASE_DIR / 'tpch-data'
+INPUT_DIR = BASE_DIR / 'data'
 OUTPUT_DIR = BASE_DIR / 'data' / 'csv'
 
 
