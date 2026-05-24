@@ -3694,3 +3694,1994 @@ order by total_net_revenue desc
 [0m14:33:46.804147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c83136f1d20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c828afec2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c828afedf00>]}
 [0m14:33:46.804853 [debug] [MainThread]: Flushing usage events
 [0m14:33:48.928580 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:54:10.817055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c4fc1210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c3f8e9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c3f8ea10>]}
+
+
+============================== 14:54:10.819807 | e0dd7bbf-19c6-4412-b660-304093a302bd ==============================
+[0m14:54:10.819807 [info ] [MainThread]: Running with dbt=1.10.1
+[0m14:54:10.820591 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt test', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:54:11.676049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e0dd7bbf-19c6-4412-b660-304093a302bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c27a5270>]}
+[0m14:54:11.733440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e0dd7bbf-19c6-4412-b660-304093a302bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c3f8cdc0>]}
+[0m14:54:11.735415 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m14:54:11.812097 [debug] [MainThread]: checksum: 2c026f85d539c10c69b093157526ce33d0bf5533489eafb07fe5172434ec7740, vars: {}, profile: , target: , version: 1.10.1
+[0m14:54:12.011070 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:54:12.012193 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:54:12.045061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e0dd7bbf-19c6-4412-b660-304093a302bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c2229b40>]}
+[0m14:54:12.113001 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m14:54:12.122590 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m14:54:12.140461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e0dd7bbf-19c6-4412-b660-304093a302bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c2041db0>]}
+[0m14:54:12.143008 [info ] [MainThread]: Found 10 models, 5 data tests, 2 sources, 456 macros
+[0m14:54:12.143775 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e0dd7bbf-19c6-4412-b660-304093a302bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c2042cb0>]}
+[0m14:54:12.145408 [info ] [MainThread]: 
+[0m14:54:12.146064 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:54:12.146680 [info ] [MainThread]: 
+[0m14:54:12.147422 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m14:54:12.151166 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg_tpch_mart_mart'
+[0m14:54:12.151764 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg_tpch_mart_staging'
+[0m14:54:12.181386 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_mart"
+[0m14:54:12.183019 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_staging"
+[0m14:54:12.183805 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_mart"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_mart') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_mart'
+[0m14:54:12.184451 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_staging"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_staging') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_staging'
+[0m14:54:12.185139 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:54:12.186197 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:54:12.186895 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m14:54:12.187550 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m14:54:12.188285 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'e0dd7bbf-19c6-4412-b660-304093a302bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c207a0b0>]}
+[0m14:54:12.188865 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'e0dd7bbf-19c6-4412-b660-304093a302bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c0d19f00>]}
+[0m14:54:12.284648 [debug] [ThreadPool]: SQL status: SUCCESS in 0.099 seconds
+[0m14:54:12.287753 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: ROLLBACK
+[0m14:54:12.289939 [debug] [ThreadPool]: SQL status: SUCCESS in 0.104 seconds
+[0m14:54:12.290235 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: Close
+[0m14:54:12.291891 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: ROLLBACK
+[0m14:54:12.295098 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: Close
+[0m14:54:12.297094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e0dd7bbf-19c6-4412-b660-304093a302bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c2041810>]}
+[0m14:54:12.298377 [debug] [MainThread]: On master: COMMIT
+[0m14:54:12.302994 [debug] [Thread-1 (]: Began running node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m14:54:12.303401 [debug] [Thread-2 (]: Began running node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m14:54:12.303718 [debug] [Thread-3 (]: Began running node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m14:54:12.304096 [debug] [Thread-4 (]: Began running node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m14:54:12.305153 [info ] [Thread-1 (]: 1 of 5 START test not_null_mart_revenue_summary_line_status .................... [RUN]
+[0m14:54:12.306394 [info ] [Thread-2 (]: 2 of 5 START test not_null_mart_revenue_summary_order_priority ................. [RUN]
+[0m14:54:12.308035 [info ] [Thread-3 (]: 3 of 5 START test source_not_null_iceberg_tpch_lineitem_l_orderkey ............. [RUN]
+[0m14:54:12.309369 [info ] [Thread-4 (]: 4 of 5 START test source_not_null_iceberg_tpch_orders_o_orderkey ............... [RUN]
+[0m14:54:12.310872 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_staging, now test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434)
+[0m14:54:12.312583 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_mart, now test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874)
+[0m14:54:12.314214 [debug] [Thread-3 (]: Acquiring new trino connection 'test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45'
+[0m14:54:12.315999 [debug] [Thread-4 (]: Acquiring new trino connection 'test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65'
+[0m14:54:12.317752 [debug] [Thread-1 (]: Began compiling node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m14:54:12.319494 [debug] [Thread-2 (]: Began compiling node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m14:54:12.320872 [debug] [Thread-3 (]: Began compiling node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m14:54:12.322040 [debug] [Thread-4 (]: Began compiling node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m14:54:12.330724 [debug] [Thread-1 (]: Writing injected SQL for node "test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434"
+[0m14:54:12.335127 [debug] [Thread-2 (]: Writing injected SQL for node "test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874"
+[0m14:54:12.340091 [debug] [Thread-3 (]: Writing injected SQL for node "test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45"
+[0m14:54:12.344642 [debug] [Thread-4 (]: Writing injected SQL for node "test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65"
+[0m14:54:12.362870 [debug] [Thread-3 (]: Began executing node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m14:54:12.363442 [debug] [Thread-1 (]: Began executing node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m14:54:12.375068 [debug] [Thread-4 (]: Began executing node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m14:54:12.375549 [debug] [Thread-2 (]: Began executing node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m14:54:12.376988 [debug] [Thread-3 (]: Writing runtime sql for node "test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45"
+[0m14:54:12.381845 [debug] [Thread-1 (]: Writing runtime sql for node "test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434"
+[0m14:54:12.385346 [debug] [Thread-4 (]: Writing runtime sql for node "test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65"
+[0m14:54:12.389296 [debug] [Thread-2 (]: Writing runtime sql for node "test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874"
+[0m14:54:12.403473 [debug] [Thread-3 (]: Using trino connection "test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45"
+[0m14:54:12.404558 [debug] [Thread-1 (]: Using trino connection "test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434"
+[0m14:54:12.406455 [debug] [Thread-3 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select l_orderkey
+from "iceberg"."tpch"."lineitem"
+where l_orderkey is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:54:12.407764 [debug] [Thread-2 (]: Using trino connection "test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874"
+[0m14:54:12.408701 [debug] [Thread-4 (]: Using trino connection "test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65"
+[0m14:54:12.409486 [debug] [Thread-1 (]: On test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select line_status
+from "iceberg"."tpch_mart_mart"."mart_revenue_summary"
+where line_status is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:54:12.411100 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m14:54:12.412795 [debug] [Thread-2 (]: On test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_priority
+from "iceberg"."tpch_mart_mart"."mart_revenue_summary"
+where order_priority is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:54:12.414341 [debug] [Thread-4 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select o_orderkey
+from "iceberg"."tpch"."orders"
+where o_orderkey is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:54:12.415711 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:54:12.418776 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:54:12.420475 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m14:54:12.568493 [debug] [Thread-4 (]: SQL status: SUCCESS in 0.148 seconds
+[0m14:54:12.569470 [debug] [Thread-3 (]: SQL status: SUCCESS in 0.158 seconds
+[0m14:54:12.573872 [debug] [Thread-4 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65: ROLLBACK
+[0m14:54:12.576186 [debug] [Thread-3 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45: ROLLBACK
+[0m14:54:12.577504 [debug] [Thread-4 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65: Close
+[0m14:54:12.578923 [debug] [Thread-3 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45: Close
+[0m14:54:12.580779 [info ] [Thread-4 (]: 4 of 5 PASS source_not_null_iceberg_tpch_orders_o_orderkey ..................... [[32mPASS[0m in 0.26s]
+[0m14:54:12.581877 [info ] [Thread-3 (]: 3 of 5 PASS source_not_null_iceberg_tpch_lineitem_l_orderkey ................... [[32mPASS[0m in 0.27s]
+[0m14:54:12.583283 [debug] [Thread-4 (]: Finished running node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m14:54:12.585109 [debug] [Thread-3 (]: Finished running node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m14:54:12.586934 [debug] [Thread-4 (]: Began running node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m14:54:12.589057 [info ] [Thread-4 (]: 5 of 5 START test source_unique_iceberg_tpch_orders_o_orderkey ................. [RUN]
+[0m14:54:12.590217 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65, now test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1)
+[0m14:54:12.591372 [debug] [Thread-4 (]: Began compiling node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m14:54:12.597393 [debug] [Thread-4 (]: Writing injected SQL for node "test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1"
+[0m14:54:12.609533 [debug] [Thread-4 (]: Began executing node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m14:54:12.613342 [debug] [Thread-4 (]: Writing runtime sql for node "test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1"
+[0m14:54:12.626862 [debug] [Thread-4 (]: Using trino connection "test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1"
+[0m14:54:12.628498 [debug] [Thread-4 (]: On test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    o_orderkey as unique_field,
+    count(*) as n_records
+
+from "iceberg"."tpch"."orders"
+where o_orderkey is not null
+group by o_orderkey
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:54:12.629489 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:54:15.881340 [debug] [Thread-1 (]: SQL status: SUCCESS in 3.465 seconds
+[0m14:54:15.917753 [debug] [Thread-1 (]: On test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434: ROLLBACK
+[0m14:54:15.890841 [debug] [Thread-2 (]: SQL status: SUCCESS in 3.472 seconds
+[0m14:54:15.932218 [debug] [Thread-1 (]: On test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434: Close
+[0m14:54:15.946146 [debug] [Thread-2 (]: On test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874: ROLLBACK
+[0m14:54:15.980600 [info ] [Thread-1 (]: 1 of 5 PASS not_null_mart_revenue_summary_line_status .......................... [[32mPASS[0m in 3.67s]
+[0m14:54:15.988160 [debug] [Thread-2 (]: On test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874: Close
+[0m14:54:16.019961 [debug] [Thread-1 (]: Finished running node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m14:54:16.028140 [info ] [Thread-2 (]: 2 of 5 PASS not_null_mart_revenue_summary_order_priority ....................... [[32mPASS[0m in 3.72s]
+[0m14:54:16.075711 [debug] [Thread-2 (]: Finished running node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m14:54:19.436740 [debug] [Thread-4 (]: SQL status: SUCCESS in 6.707 seconds
+[0m14:54:19.438956 [debug] [Thread-4 (]: On test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1: ROLLBACK
+[0m14:54:19.440197 [debug] [Thread-4 (]: On test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1: Close
+[0m14:54:19.441486 [info ] [Thread-4 (]: 5 of 5 PASS source_unique_iceberg_tpch_orders_o_orderkey ....................... [[32mPASS[0m in 6.85s]
+[0m14:54:19.442686 [debug] [Thread-4 (]: Finished running node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m14:54:19.445092 [debug] [MainThread]: On master: COMMIT
+[0m14:54:19.446498 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:54:19.447696 [debug] [MainThread]: Connection 'test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874' was properly closed.
+[0m14:54:19.449054 [debug] [MainThread]: Connection 'test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434' was properly closed.
+[0m14:54:19.450004 [debug] [MainThread]: Connection 'test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45' was properly closed.
+[0m14:54:19.451010 [debug] [MainThread]: Connection 'test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1' was properly closed.
+[0m14:54:19.452058 [info ] [MainThread]: 
+[0m14:54:19.453229 [info ] [MainThread]: Finished running 5 data tests in 0 hours 0 minutes and 7.30 seconds (7.30s).
+[0m14:54:19.454767 [debug] [MainThread]: Command end result
+[0m14:54:19.502142 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m14:54:19.510182 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m14:54:19.522411 [debug] [MainThread]: Wrote artifact RunExecutionResult to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/run_results.json
+[0m14:54:19.523489 [info ] [MainThread]: 
+[0m14:54:19.524724 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:54:19.525944 [info ] [MainThread]: 
+[0m14:54:19.526974 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m14:54:19.530846 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 8.6681, "process_in_blocks": "104568", "process_kernel_time": 0.17709, "process_mem_max_rss": "153692", "process_out_blocks": "8", "process_user_time": 2.260987}
+[0m14:54:19.532435 [debug] [MainThread]: Command `dbt test` succeeded at 14:54:19.532329 after 8.67 seconds
+[0m14:54:19.533625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c4fc1210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c27a5270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e2c4e91e70>]}
+[0m14:54:19.535036 [debug] [MainThread]: Flushing usage events
+[0m14:54:21.562855 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:57:07.192413 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed40e0aad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed40d780d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed40d79840>]}
+
+
+============================== 15:57:07.195376 | e1ccb30c-450f-4c69-91e7-f73003b5802a ==============================
+[0m15:57:07.195376 [info ] [MainThread]: Running with dbt=1.10.1
+[0m15:57:07.196150 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '.', 'log_path': '/mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --profiles-dir .', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:57:08.292161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed3e41fd60>]}
+[0m15:57:08.344006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed3e433190>]}
+[0m15:57:08.345477 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m15:57:08.402913 [debug] [MainThread]: checksum: 2c026f85d539c10c69b093157526ce33d0bf5533489eafb07fe5172434ec7740, vars: {}, profile: , target: , version: 1.10.1
+[0m15:57:08.673675 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:57:08.675269 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:57:08.709176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed3e0e5870>]}
+[0m15:57:08.780518 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m15:57:08.789044 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m15:57:08.799787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed3df260b0>]}
+[0m15:57:08.800718 [info ] [MainThread]: Found 10 models, 5 data tests, 2 sources, 456 macros
+[0m15:57:08.801401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed3df26050>]}
+[0m15:57:08.803014 [info ] [MainThread]: 
+[0m15:57:08.803621 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:57:08.804253 [info ] [MainThread]: 
+[0m15:57:08.804968 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m15:57:08.808769 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m15:57:08.809417 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg'
+[0m15:57:08.833662 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m15:57:08.834251 [debug] [ThreadPool]: Using trino connection "list_iceberg"
+[0m15:57:08.834955 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m15:57:08.835681 [debug] [ThreadPool]: On list_iceberg: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg"} */
+
+    select schema_name
+    from "iceberg".INFORMATION_SCHEMA.schemata
+[0m15:57:08.836368 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:57:08.836860 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:57:08.837364 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m15:57:08.838041 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m15:57:08.838864 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed3df7a830>]}
+[0m15:57:08.839534 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed3cb59690>]}
+[0m15:57:08.984762 [debug] [ThreadPool]: SQL status: SUCCESS in 0.148 seconds
+[0m15:57:08.985353 [debug] [ThreadPool]: SQL status: SUCCESS in 0.148 seconds
+[0m15:57:08.987597 [debug] [ThreadPool]: On list_iceberg: Close
+[0m15:57:08.989540 [debug] [ThreadPool]: On list_iceberg: Close
+[0m15:57:08.993491 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now list_iceberg_tpch_mart_mart)
+[0m15:57:08.993848 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_iceberg, now list_iceberg_tpch_mart_staging)
+[0m15:57:09.003302 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_mart"
+[0m15:57:09.006961 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_staging"
+[0m15:57:09.008552 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_mart"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_mart') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_mart'
+[0m15:57:09.010233 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_staging"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_staging') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_staging'
+[0m15:57:09.012128 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:57:09.014063 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:57:09.177555 [debug] [ThreadPool]: SQL status: SUCCESS in 0.165 seconds
+[0m15:57:09.180865 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: ROLLBACK
+[0m15:57:09.182367 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: Close
+[0m15:57:09.182902 [debug] [ThreadPool]: SQL status: SUCCESS in 0.169 seconds
+[0m15:57:09.185714 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: ROLLBACK
+[0m15:57:09.186916 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: Close
+[0m15:57:09.189165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed40f4f550>]}
+[0m15:57:09.190547 [debug] [MainThread]: On master: COMMIT
+[0m15:57:09.194599 [debug] [Thread-1 (]: Began running node model.tpch_dbt.stg_lineitem
+[0m15:57:09.194880 [debug] [Thread-2 (]: Began running node model.tpch_dbt.stg_orders
+[0m15:57:09.196211 [info ] [Thread-1 (]: 1 of 10 START sql view model tpch_mart_staging.stg_lineitem .................... [RUN]
+[0m15:57:09.197559 [info ] [Thread-2 (]: 2 of 10 START sql view model tpch_mart_staging.stg_orders ...................... [RUN]
+[0m15:57:09.199650 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_staging, now model.tpch_dbt.stg_lineitem)
+[0m15:57:09.200821 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_mart, now model.tpch_dbt.stg_orders)
+[0m15:57:09.202163 [debug] [Thread-1 (]: Began compiling node model.tpch_dbt.stg_lineitem
+[0m15:57:09.203589 [debug] [Thread-2 (]: Began compiling node model.tpch_dbt.stg_orders
+[0m15:57:09.205994 [debug] [Thread-1 (]: Writing injected SQL for node "model.tpch_dbt.stg_lineitem"
+[0m15:57:09.209032 [debug] [Thread-2 (]: Writing injected SQL for node "model.tpch_dbt.stg_orders"
+[0m15:57:09.218178 [debug] [Thread-1 (]: Began executing node model.tpch_dbt.stg_lineitem
+[0m15:57:09.225052 [debug] [Thread-2 (]: Began executing node model.tpch_dbt.stg_orders
+[0m15:57:09.231529 [debug] [Thread-1 (]: Writing runtime sql for node "model.tpch_dbt.stg_lineitem"
+[0m15:57:09.234298 [debug] [Thread-2 (]: Writing runtime sql for node "model.tpch_dbt.stg_orders"
+[0m15:57:09.243639 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.stg_lineitem"
+[0m15:57:09.245147 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_lineitem"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_lineitem"
+  security definer
+  as
+    with source_lineitem as (
+    select * from "iceberg"."tpch"."lineitem"
+),
+
+renamed_cleaned as (
+    select
+        l_orderkey as order_id,
+        l_partkey as part_id,
+        l_suppkey as supplier_id,
+        l_linenumber as line_number,
+        l_quantity as quantity,
+        l_extendedprice as extended_price,
+        l_discount as discount,
+        l_tax as tax_rate,
+        l_returnflag as return_flag,
+        l_linestatus as line_status,
+        l_shipdate as ship_date,
+        l_commitdate as commit_date,
+        l_receiptdate as receipt_date,
+        l_shipinstruct as ship_instruction,
+        l_shipmode as ship_mode,
+        l_comment as comment
+    from source_lineitem
+)
+
+select * from renamed_cleaned
+  
+[0m15:57:09.246560 [debug] [Thread-2 (]: Using trino connection "model.tpch_dbt.stg_orders"
+[0m15:57:09.247902 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:57:09.249595 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.stg_orders"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_staging"."stg_orders"
+  security definer
+  as
+    with source_orders as (
+    select * from "iceberg"."tpch"."orders"
+),
+
+renamed_cleaned as (
+    select
+        o_orderkey as order_id,
+        o_custkey as customer_id,
+        o_orderstatus as order_status,
+        o_totalprice as total_price,
+        o_orderdate as order_date,
+        o_orderpriority as order_priority,
+        o_clerk as clerk_name,
+        o_shippriority as ship_priority,
+        o_comment as comment
+    from source_orders
+)
+
+select * from renamed_cleaned
+  
+[0m15:57:09.252814 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:57:09.431646 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.179 seconds
+[0m15:57:09.432194 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.184 seconds
+[0m15:57:09.442587 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: ROLLBACK
+[0m15:57:09.444466 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: ROLLBACK
+[0m15:57:09.445732 [debug] [Thread-2 (]: On model.tpch_dbt.stg_orders: Close
+[0m15:57:09.447601 [debug] [Thread-1 (]: On model.tpch_dbt.stg_lineitem: Close
+[0m15:57:09.450714 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed3caa9cc0>]}
+[0m15:57:09.452293 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed3c100340>]}
+[0m15:57:09.453717 [info ] [Thread-2 (]: 2 of 10 OK created sql view model tpch_mart_staging.stg_orders ................. [[32mCREATE VIEW[0m in 0.25s]
+[0m15:57:09.455572 [info ] [Thread-1 (]: 1 of 10 OK created sql view model tpch_mart_staging.stg_lineitem ............... [[32mCREATE VIEW[0m in 0.25s]
+[0m15:57:09.457277 [debug] [Thread-2 (]: Finished running node model.tpch_dbt.stg_orders
+[0m15:57:09.458848 [debug] [Thread-1 (]: Finished running node model.tpch_dbt.stg_lineitem
+[0m15:57:09.462027 [debug] [Thread-4 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1992
+[0m15:57:09.462388 [debug] [Thread-3 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1993
+[0m15:57:09.462678 [debug] [Thread-2 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1994
+[0m15:57:09.462932 [debug] [Thread-1 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1995
+[0m15:57:09.463976 [info ] [Thread-4 (]: 3 of 10 START sql table model tpch_mart_mart.mart_revenue_summary_y1992 ........ [RUN]
+[0m15:57:09.465353 [info ] [Thread-3 (]: 4 of 10 START sql table model tpch_mart_mart.mart_revenue_summary_y1993 ........ [RUN]
+[0m15:57:09.466717 [info ] [Thread-2 (]: 5 of 10 START sql table model tpch_mart_mart.mart_revenue_summary_y1994 ........ [RUN]
+[0m15:57:09.467947 [info ] [Thread-1 (]: 6 of 10 START sql table model tpch_mart_mart.mart_revenue_summary_y1995 ........ [RUN]
+[0m15:57:09.469309 [debug] [Thread-4 (]: Acquiring new trino connection 'model.tpch_dbt.mart_revenue_summary_y1992'
+[0m15:57:09.470677 [debug] [Thread-3 (]: Acquiring new trino connection 'model.tpch_dbt.mart_revenue_summary_y1993'
+[0m15:57:09.471959 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.stg_orders, now model.tpch_dbt.mart_revenue_summary_y1994)
+[0m15:57:09.472969 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.stg_lineitem, now model.tpch_dbt.mart_revenue_summary_y1995)
+[0m15:57:09.473630 [debug] [Thread-4 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1992
+[0m15:57:09.474317 [debug] [Thread-3 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1993
+[0m15:57:09.475207 [debug] [Thread-2 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1994
+[0m15:57:09.475852 [debug] [Thread-1 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1995
+[0m15:57:09.479656 [debug] [Thread-4 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1992"
+[0m15:57:09.483271 [debug] [Thread-3 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1993"
+[0m15:57:09.486138 [debug] [Thread-2 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1994"
+[0m15:57:09.488728 [debug] [Thread-1 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1995"
+[0m15:57:09.496319 [debug] [Thread-4 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1992
+[0m15:57:09.497156 [debug] [Thread-3 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1993
+[0m15:57:09.497491 [debug] [Thread-1 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1995
+[0m15:57:09.497797 [debug] [Thread-2 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1994
+[0m15:57:09.535907 [debug] [Thread-3 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary_y1993"
+[0m15:57:09.537527 [debug] [Thread-4 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary_y1992"
+[0m15:57:09.541453 [debug] [Thread-1 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary_y1995"
+[0m15:57:09.544912 [debug] [Thread-2 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary_y1994"
+[0m15:57:09.561740 [debug] [Thread-3 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1993"
+[0m15:57:09.565032 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1995"
+[0m15:57:09.566997 [debug] [Thread-2 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1994"
+[0m15:57:09.567363 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1993: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1993"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1993__dbt_tmp"
+      
+      
+    as (
+      with orders as (
+    -- One-year slice for 1993 to keep each batch lightweight
+    select *
+    from "iceberg"."tpch_mart_staging"."stg_orders"
+    where order_date >= date '1993-01-01'
+      and order_date <  date '1994-01-01'
+),
+
+lineitem_agg as (
+    -- Pre-aggregate lineitem per order to reduce join size and memory usage
+    select
+        order_id,
+        line_status,
+        sum(
+    extended_price * (1 - discount)
+) as net_revenue
+    from "iceberg"."tpch_mart_staging"."stg_lineitem"
+    where ship_date >= date '1993-01-01'
+      and ship_date <  date '1994-01-01'
+    group by 1, 2
+)
+
+select
+    o.order_priority,
+    l.line_status,
+    count(*) as total_orders,
+    sum(l.net_revenue) as total_net_revenue
+from lineitem_agg l
+join orders o on l.order_id = o.order_id
+group by 1, 2
+    )
+[0m15:57:09.569482 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1992"
+[0m15:57:09.570562 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1995: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1995"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1995__dbt_tmp"
+      
+      
+    as (
+      with orders as (
+    -- One-year slice for 1995 to keep each batch lightweight
+    select *
+    from "iceberg"."tpch_mart_staging"."stg_orders"
+    where order_date >= date '1995-01-01'
+      and order_date <  date '1996-01-01'
+),
+
+lineitem_agg as (
+    -- Pre-aggregate lineitem per order to reduce join size and memory usage
+    select
+        order_id,
+        line_status,
+        sum(
+    extended_price * (1 - discount)
+) as net_revenue
+    from "iceberg"."tpch_mart_staging"."stg_lineitem"
+    where ship_date >= date '1995-01-01'
+      and ship_date <  date '1996-01-01'
+    group by 1, 2
+)
+
+select
+    o.order_priority,
+    l.line_status,
+    count(*) as total_orders,
+    sum(l.net_revenue) as total_net_revenue
+from lineitem_agg l
+join orders o on l.order_id = o.order_id
+group by 1, 2
+    )
+[0m15:57:09.572041 [debug] [Thread-2 (]: On model.tpch_dbt.mart_revenue_summary_y1994: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1994"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1994__dbt_tmp"
+      
+      
+    as (
+      with orders as (
+    -- One-year slice for 1994 to keep each batch lightweight
+    select *
+    from "iceberg"."tpch_mart_staging"."stg_orders"
+    where order_date >= date '1994-01-01'
+      and order_date <  date '1995-01-01'
+),
+
+lineitem_agg as (
+    -- Pre-aggregate lineitem per order to reduce join size and memory usage
+    select
+        order_id,
+        line_status,
+        sum(
+    extended_price * (1 - discount)
+) as net_revenue
+    from "iceberg"."tpch_mart_staging"."stg_lineitem"
+    where ship_date >= date '1994-01-01'
+      and ship_date <  date '1995-01-01'
+    group by 1, 2
+)
+
+select
+    o.order_priority,
+    l.line_status,
+    count(*) as total_orders,
+    sum(l.net_revenue) as total_net_revenue
+from lineitem_agg l
+join orders o on l.order_id = o.order_id
+group by 1, 2
+    )
+[0m15:57:09.573152 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:57:09.574378 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1992: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1992"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1992__dbt_tmp"
+      
+      
+    as (
+      with orders as (
+    -- One-year slice for 1992 to keep each batch lightweight
+    select *
+    from "iceberg"."tpch_mart_staging"."stg_orders"
+    where order_date >= date '1992-01-01'
+      and order_date <  date '1993-01-01'
+),
+
+lineitem_agg as (
+    -- Pre-aggregate lineitem per order to reduce join size and memory usage
+    select
+        order_id,
+        line_status,
+        sum(
+    extended_price * (1 - discount)
+) as net_revenue
+    from "iceberg"."tpch_mart_staging"."stg_lineitem"
+    where ship_date >= date '1992-01-01'
+      and ship_date <  date '1993-01-01'
+    group by 1, 2
+)
+
+select
+    o.order_priority,
+    l.line_status,
+    count(*) as total_orders,
+    sum(l.net_revenue) as total_net_revenue
+from lineitem_agg l
+join orders o on l.order_id = o.order_id
+group by 1, 2
+    )
+[0m15:57:09.575602 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:57:09.576662 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:57:09.579564 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:57:13.231408 [debug] [Thread-4 (]: SQL status: CREATE TABLE (5 rows) in 3.652 seconds
+[0m15:57:13.237267 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1992"
+[0m15:57:13.238769 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1992: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1992"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1992" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1992__dbt_backup"
+[0m15:57:13.254021 [debug] [Thread-3 (]: SQL status: CREATE TABLE (5 rows) in 3.681 seconds
+[0m15:57:13.258450 [debug] [Thread-3 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1993"
+[0m15:57:13.259733 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1993: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1993"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1993" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1993__dbt_backup"
+[0m15:57:13.277208 [debug] [Thread-1 (]: SQL status: CREATE TABLE (10 rows) in 3.702 seconds
+[0m15:57:13.277845 [debug] [Thread-2 (]: SQL status: CREATE TABLE (5 rows) in 3.701 seconds
+[0m15:57:13.281156 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1995"
+[0m15:57:13.284195 [debug] [Thread-2 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1994"
+[0m15:57:13.285847 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1995: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1995"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1995" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1995__dbt_backup"
+[0m15:57:13.287099 [debug] [Thread-2 (]: On model.tpch_dbt.mart_revenue_summary_y1994: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1994"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1994" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1994__dbt_backup"
+[0m15:57:13.372949 [debug] [Thread-4 (]: SQL status: RENAME TABLE in 0.133 seconds
+[0m15:57:13.380156 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1992"
+[0m15:57:13.381183 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1992: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1992"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1992__dbt_tmp" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1992"
+[0m15:57:13.387072 [debug] [Thread-3 (]: SQL status: RENAME TABLE in 0.126 seconds
+[0m15:57:13.391478 [debug] [Thread-3 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1993"
+[0m15:57:13.393239 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1993: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1993"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1993__dbt_tmp" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1993"
+[0m15:57:13.394044 [debug] [Thread-2 (]: SQL status: RENAME TABLE in 0.104 seconds
+[0m15:57:13.398187 [debug] [Thread-2 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1994"
+[0m15:57:13.399879 [debug] [Thread-2 (]: On model.tpch_dbt.mart_revenue_summary_y1994: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1994"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1994__dbt_tmp" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1994"
+[0m15:57:13.426103 [debug] [Thread-1 (]: SQL status: RENAME TABLE in 0.138 seconds
+[0m15:57:13.429604 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1995"
+[0m15:57:13.430686 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1995: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1995"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1995__dbt_tmp" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1995"
+[0m15:57:13.496462 [debug] [Thread-4 (]: SQL status: RENAME TABLE in 0.114 seconds
+[0m15:57:13.502613 [debug] [Thread-4 (]: Applying DROP to: "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1992__dbt_backup"
+[0m15:57:13.505014 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1992"
+[0m15:57:13.506721 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1992: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1992"} */
+
+    drop table if exists "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1992__dbt_backup"
+[0m15:57:13.507429 [debug] [Thread-3 (]: SQL status: RENAME TABLE in 0.113 seconds
+[0m15:57:13.511904 [debug] [Thread-3 (]: Applying DROP to: "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1993__dbt_backup"
+[0m15:57:13.515306 [debug] [Thread-3 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1993"
+[0m15:57:13.516943 [debug] [Thread-2 (]: SQL status: RENAME TABLE in 0.115 seconds
+[0m15:57:13.518277 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1993: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1993"} */
+
+    drop table if exists "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1993__dbt_backup"
+[0m15:57:13.522202 [debug] [Thread-2 (]: Applying DROP to: "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1994__dbt_backup"
+[0m15:57:13.527357 [debug] [Thread-1 (]: SQL status: RENAME TABLE in 0.096 seconds
+[0m15:57:13.528077 [debug] [Thread-2 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1994"
+[0m15:57:13.531606 [debug] [Thread-1 (]: Applying DROP to: "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1995__dbt_backup"
+[0m15:57:13.533576 [debug] [Thread-2 (]: On model.tpch_dbt.mart_revenue_summary_y1994: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1994"} */
+
+    drop table if exists "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1994__dbt_backup"
+[0m15:57:13.534796 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1995"
+[0m15:57:13.538236 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1995: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1995"} */
+
+    drop table if exists "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1995__dbt_backup"
+[0m15:57:13.659460 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.135 seconds
+[0m15:57:13.660082 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.152 seconds
+[0m15:57:13.661875 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1993: ROLLBACK
+[0m15:57:13.664325 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1992: ROLLBACK
+[0m15:57:13.664987 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.125 seconds
+[0m15:57:13.665809 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1993: Close
+[0m15:57:13.666746 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1992: Close
+[0m15:57:13.669787 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1995: ROLLBACK
+[0m15:57:13.671363 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed425f67d0>]}
+[0m15:57:13.672307 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed3c0d5780>]}
+[0m15:57:13.673405 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1995: Close
+[0m15:57:13.675094 [info ] [Thread-3 (]: 4 of 10 OK created sql table model tpch_mart_mart.mart_revenue_summary_y1993 ... [[32mCREATE TABLE (5 rows)[0m in 4.20s]
+[0m15:57:13.676808 [info ] [Thread-4 (]: 3 of 10 OK created sql table model tpch_mart_mart.mart_revenue_summary_y1992 ... [[32mCREATE TABLE (5 rows)[0m in 4.20s]
+[0m15:57:13.677495 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.141 seconds
+[0m15:57:13.678617 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed3cab4370>]}
+[0m15:57:13.679776 [debug] [Thread-3 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1993
+[0m15:57:13.681356 [debug] [Thread-4 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1992
+[0m15:57:13.683672 [debug] [Thread-2 (]: On model.tpch_dbt.mart_revenue_summary_y1994: ROLLBACK
+[0m15:57:13.685148 [info ] [Thread-1 (]: 6 of 10 OK created sql table model tpch_mart_mart.mart_revenue_summary_y1995 ... [[32mCREATE TABLE (10 rows)[0m in 4.21s]
+[0m15:57:13.686421 [debug] [Thread-3 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1996
+[0m15:57:13.687695 [debug] [Thread-4 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1997
+[0m15:57:13.689045 [debug] [Thread-2 (]: On model.tpch_dbt.mart_revenue_summary_y1994: Close
+[0m15:57:13.690436 [debug] [Thread-1 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1995
+[0m15:57:13.691373 [info ] [Thread-3 (]: 7 of 10 START sql table model tpch_mart_mart.mart_revenue_summary_y1996 ........ [RUN]
+[0m15:57:13.692364 [info ] [Thread-4 (]: 8 of 10 START sql table model tpch_mart_mart.mart_revenue_summary_y1997 ........ [RUN]
+[0m15:57:13.693505 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed425f6830>]}
+[0m15:57:13.694247 [debug] [Thread-1 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1998
+[0m15:57:13.695153 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.mart_revenue_summary_y1993, now model.tpch_dbt.mart_revenue_summary_y1996)
+[0m15:57:13.696070 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.mart_revenue_summary_y1992, now model.tpch_dbt.mart_revenue_summary_y1997)
+[0m15:57:13.697208 [info ] [Thread-2 (]: 5 of 10 OK created sql table model tpch_mart_mart.mart_revenue_summary_y1994 ... [[32mCREATE TABLE (5 rows)[0m in 4.22s]
+[0m15:57:13.698559 [info ] [Thread-1 (]: 9 of 10 START sql table model tpch_mart_mart.mart_revenue_summary_y1998 ........ [RUN]
+[0m15:57:13.699733 [debug] [Thread-3 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1996
+[0m15:57:13.700755 [debug] [Thread-4 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1997
+[0m15:57:13.701822 [debug] [Thread-2 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1994
+[0m15:57:13.703120 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.mart_revenue_summary_y1995, now model.tpch_dbt.mart_revenue_summary_y1998)
+[0m15:57:13.709021 [debug] [Thread-3 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1996"
+[0m15:57:13.712373 [debug] [Thread-4 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1997"
+[0m15:57:13.715509 [debug] [Thread-1 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1998
+[0m15:57:13.721876 [debug] [Thread-1 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1998"
+[0m15:57:13.729883 [debug] [Thread-4 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1997
+[0m15:57:13.730903 [debug] [Thread-3 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1996
+[0m15:57:13.734432 [debug] [Thread-4 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary_y1997"
+[0m15:57:13.734964 [debug] [Thread-1 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1998
+[0m15:57:13.738144 [debug] [Thread-3 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary_y1996"
+[0m15:57:13.743159 [debug] [Thread-1 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary_y1998"
+[0m15:57:13.753528 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1997"
+[0m15:57:13.756554 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1998"
+[0m15:57:13.757041 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1997: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1997"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1997__dbt_tmp"
+      
+      
+    as (
+      with orders as (
+    -- One-year slice for 1997 to keep each batch lightweight
+    select *
+    from "iceberg"."tpch_mart_staging"."stg_orders"
+    where order_date >= date '1997-01-01'
+      and order_date <  date '1998-01-01'
+),
+
+lineitem_agg as (
+    -- Pre-aggregate lineitem per order to reduce join size and memory usage
+    select
+        order_id,
+        line_status,
+        sum(
+    extended_price * (1 - discount)
+) as net_revenue
+    from "iceberg"."tpch_mart_staging"."stg_lineitem"
+    where ship_date >= date '1997-01-01'
+      and ship_date <  date '1998-01-01'
+    group by 1, 2
+)
+
+select
+    o.order_priority,
+    l.line_status,
+    count(*) as total_orders,
+    sum(l.net_revenue) as total_net_revenue
+from lineitem_agg l
+join orders o on l.order_id = o.order_id
+group by 1, 2
+    )
+[0m15:57:13.758684 [debug] [Thread-3 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1996"
+[0m15:57:13.760170 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1998: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1998"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1998__dbt_tmp"
+      
+      
+    as (
+      with orders as (
+    -- One-year slice for 1998 to keep each batch lightweight
+    select *
+    from "iceberg"."tpch_mart_staging"."stg_orders"
+    where order_date >= date '1998-01-01'
+      and order_date <  date '1999-01-01'
+),
+
+lineitem_agg as (
+    -- Pre-aggregate lineitem per order to reduce join size and memory usage
+    select
+        order_id,
+        line_status,
+        sum(
+    extended_price * (1 - discount)
+) as net_revenue
+    from "iceberg"."tpch_mart_staging"."stg_lineitem"
+    where ship_date >= date '1998-01-01'
+      and ship_date <  date '1999-01-01'
+    group by 1, 2
+)
+
+select
+    o.order_priority,
+    l.line_status,
+    count(*) as total_orders,
+    sum(l.net_revenue) as total_net_revenue
+from lineitem_agg l
+join orders o on l.order_id = o.order_id
+group by 1, 2
+    )
+[0m15:57:13.761209 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:57:13.762467 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1996: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1996"} */
+
+  
+    
+
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1996__dbt_tmp"
+      
+      
+    as (
+      with orders as (
+    -- One-year slice for 1996 to keep each batch lightweight
+    select *
+    from "iceberg"."tpch_mart_staging"."stg_orders"
+    where order_date >= date '1996-01-01'
+      and order_date <  date '1997-01-01'
+),
+
+lineitem_agg as (
+    -- Pre-aggregate lineitem per order to reduce join size and memory usage
+    select
+        order_id,
+        line_status,
+        sum(
+    extended_price * (1 - discount)
+) as net_revenue
+    from "iceberg"."tpch_mart_staging"."stg_lineitem"
+    where ship_date >= date '1996-01-01'
+      and ship_date <  date '1997-01-01'
+    group by 1, 2
+)
+
+select
+    o.order_priority,
+    l.line_status,
+    count(*) as total_orders,
+    sum(l.net_revenue) as total_net_revenue
+from lineitem_agg l
+join orders o on l.order_id = o.order_id
+group by 1, 2
+    )
+[0m15:57:13.763847 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:57:13.766909 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:57:15.624687 [debug] [Thread-1 (]: SQL status: CREATE TABLE (5 rows) in 1.861 seconds
+[0m15:57:15.628031 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1998"
+[0m15:57:15.629294 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1998: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1998"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1998" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1998__dbt_backup"
+[0m15:57:15.733315 [debug] [Thread-3 (]: SQL status: CREATE TABLE (5 rows) in 1.966 seconds
+[0m15:57:15.737010 [debug] [Thread-3 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1996"
+[0m15:57:15.739252 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1996: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1996"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1996" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1996__dbt_backup"
+[0m15:57:15.743412 [debug] [Thread-1 (]: SQL status: RENAME TABLE in 0.113 seconds
+[0m15:57:15.743792 [debug] [Thread-4 (]: SQL status: CREATE TABLE (5 rows) in 1.983 seconds
+[0m15:57:15.747901 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1998"
+[0m15:57:15.751267 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1997"
+[0m15:57:15.753109 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1998: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1998"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1998__dbt_tmp" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1998"
+[0m15:57:15.754846 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1997: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1997"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1997" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1997__dbt_backup"
+[0m15:57:15.839845 [debug] [Thread-3 (]: SQL status: RENAME TABLE in 0.098 seconds
+[0m15:57:15.843509 [debug] [Thread-3 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1996"
+[0m15:57:15.850353 [debug] [Thread-1 (]: SQL status: RENAME TABLE in 0.094 seconds
+[0m15:57:15.852187 [debug] [Thread-4 (]: SQL status: RENAME TABLE in 0.094 seconds
+[0m15:57:15.854274 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1996: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1996"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1996__dbt_tmp" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1996"
+[0m15:57:15.858821 [debug] [Thread-1 (]: Applying DROP to: "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1998__dbt_backup"
+[0m15:57:15.861947 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1997"
+[0m15:57:15.864416 [debug] [Thread-1 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1998"
+[0m15:57:15.866196 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1997: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1997"} */
+alter table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1997__dbt_tmp" rename to "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1997"
+[0m15:57:15.867307 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1998: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1998"} */
+
+    drop table if exists "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1998__dbt_backup"
+[0m15:57:15.958928 [debug] [Thread-3 (]: SQL status: RENAME TABLE in 0.096 seconds
+[0m15:57:15.961002 [debug] [Thread-4 (]: SQL status: RENAME TABLE in 0.091 seconds
+[0m15:57:15.964027 [debug] [Thread-3 (]: Applying DROP to: "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1996__dbt_backup"
+[0m15:57:15.966944 [debug] [Thread-4 (]: Applying DROP to: "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1997__dbt_backup"
+[0m15:57:15.968223 [debug] [Thread-3 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1996"
+[0m15:57:15.969789 [debug] [Thread-4 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary_y1997"
+[0m15:57:15.970956 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1996: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1996"} */
+
+    drop table if exists "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1996__dbt_backup"
+[0m15:57:15.972280 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1997: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary_y1997"} */
+
+    drop table if exists "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1997__dbt_backup"
+[0m15:57:15.983592 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.111 seconds
+[0m15:57:15.986024 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1998: ROLLBACK
+[0m15:57:15.987754 [debug] [Thread-1 (]: On model.tpch_dbt.mart_revenue_summary_y1998: Close
+[0m15:57:15.989477 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed2de47880>]}
+[0m15:57:15.990926 [info ] [Thread-1 (]: 9 of 10 OK created sql table model tpch_mart_mart.mart_revenue_summary_y1998 ... [[32mCREATE TABLE (5 rows)[0m in 2.29s]
+[0m15:57:15.992371 [debug] [Thread-1 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1998
+[0m15:57:16.066338 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.091 seconds
+[0m15:57:16.069144 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1997: ROLLBACK
+[0m15:57:16.069728 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.096 seconds
+[0m15:57:16.070539 [debug] [Thread-4 (]: On model.tpch_dbt.mart_revenue_summary_y1997: Close
+[0m15:57:16.072159 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1996: ROLLBACK
+[0m15:57:16.073275 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed2de9be20>]}
+[0m15:57:16.074366 [debug] [Thread-3 (]: On model.tpch_dbt.mart_revenue_summary_y1996: Close
+[0m15:57:16.075758 [info ] [Thread-4 (]: 8 of 10 OK created sql table model tpch_mart_mart.mart_revenue_summary_y1997 ... [[32mCREATE TABLE (5 rows)[0m in 2.38s]
+[0m15:57:16.076837 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed4133eaa0>]}
+[0m15:57:16.077569 [debug] [Thread-4 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1997
+[0m15:57:16.078574 [info ] [Thread-3 (]: 7 of 10 OK created sql table model tpch_mart_mart.mart_revenue_summary_y1996 ... [[32mCREATE TABLE (5 rows)[0m in 2.38s]
+[0m15:57:16.080123 [debug] [Thread-3 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1996
+[0m15:57:16.081258 [debug] [Thread-2 (]: Began running node model.tpch_dbt.mart_revenue_summary
+[0m15:57:16.082377 [info ] [Thread-2 (]: 10 of 10 START sql view model tpch_mart_mart.mart_revenue_summary .............. [RUN]
+[0m15:57:16.083281 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.mart_revenue_summary_y1994, now model.tpch_dbt.mart_revenue_summary)
+[0m15:57:16.084447 [debug] [Thread-2 (]: Began compiling node model.tpch_dbt.mart_revenue_summary
+[0m15:57:16.087554 [debug] [Thread-2 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary"
+[0m15:57:16.096097 [debug] [Thread-2 (]: Began executing node model.tpch_dbt.mart_revenue_summary
+[0m15:57:16.098372 [debug] [Thread-2 (]: Writing runtime sql for node "model.tpch_dbt.mart_revenue_summary"
+[0m15:57:16.111047 [debug] [Thread-2 (]: Using trino connection "model.tpch_dbt.mart_revenue_summary"
+[0m15:57:16.112252 [debug] [Thread-2 (]: On model.tpch_dbt.mart_revenue_summary: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "model.tpch_dbt.mart_revenue_summary"} */
+
+  create or replace view
+    "iceberg"."tpch_mart_mart"."mart_revenue_summary"
+  security definer
+  as
+    
+
+-- Union yearly aggregates to keep each batch small and memory friendly
+with yearly as (
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1992"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1993"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1994"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1995"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1996"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1997"
+    union all
+    select * from "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1998"
+)
+
+select
+    order_priority,
+    line_status,
+    sum(total_orders) as total_orders,
+    sum(total_net_revenue) as total_net_revenue
+from yearly
+group by 1, 2
+order by total_net_revenue desc
+  
+[0m15:57:16.113061 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:57:16.360467 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.247 seconds
+[0m15:57:16.375324 [debug] [Thread-2 (]: On model.tpch_dbt.mart_revenue_summary: ROLLBACK
+[0m15:57:16.380252 [debug] [Thread-2 (]: On model.tpch_dbt.mart_revenue_summary: Close
+[0m15:57:16.386975 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e1ccb30c-450f-4c69-91e7-f73003b5802a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed2df4d060>]}
+[0m15:57:16.388262 [info ] [Thread-2 (]: 10 of 10 OK created sql view model tpch_mart_mart.mart_revenue_summary ......... [[32mCREATE VIEW[0m in 0.30s]
+[0m15:57:16.392248 [debug] [Thread-2 (]: Finished running node model.tpch_dbt.mart_revenue_summary
+[0m15:57:16.404196 [debug] [MainThread]: On master: COMMIT
+[0m15:57:16.405748 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:57:16.407207 [debug] [MainThread]: Connection 'model.tpch_dbt.mart_revenue_summary_y1998' was properly closed.
+[0m15:57:16.408391 [debug] [MainThread]: Connection 'model.tpch_dbt.mart_revenue_summary' was properly closed.
+[0m15:57:16.409446 [debug] [MainThread]: Connection 'model.tpch_dbt.mart_revenue_summary_y1997' was properly closed.
+[0m15:57:16.410216 [debug] [MainThread]: Connection 'model.tpch_dbt.mart_revenue_summary_y1996' was properly closed.
+[0m15:57:16.412565 [info ] [MainThread]: 
+[0m15:57:16.414483 [info ] [MainThread]: Finished running 7 table models, 3 view models in 0 hours 0 minutes and 7.61 seconds (7.61s).
+[0m15:57:16.418274 [debug] [MainThread]: Command end result
+[0m15:57:16.552997 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m15:57:16.561014 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m15:57:16.581273 [debug] [MainThread]: Wrote artifact RunExecutionResult to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/run_results.json
+[0m15:57:16.582729 [info ] [MainThread]: 
+[0m15:57:16.584460 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:57:16.586568 [info ] [MainThread]: 
+[0m15:57:16.588312 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=10
+[0m15:57:16.591966 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 9.457321, "process_in_blocks": "128040", "process_kernel_time": 0.35503, "process_mem_max_rss": "156304", "process_out_blocks": "8", "process_user_time": 2.520323}
+[0m15:57:16.594144 [debug] [MainThread]: Command `dbt run` succeeded at 15:57:16.593878 after 9.46 seconds
+[0m15:57:16.596347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed40e0aad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed4133eaa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78ed40d532b0>]}
+[0m15:57:16.597996 [debug] [MainThread]: Flushing usage events
+[0m15:57:18.891570 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:59:12.696103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f64d5300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f568aef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f568af50>]}
+
+
+============================== 15:59:12.701800 | d1db3e3b-11e4-442e-add8-3fa540591825 ==============================
+[0m15:59:12.701800 [info ] [MainThread]: Running with dbt=1.10.1
+[0m15:59:12.710941 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt docs generate --profiles-dir .', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:59:16.055477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd1db3e3b-11e4-442e-add8-3fa540591825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f8302f50>]}
+[0m15:59:16.108367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd1db3e3b-11e4-442e-add8-3fa540591825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f534f5e0>]}
+[0m15:59:16.132518 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m15:59:16.216276 [debug] [MainThread]: checksum: 2c026f85d539c10c69b093157526ce33d0bf5533489eafb07fe5172434ec7740, vars: {}, profile: , target: , version: 1.10.1
+[0m15:59:16.512545 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:59:16.513823 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:59:16.543374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd1db3e3b-11e4-442e-add8-3fa540591825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f3735c00>]}
+[0m15:59:16.554642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd1db3e3b-11e4-442e-add8-3fa540591825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f38f1780>]}
+[0m15:59:16.555284 [info ] [MainThread]: Found 10 models, 5 data tests, 2 sources, 456 macros
+[0m15:59:16.555948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd1db3e3b-11e4-442e-add8-3fa540591825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f38f1870>]}
+[0m15:59:16.557809 [info ] [MainThread]: 
+[0m15:59:16.558423 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:59:16.560337 [info ] [MainThread]: 
+[0m15:59:16.561483 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m15:59:16.565689 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg_tpch_mart_mart'
+[0m15:59:16.566152 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg_tpch_mart_staging'
+[0m15:59:16.594400 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_mart"
+[0m15:59:16.596141 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_staging"
+[0m15:59:16.596950 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_mart"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_mart') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_mart'
+[0m15:59:16.597830 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_staging"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_staging') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_staging'
+[0m15:59:16.598603 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:59:16.599287 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:59:16.599953 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m15:59:16.600837 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m15:59:16.601516 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'd1db3e3b-11e4-442e-add8-3fa540591825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f240b7f0>]}
+[0m15:59:16.602034 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'd1db3e3b-11e4-442e-add8-3fa540591825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f240bf10>]}
+[0m15:59:16.683631 [debug] [ThreadPool]: SQL status: SUCCESS in 0.084 seconds
+[0m15:59:16.685510 [debug] [ThreadPool]: SQL status: SUCCESS in 0.087 seconds
+[0m15:59:16.686339 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: ROLLBACK
+[0m15:59:16.687973 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: ROLLBACK
+[0m15:59:16.689534 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: Close
+[0m15:59:16.690794 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: Close
+[0m15:59:16.694176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd1db3e3b-11e4-442e-add8-3fa540591825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f38f2a10>]}
+[0m15:59:16.696930 [debug] [Thread-1 (]: Began running node model.tpch_dbt.stg_lineitem
+[0m15:59:16.697226 [debug] [Thread-2 (]: Began running node model.tpch_dbt.stg_orders
+[0m15:59:16.697503 [debug] [Thread-3 (]: Began running node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m15:59:16.697765 [debug] [Thread-4 (]: Began running node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m15:59:16.698887 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_mart, now model.tpch_dbt.stg_lineitem)
+[0m15:59:16.700264 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_staging, now model.tpch_dbt.stg_orders)
+[0m15:59:16.701475 [debug] [Thread-3 (]: Acquiring new trino connection 'test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45'
+[0m15:59:16.702733 [debug] [Thread-4 (]: Acquiring new trino connection 'test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65'
+[0m15:59:16.704078 [debug] [Thread-1 (]: Began compiling node model.tpch_dbt.stg_lineitem
+[0m15:59:16.705569 [debug] [Thread-2 (]: Began compiling node model.tpch_dbt.stg_orders
+[0m15:59:16.706567 [debug] [Thread-3 (]: Began compiling node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m15:59:16.707835 [debug] [Thread-4 (]: Began compiling node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m15:59:16.712121 [debug] [Thread-1 (]: Writing injected SQL for node "model.tpch_dbt.stg_lineitem"
+[0m15:59:16.715301 [debug] [Thread-2 (]: Writing injected SQL for node "model.tpch_dbt.stg_orders"
+[0m15:59:16.722922 [debug] [Thread-3 (]: Writing injected SQL for node "test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45"
+[0m15:59:16.726693 [debug] [Thread-4 (]: Writing injected SQL for node "test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65"
+[0m15:59:16.734880 [debug] [Thread-1 (]: Began executing node model.tpch_dbt.stg_lineitem
+[0m15:59:16.736009 [debug] [Thread-3 (]: Began executing node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m15:59:16.736269 [debug] [Thread-2 (]: Began executing node model.tpch_dbt.stg_orders
+[0m15:59:16.736782 [debug] [Thread-1 (]: Finished running node model.tpch_dbt.stg_lineitem
+[0m15:59:16.737616 [debug] [Thread-4 (]: Began executing node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m15:59:16.738392 [debug] [Thread-3 (]: Finished running node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m15:59:16.739779 [debug] [Thread-2 (]: Finished running node model.tpch_dbt.stg_orders
+[0m15:59:16.741043 [debug] [Thread-1 (]: Began running node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m15:59:16.742454 [debug] [Thread-4 (]: Finished running node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m15:59:16.745131 [debug] [Thread-3 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1992
+[0m15:59:16.745464 [debug] [Thread-2 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1993
+[0m15:59:16.746352 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.stg_lineitem, now test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1)
+[0m15:59:16.747712 [debug] [Thread-4 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1994
+[0m15:59:16.749380 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45, now model.tpch_dbt.mart_revenue_summary_y1992)
+[0m15:59:16.750336 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.stg_orders, now model.tpch_dbt.mart_revenue_summary_y1993)
+[0m15:59:16.751195 [debug] [Thread-1 (]: Began compiling node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m15:59:16.752198 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65, now model.tpch_dbt.mart_revenue_summary_y1994)
+[0m15:59:16.753096 [debug] [Thread-3 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1992
+[0m15:59:16.753890 [debug] [Thread-2 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1993
+[0m15:59:16.758539 [debug] [Thread-1 (]: Writing injected SQL for node "test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1"
+[0m15:59:16.759710 [debug] [Thread-4 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1994
+[0m15:59:16.763202 [debug] [Thread-3 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1992"
+[0m15:59:16.765660 [debug] [Thread-2 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1993"
+[0m15:59:16.768671 [debug] [Thread-4 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1994"
+[0m15:59:16.771918 [debug] [Thread-1 (]: Began executing node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m15:59:16.772191 [debug] [Thread-2 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1993
+[0m15:59:16.772491 [debug] [Thread-3 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1992
+[0m15:59:16.773197 [debug] [Thread-4 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1994
+[0m15:59:16.774167 [debug] [Thread-1 (]: Finished running node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m15:59:16.775334 [debug] [Thread-2 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1993
+[0m15:59:16.776911 [debug] [Thread-3 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1992
+[0m15:59:16.777951 [debug] [Thread-4 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1994
+[0m15:59:16.780225 [debug] [Thread-1 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1995
+[0m15:59:16.781046 [debug] [Thread-2 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1996
+[0m15:59:16.786468 [debug] [Thread-3 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1997
+[0m15:59:16.787732 [debug] [Thread-4 (]: Began running node model.tpch_dbt.mart_revenue_summary_y1998
+[0m15:59:16.790526 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1, now model.tpch_dbt.mart_revenue_summary_y1995)
+[0m15:59:16.792402 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.mart_revenue_summary_y1993, now model.tpch_dbt.mart_revenue_summary_y1996)
+[0m15:59:16.793507 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.mart_revenue_summary_y1992, now model.tpch_dbt.mart_revenue_summary_y1997)
+[0m15:59:16.794568 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.mart_revenue_summary_y1994, now model.tpch_dbt.mart_revenue_summary_y1998)
+[0m15:59:16.795574 [debug] [Thread-1 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1995
+[0m15:59:16.797855 [debug] [Thread-2 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1996
+[0m15:59:16.800499 [debug] [Thread-3 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1997
+[0m15:59:16.801422 [debug] [Thread-4 (]: Began compiling node model.tpch_dbt.mart_revenue_summary_y1998
+[0m15:59:16.804866 [debug] [Thread-1 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1995"
+[0m15:59:16.807843 [debug] [Thread-2 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1996"
+[0m15:59:16.811858 [debug] [Thread-3 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1997"
+[0m15:59:16.814784 [debug] [Thread-4 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary_y1998"
+[0m15:59:16.823471 [debug] [Thread-1 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1995
+[0m15:59:16.824624 [debug] [Thread-2 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1996
+[0m15:59:16.825772 [debug] [Thread-1 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1995
+[0m15:59:16.826114 [debug] [Thread-3 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1997
+[0m15:59:16.827096 [debug] [Thread-2 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1996
+[0m15:59:16.827358 [debug] [Thread-4 (]: Began executing node model.tpch_dbt.mart_revenue_summary_y1998
+[0m15:59:16.828915 [debug] [Thread-3 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1997
+[0m15:59:16.830580 [debug] [Thread-4 (]: Finished running node model.tpch_dbt.mart_revenue_summary_y1998
+[0m15:59:16.832369 [debug] [Thread-1 (]: Began running node model.tpch_dbt.mart_revenue_summary
+[0m15:59:16.833833 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.mart_revenue_summary_y1995, now model.tpch_dbt.mart_revenue_summary)
+[0m15:59:16.834674 [debug] [Thread-1 (]: Began compiling node model.tpch_dbt.mart_revenue_summary
+[0m15:59:16.838096 [debug] [Thread-1 (]: Writing injected SQL for node "model.tpch_dbt.mart_revenue_summary"
+[0m15:59:16.846072 [debug] [Thread-1 (]: Began executing node model.tpch_dbt.mart_revenue_summary
+[0m15:59:16.847211 [debug] [Thread-1 (]: Finished running node model.tpch_dbt.mart_revenue_summary
+[0m15:59:16.849524 [debug] [Thread-3 (]: Began running node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m15:59:16.849937 [debug] [Thread-4 (]: Began running node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m15:59:16.850894 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.mart_revenue_summary_y1997, now test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434)
+[0m15:59:16.851926 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.tpch_dbt.mart_revenue_summary_y1998, now test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874)
+[0m15:59:16.852864 [debug] [Thread-3 (]: Began compiling node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m15:59:16.853730 [debug] [Thread-4 (]: Began compiling node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m15:59:16.857815 [debug] [Thread-3 (]: Writing injected SQL for node "test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434"
+[0m15:59:16.862853 [debug] [Thread-4 (]: Writing injected SQL for node "test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874"
+[0m15:59:16.870117 [debug] [Thread-3 (]: Began executing node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m15:59:16.872088 [debug] [Thread-3 (]: Finished running node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m15:59:16.872537 [debug] [Thread-4 (]: Began executing node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m15:59:16.874470 [debug] [Thread-4 (]: Finished running node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m15:59:16.876604 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:59:16.877967 [debug] [MainThread]: Connection 'model.tpch_dbt.mart_revenue_summary' was properly closed.
+[0m15:59:16.878896 [debug] [MainThread]: Connection 'model.tpch_dbt.mart_revenue_summary_y1996' was properly closed.
+[0m15:59:16.879741 [debug] [MainThread]: Connection 'test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434' was properly closed.
+[0m15:59:16.880753 [debug] [MainThread]: Connection 'test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874' was properly closed.
+[0m15:59:16.883801 [debug] [MainThread]: Command end result
+[0m15:59:16.967912 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m15:59:16.975505 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m15:59:16.985486 [debug] [MainThread]: Wrote artifact RunExecutionResult to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/run_results.json
+[0m15:59:17.009410 [debug] [MainThread]: Acquiring new trino connection 'generate_catalog'
+[0m15:59:17.010526 [info ] [MainThread]: Building catalog
+[0m15:59:17.014286 [debug] [ThreadPool]: Acquiring new trino connection 'iceberg.information_schema'
+[0m15:59:17.043320 [debug] [ThreadPool]: Using trino connection "iceberg.information_schema"
+[0m15:59:17.045382 [debug] [ThreadPool]: On iceberg.information_schema: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "iceberg.information_schema"} */
+
+    
+        with tables as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+        table_type as "table_type",
+        null as "table_owner"
+    from "iceberg".INFORMATION_SCHEMA.tables
+            where
+        table_schema != 'information_schema'
+        and
+        (
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1994'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_staging'
+                        and table_name = 'stg_lineitem'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1995'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1993'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1992'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1997'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch'
+                        and table_name = 'lineitem'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1998'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_staging'
+                        and table_name = 'stg_orders'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch'
+                        and table_name = 'orders'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1996'
+                    )
+                )
+        ),
+        columns as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+        column_name as "column_name",
+        ordinal_position as "column_index",
+        data_type as "column_type",
+        comment as "column_comment"
+    from "iceberg".INFORMATION_SCHEMA.columns
+            where
+        table_schema != 'information_schema'
+        and
+        (
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1994'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_staging'
+                        and table_name = 'stg_lineitem'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1995'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1993'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1992'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1997'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch'
+                        and table_name = 'lineitem'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1998'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_staging'
+                        and table_name = 'stg_orders'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch'
+                        and table_name = 'orders'
+                    )
+                 or 
+                    (
+                        table_schema = 'tpch_mart_mart'
+                        and table_name = 'mart_revenue_summary_y1996'
+                    )
+                )
+        ),
+        table_comment as (
+            
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch_mart_mart'
+                    and table_name = 'mart_revenue_summary_y1994'
+                )
+            
+    union all
+    
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch_mart_staging'
+                    and table_name = 'stg_lineitem'
+                )
+            
+    union all
+    
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch_mart_mart'
+                    and table_name = 'mart_revenue_summary_y1995'
+                )
+            
+    union all
+    
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch_mart_mart'
+                    and table_name = 'mart_revenue_summary_y1993'
+                )
+            
+    union all
+    
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch_mart_mart'
+                    and table_name = 'mart_revenue_summary_y1992'
+                )
+            
+    union all
+    
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch_mart_mart'
+                    and table_name = 'mart_revenue_summary'
+                )
+            
+    union all
+    
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch_mart_mart'
+                    and table_name = 'mart_revenue_summary_y1997'
+                )
+            
+    union all
+    
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch'
+                    and table_name = 'lineitem'
+                )
+            
+    union all
+    
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch_mart_mart'
+                    and table_name = 'mart_revenue_summary_y1998'
+                )
+            
+    union all
+    
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch_mart_staging'
+                    and table_name = 'stg_orders'
+                )
+            
+    union all
+    
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch'
+                    and table_name = 'orders'
+                )
+            
+    union all
+    
+    select
+        catalog_name as "table_database",
+        schema_name as "table_schema",
+        table_name as "table_name",
+        comment as "table_comment"
+    from system.metadata.table_comments
+    where
+        catalog_name = 'iceberg'
+        and
+        schema_name != 'information_schema'
+        and
+        
+                (
+                    schema_name = 'tpch_mart_mart'
+                    and table_name = 'mart_revenue_summary_y1996'
+                )
+            
+        )
+        select
+            table_database,
+            table_schema,
+            table_name,
+            table_type,
+            table_owner,
+            column_name,
+            column_index,
+            column_type,
+            column_comment,
+            table_comment
+        from tables
+        join columns using ("table_database", "table_schema", "table_name")
+        join table_comment using ("table_database", "table_schema", "table_name")
+        order by "column_index"
+[0m15:59:17.046769 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:59:17.827694 [debug] [ThreadPool]: SQL status: SUCCESS in 0.781 seconds
+[0m15:59:17.831896 [debug] [ThreadPool]: On iceberg.information_schema: Close
+[0m15:59:17.851698 [debug] [MainThread]: Wrote artifact CatalogArtifact to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/catalog.json
+[0m15:59:17.914544 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m15:59:17.922015 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m15:59:17.923205 [info ] [MainThread]: Catalog written to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/catalog.json
+[0m15:59:17.925389 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 5.4898767, "process_in_blocks": "3392", "process_kernel_time": 0.121035, "process_mem_max_rss": "153268", "process_out_blocks": "8", "process_user_time": 2.186396}
+[0m15:59:17.926891 [debug] [MainThread]: Command `dbt docs generate` succeeded at 15:59:17.926722 after 5.49 seconds
+[0m15:59:17.927998 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m15:59:17.929259 [debug] [MainThread]: Connection 'iceberg.information_schema' was properly closed.
+[0m15:59:17.930658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f64d5300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f240b940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a16f8302f50>]}
+[0m15:59:17.932056 [debug] [MainThread]: Flushing usage events
+[0m15:59:19.651145 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:59:52.185947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73aaecb6dde0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73aaeca55cf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73aaebea1630>]}
+
+
+============================== 15:59:52.188434 | 9e9d48ad-8bed-44c3-805b-55aaec7522e6 ==============================
+[0m15:59:52.188434 [info ] [MainThread]: Running with dbt=1.10.1
+[0m15:59:52.189319 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt docs serve --profiles-dir .', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:59:52.845744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9e9d48ad-8bed-44c3-805b-55aaec7522e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73aaee9a3850>]}
+[0m15:59:52.895648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9e9d48ad-8bed-44c3-805b-55aaec7522e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73aaee50fd00>]}
+[0m15:59:55.074102 [error] [MainThread]: Encountered an error:
+[Errno 98] Address already in use
+[0m15:59:55.080417 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 254, in wrapper
+    return func(*args, **kwargs)
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 285, in wrapper
+    return func(*args, **kwargs)
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 332, in wrapper
+    return func(*args, **kwargs)
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/main.py", line 307, in docs_serve
+    results = task.run()
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/task/docs/serve.py", line 24, in run
+    with socketserver.TCPServer((host, port), SimpleHTTPRequestHandler) as httpd:
+  File "/usr/lib/python3.10/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.10/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+
+[0m15:59:55.086127 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 2.9621594, "process_in_blocks": "1016", "process_kernel_time": 0.158043, "process_mem_max_rss": "138172", "process_out_blocks": "8", "process_user_time": 1.625012}
+[0m15:59:55.088302 [debug] [MainThread]: Command `dbt docs serve` failed at 15:59:55.088212 after 2.96 seconds
+[0m15:59:55.089671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73aaecb6dde0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73aaea09a4a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73aaea09a440>]}
+[0m15:59:55.099281 [debug] [MainThread]: Flushing usage events
+[0m15:59:56.658405 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:05:03.834634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b10f6cb9de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b10f6d9dcf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b10f5ff1630>]}
+
+
+============================== 16:05:03.839985 | 0b858dfe-aefa-477d-a693-41ad760328bd ==============================
+[0m16:05:03.839985 [info ] [MainThread]: Running with dbt=1.10.1
+[0m16:05:03.844484 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '.', 'log_path': '/mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt docs serve --profiles-dir . --port 8081 --no-browser', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:05:05.923308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0b858dfe-aefa-477d-a693-41ad760328bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b10f8aa7850>]}
+[0m16:05:05.976133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0b858dfe-aefa-477d-a693-41ad760328bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b10f8677d00>]}
+[0m16:21:36.831672 [error] [MainThread]: Encountered an error:
+
+[0m16:21:36.835708 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 254, in wrapper
+    return func(*args, **kwargs)
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 285, in wrapper
+    return func(*args, **kwargs)
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 332, in wrapper
+    return func(*args, **kwargs)
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/cli/main.py", line 307, in docs_serve
+    results = task.run()
+  File "/home/muzaraar/.local/lib/python3.10/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+  File "/usr/lib/python3.10/socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/lib/python3.10/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+
+[0m16:21:36.838476 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 988.7865, "process_in_blocks": "1192", "process_kernel_time": 0.135634, "process_mem_max_rss": "139116", "process_out_blocks": "8", "process_user_time": 1.836583}
+[0m16:21:36.840107 [debug] [MainThread]: Command `dbt docs serve` failed at 16:21:36.839957 after 988.79 seconds
+[0m16:21:36.841281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b10f6cb9de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b10f43d11b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b10f43d2a70>]}
+[0m16:21:36.842369 [debug] [MainThread]: Flushing usage events
+[0m16:21:38.614936 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:21:43.854577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b62bdae0b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b62af2e710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b62af2fd30>]}
+
+
+============================== 16:21:43.857157 | ae679eef-527a-42b4-ac03-996356eacd88 ==============================
+[0m16:21:43.857157 [info ] [MainThread]: Running with dbt=1.10.1
+[0m16:21:43.857778 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt test', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:21:44.761689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ae679eef-527a-42b4-ac03-996356eacd88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b629507790>]}
+[0m16:21:44.814818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ae679eef-527a-42b4-ac03-996356eacd88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b629547550>]}
+[0m16:21:44.817288 [info ] [MainThread]: Registered adapter: trino=1.10.1
+[0m16:21:44.866868 [debug] [MainThread]: checksum: 2c026f85d539c10c69b093157526ce33d0bf5533489eafb07fe5172434ec7740, vars: {}, profile: , target: , version: 1.10.1
+[0m16:21:45.074489 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:21:45.075697 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:21:45.110896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ae679eef-527a-42b4-ac03-996356eacd88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6290169b0>]}
+[0m16:21:45.177131 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m16:21:45.187583 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m16:21:45.205485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ae679eef-527a-42b4-ac03-996356eacd88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b629017d60>]}
+[0m16:21:45.206466 [info ] [MainThread]: Found 10 models, 5 data tests, 2 sources, 456 macros
+[0m16:21:45.207179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ae679eef-527a-42b4-ac03-996356eacd88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b629015240>]}
+[0m16:21:45.208789 [info ] [MainThread]: 
+[0m16:21:45.209671 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:21:45.210387 [info ] [MainThread]: 
+[0m16:21:45.211206 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m16:21:45.215415 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg_tpch_mart_mart'
+[0m16:21:45.216043 [debug] [ThreadPool]: Acquiring new trino connection 'list_iceberg_tpch_mart_staging'
+[0m16:21:45.242308 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_mart"
+[0m16:21:45.243876 [debug] [ThreadPool]: Using trino connection "list_iceberg_tpch_mart_staging"
+[0m16:21:45.245058 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_mart"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_mart') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_mart'
+[0m16:21:45.245820 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "connection_name": "list_iceberg_tpch_mart_staging"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "iceberg".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'iceberg'
+              and schema_name = 'tpch_mart_staging') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'tpch_mart_staging'
+[0m16:21:45.246693 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:21:45.247503 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:21:45.248134 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m16:21:45.248853 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m16:21:45.249615 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'ae679eef-527a-42b4-ac03-996356eacd88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b62906a4d0>]}
+[0m16:21:45.250245 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'ae679eef-527a-42b4-ac03-996356eacd88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6282fed70>]}
+[0m16:21:45.341367 [debug] [ThreadPool]: SQL status: SUCCESS in 0.095 seconds
+[0m16:21:45.344818 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: ROLLBACK
+[0m16:21:45.345832 [debug] [ThreadPool]: SQL status: SUCCESS in 0.098 seconds
+[0m16:21:45.346765 [debug] [ThreadPool]: On list_iceberg_tpch_mart_mart: Close
+[0m16:21:45.349259 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: ROLLBACK
+[0m16:21:45.353868 [debug] [ThreadPool]: On list_iceberg_tpch_mart_staging: Close
+[0m16:21:45.356562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ae679eef-527a-42b4-ac03-996356eacd88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b629015b10>]}
+[0m16:21:45.358241 [debug] [MainThread]: On master: COMMIT
+[0m16:21:45.363359 [debug] [Thread-1 (]: Began running node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m16:21:45.363738 [debug] [Thread-2 (]: Began running node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m16:21:45.364097 [debug] [Thread-3 (]: Began running node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m16:21:45.364553 [debug] [Thread-4 (]: Began running node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m16:21:45.365741 [info ] [Thread-1 (]: 1 of 5 START test not_null_mart_revenue_summary_line_status .................... [RUN]
+[0m16:21:45.367382 [info ] [Thread-2 (]: 2 of 5 START test not_null_mart_revenue_summary_order_priority ................. [RUN]
+[0m16:21:45.369011 [info ] [Thread-3 (]: 3 of 5 START test source_not_null_iceberg_tpch_lineitem_l_orderkey ............. [RUN]
+[0m16:21:45.370380 [info ] [Thread-4 (]: 4 of 5 START test source_not_null_iceberg_tpch_orders_o_orderkey ............... [RUN]
+[0m16:21:45.371822 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_staging, now test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434)
+[0m16:21:45.373497 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_iceberg_tpch_mart_mart, now test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874)
+[0m16:21:45.374936 [debug] [Thread-3 (]: Acquiring new trino connection 'test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45'
+[0m16:21:45.376305 [debug] [Thread-4 (]: Acquiring new trino connection 'test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65'
+[0m16:21:45.377828 [debug] [Thread-1 (]: Began compiling node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m16:21:45.379351 [debug] [Thread-2 (]: Began compiling node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m16:21:45.380871 [debug] [Thread-3 (]: Began compiling node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m16:21:45.382226 [debug] [Thread-4 (]: Began compiling node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m16:21:45.390995 [debug] [Thread-1 (]: Writing injected SQL for node "test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434"
+[0m16:21:45.394348 [debug] [Thread-2 (]: Writing injected SQL for node "test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874"
+[0m16:21:45.397894 [debug] [Thread-3 (]: Writing injected SQL for node "test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45"
+[0m16:21:45.401203 [debug] [Thread-4 (]: Writing injected SQL for node "test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65"
+[0m16:21:45.412087 [debug] [Thread-1 (]: Began executing node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m16:21:45.413045 [debug] [Thread-4 (]: Began executing node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m16:21:45.413417 [debug] [Thread-2 (]: Began executing node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m16:21:45.420080 [debug] [Thread-3 (]: Began executing node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m16:21:45.423556 [debug] [Thread-1 (]: Writing runtime sql for node "test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434"
+[0m16:21:45.426288 [debug] [Thread-4 (]: Writing runtime sql for node "test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65"
+[0m16:21:45.428547 [debug] [Thread-2 (]: Writing runtime sql for node "test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874"
+[0m16:21:45.430493 [debug] [Thread-3 (]: Writing runtime sql for node "test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45"
+[0m16:21:45.435869 [debug] [Thread-2 (]: Using trino connection "test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874"
+[0m16:21:45.437025 [debug] [Thread-1 (]: Using trino connection "test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434"
+[0m16:21:45.438011 [debug] [Thread-3 (]: Using trino connection "test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45"
+[0m16:21:45.438926 [debug] [Thread-4 (]: Using trino connection "test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65"
+[0m16:21:45.439591 [debug] [Thread-2 (]: On test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_priority
+from "iceberg"."tpch_mart_mart"."mart_revenue_summary"
+where order_priority is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:21:45.440323 [debug] [Thread-1 (]: On test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select line_status
+from "iceberg"."tpch_mart_mart"."mart_revenue_summary"
+where line_status is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:21:45.441087 [debug] [Thread-3 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select l_orderkey
+from "iceberg"."tpch"."lineitem"
+where l_orderkey is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:21:45.441691 [debug] [Thread-4 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select o_orderkey
+from "iceberg"."tpch"."orders"
+where o_orderkey is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:21:45.442244 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:21:45.442930 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:21:45.443563 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:21:45.444218 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:21:45.519246 [debug] [Thread-3 (]: SQL status: SUCCESS in 0.076 seconds
+[0m16:21:45.524126 [debug] [Thread-3 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45: ROLLBACK
+[0m16:21:45.526141 [debug] [Thread-3 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45: Close
+[0m16:21:45.527308 [debug] [Thread-4 (]: SQL status: SUCCESS in 0.083 seconds
+[0m16:21:45.528952 [info ] [Thread-3 (]: 3 of 5 PASS source_not_null_iceberg_tpch_lineitem_l_orderkey ................... [[32mPASS[0m in 0.15s]
+[0m16:21:45.531258 [debug] [Thread-4 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65: ROLLBACK
+[0m16:21:45.533048 [debug] [Thread-3 (]: Finished running node test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45
+[0m16:21:45.534420 [debug] [Thread-4 (]: On test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65: Close
+[0m16:21:45.536142 [debug] [Thread-3 (]: Began running node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m16:21:45.537877 [info ] [Thread-4 (]: 4 of 5 PASS source_not_null_iceberg_tpch_orders_o_orderkey ..................... [[32mPASS[0m in 0.16s]
+[0m16:21:45.538942 [info ] [Thread-3 (]: 5 of 5 START test source_unique_iceberg_tpch_orders_o_orderkey ................. [RUN]
+[0m16:21:45.540319 [debug] [Thread-4 (]: Finished running node test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65
+[0m16:21:45.541636 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.tpch_dbt.source_not_null_iceberg_tpch_lineitem_l_orderkey.1a80589a45, now test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1)
+[0m16:21:45.544430 [debug] [Thread-3 (]: Began compiling node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m16:21:45.550141 [debug] [Thread-3 (]: Writing injected SQL for node "test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1"
+[0m16:21:45.565834 [debug] [Thread-3 (]: Began executing node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m16:21:45.568874 [debug] [Thread-3 (]: Writing runtime sql for node "test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1"
+[0m16:21:45.587414 [debug] [Thread-3 (]: Using trino connection "test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1"
+[0m16:21:45.589061 [debug] [Thread-3 (]: On test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1: /* {"app": "dbt", "dbt_version": "1.10.1", "profile_name": "tpch_project_profile", "target_name": "dev", "node_id": "test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    o_orderkey as unique_field,
+    count(*) as n_records
+
+from "iceberg"."tpch"."orders"
+where o_orderkey is not null
+group by o_orderkey
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:21:45.590685 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:21:46.125897 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.683 seconds
+[0m16:21:46.130947 [debug] [Thread-1 (]: On test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434: ROLLBACK
+[0m16:21:46.132906 [debug] [Thread-2 (]: SQL status: SUCCESS in 0.690 seconds
+[0m16:21:46.137614 [debug] [Thread-1 (]: On test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434: Close
+[0m16:21:46.141388 [debug] [Thread-2 (]: On test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874: ROLLBACK
+[0m16:21:46.143934 [info ] [Thread-1 (]: 1 of 5 PASS not_null_mart_revenue_summary_line_status .......................... [[32mPASS[0m in 0.77s]
+[0m16:21:46.145451 [debug] [Thread-2 (]: On test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874: Close
+[0m16:21:46.147197 [debug] [Thread-1 (]: Finished running node test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434
+[0m16:21:46.149591 [info ] [Thread-2 (]: 2 of 5 PASS not_null_mart_revenue_summary_order_priority ....................... [[32mPASS[0m in 0.78s]
+[0m16:21:46.161771 [debug] [Thread-2 (]: Finished running node test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874
+[0m16:21:46.480171 [debug] [Thread-3 (]: SQL status: SUCCESS in 0.889 seconds
+[0m16:21:46.482403 [debug] [Thread-3 (]: On test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1: ROLLBACK
+[0m16:21:46.483480 [debug] [Thread-3 (]: On test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1: Close
+[0m16:21:46.485124 [info ] [Thread-3 (]: 5 of 5 PASS source_unique_iceberg_tpch_orders_o_orderkey ....................... [[32mPASS[0m in 0.94s]
+[0m16:21:46.486606 [debug] [Thread-3 (]: Finished running node test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1
+[0m16:21:46.488703 [debug] [MainThread]: On master: COMMIT
+[0m16:21:46.490232 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:21:46.491333 [debug] [MainThread]: Connection 'test.tpch_dbt.not_null_mart_revenue_summary_order_priority.67126f2874' was properly closed.
+[0m16:21:46.492732 [debug] [MainThread]: Connection 'test.tpch_dbt.not_null_mart_revenue_summary_line_status.57e43d8434' was properly closed.
+[0m16:21:46.493935 [debug] [MainThread]: Connection 'test.tpch_dbt.source_unique_iceberg_tpch_orders_o_orderkey.fe86c45eb1' was properly closed.
+[0m16:21:46.495130 [debug] [MainThread]: Connection 'test.tpch_dbt.source_not_null_iceberg_tpch_orders_o_orderkey.4994710a65' was properly closed.
+[0m16:21:46.496587 [info ] [MainThread]: 
+[0m16:21:46.498054 [info ] [MainThread]: Finished running 5 data tests in 0 hours 0 minutes and 1.29 seconds (1.29s).
+[0m16:21:46.500124 [debug] [MainThread]: Command end result
+[0m16:21:46.548180 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/manifest.json
+[0m16:21:46.557042 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/semantic_manifest.json
+[0m16:21:46.565344 [debug] [MainThread]: Wrote artifact RunExecutionResult to /mnt/c/Users/Muzaraar/Documents/Kuliah/Kelas_Kuliah/Semester_6/BigData/BigData-Kelompok5/tpch-dbt/target/run_results.json
+[0m16:21:46.566152 [info ] [MainThread]: 
+[0m16:21:46.567300 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:21:46.568237 [info ] [MainThread]: 
+[0m16:21:46.569036 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m16:21:46.570282 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.7702484, "process_in_blocks": "55640", "process_kernel_time": 0.159412, "process_mem_max_rss": "153916", "process_out_blocks": "8", "process_user_time": 2.148078}
+[0m16:21:46.571548 [debug] [MainThread]: Command `dbt test` succeeded at 16:21:46.571457 after 2.77 seconds
+[0m16:21:46.572424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b62bdae0b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b629507790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6280f24a0>]}
+[0m16:21:46.573585 [debug] [MainThread]: Flushing usage events
+[0m16:21:48.305785 [debug] [MainThread]: An error was encountered while trying to flush usage events

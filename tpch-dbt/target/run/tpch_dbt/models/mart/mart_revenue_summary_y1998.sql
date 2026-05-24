@@ -2,7 +2,7 @@
   
     
 
-    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1998"
+    create table "iceberg"."tpch_mart_mart"."mart_revenue_summary_y1998__dbt_tmp"
       
       
     as (
